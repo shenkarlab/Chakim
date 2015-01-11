@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html dir="rtl">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="js/calcalistFunctions.js"></script>
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<title>שאלון</title>
+	</head>
+	<body>
+		<section id="container">
+			<h1>במי אתם הייתם בוחרים?</h1>
+			<form name="message" method="post" onsubmit="return checkform(this)">
+				<section class="questions" id="Question1">
+					<h3>האם תקדם את תוכנית מע״מ 0 על דירות לזוגות צעירים?</h3>
+					<br />
+					<br />
+					<br />
+					<input type="radio" name="question1choices" value="yes">
+					כן
+					<input type="radio" name="question1choices" value="no">
+					לא
+					<input type="radio" name="question1choices" value="i don't know">
+					לא יודע
+					<br>
+				</section>
+				<section class="questions" id="Question2">
+					<h3>האם תקדם את המלצות ועדת גרמן להגבלת מערכת הבריאות הפרטית ולחיזוק מערכת הבריאות הציבורית? האם את/ה בעד הכנסת שר״פ למערכת הציבורית?</h3>
+					<br />
+					<br />
+					<br />
+					<input type="radio" name="question2choices" value="yes">
+					כן
+					<input type="radio" name="question2choices" value="no">
+					לא
+					<input type="radio" name="question2choices" value="i don't know">
+					לא יודע
+					<br>
+				</section>
+				<section class="questions" id="Question3">
+					<h3>האם אתה תומך בהגבלת שכר הבכירים במשק? האם תקדם את חוק הגבלת שכר הבכירים בגופים פיננסיים עד 3.5 מיליון שקל בשנה?</h3>
+					<br />
+					<br />
+					<br />
+					<input type="radio" name="question3choices" value="yes">
+					כן
+					<input type="radio" name="question3choices" value="no">
+					לא
+					<input type="radio" name="question3choices" value="i don't know">
+					לא יודע
+					<br>
+				</section>
+				<section class="questions" id="Question4">
+					<h3>מה עמדתך ביחס לתקציב הביטחון? במערכת הביטחון דורשים תוספת של 11 מיליארד שקל לשנת 2015 ועוד מיליארדים בשנים הבאות, ובאוצר מוכנים להסתפק רק ב-6 מיליארד ודורשים רפורמה בפנסיה הצבאית. במה תבחר?</h3>
+					<br />
+					<br />
+					<br />
+					<input type="radio" name="question4choices" value="yes">
+					כן
+					<input type="radio" name="question4choices" value="no">
+					לא
+					<input type="radio" name="question4choices" value="i don't know">
+					לא יודע
+					<br>
+				</section>
+				<section class="questions" id="Question5">
+					<h3>האם לדעתכם ניתן לקצץ בתקציב הביטחון שלא באמצעות התייעלות פנימיתמה הבעיה הכלכלית הדחופה ביותר של הממשלה הבאה לטפל בה?</h3>
+					<br />
+					<br />
+					<br />
+					<input type="radio" name="question5choices" value="yes">
+					כן
+					<input type="radio" name="question5choices" value="no">
+					לא
+					<input type="radio" name="question5choices" value="i don't know">
+					לא יודע
+					<br>
+				</section>
+				<section class="questions" id="Question6">
+					<h3>מהו האתגר החשוב ביותר לטיפול בשוק העבודה וכיצד תטפל בו?</h3>
+					<br />
+					<br />
+					<br />
+					<input type="radio" name="question6choices" value="yes">
+					כן
+					<input type="radio" name="question6choices" value="no">
+					לא
+					<input type="radio" name="question6choices" value="i don't know">
+					לא יודע
+					<br>
+				</section>
+				<section class="questions" id="Question7">
+					<h3>האם גיל הפרישה במשק הוא מיטבי? אם לא, כיצד ולמה תשנה אותו?</h3>
+					<br />
+					<br />
+					<br />
+					<input type="radio" name="question7choices" value="yes">
+					כן
+					<input type="radio" name="question7choices" value="no">
+					לא
+					<input type="radio" name="question7choices" value="i don't know">
+					לא יודע
+					<br>
+				</section>
+				<section class="questions" id="Question8">
+					<h3>האם יש מקום לרפורמה בפנסיה התקציבית?</h3>
+					<br />
+					<br />
+					<br />
+					<input type="radio" name="question8choices" value="yes">
+					כן
+					<input type="radio" name="question8choices" value="no">
+					לא
+					<input type="radio" name="question8choices" value="i don't know">
+					לא יודע
+					<br>
+				</section>
+				<section class="questions" id="Question9">
+					<h3>איך מתמודדים עם האיומים על הפנסיה של מעמד הביניים?</h3>
+					<br />
+					<br />
+					<br />
+					<input type="radio" name="question9choices" value="yes">
+					כן
+					<input type="radio" name="question9choices" value="no">
+					לא
+					<input type="radio" name="question9choices" value="i don't know">
+					לא יודע
+					<br>
+				</section>
+				<section class="questions" id="Question10">
+					<h3>האם בכוונתכם לשנות את מבנה ההעסקה במגזר הציבורי?</h3>
+					<br />
+					<br />
+					<br />
+					<input type="radio" name="question10choices" value="yes">
+					כן
+					<input type="radio" name="question10choices" value="no">
+					לא
+					<input type="radio" name="question10choices" value="i don't know">
+					לא יודע
+					<br>
+				</section>
+				<section class="questions" id="Question11">
+					<h3>האם תתמכו בחוק לצמצום הריכוזיות תפעלו לקידומו?</h3>
+					<br />
+					<br />
+					<br />
+					<input type="radio" name="question11choices" value="yes">
+					כן
+					<input type="radio" name="question11choices" value="no">
+					לא
+					<input type="radio" name="question11choices" value="i don't know">
+					לא יודע
+					<br>
+				</section>
+				<section class="questions" id="Question12">
+					<h3>האם התיקונים האחרונים בחוק ירסנו  שכר הבכירים?</h3>
+					<br />
+					<br />
+					<br />
+					<input type="radio" name="question12choices" value="yes">
+					כן
+					<input type="radio" name="question12choices" value="no">
+					לא
+					<input type="radio" name="question12choices" value="i don't know">
+					לא יודע
+					<br>
+				</section>
+				<input id="nextQuestionButton" type="submit" value="לשאלה הבאה" />
+			</form>
+		</section>
+	</body>
+</html>

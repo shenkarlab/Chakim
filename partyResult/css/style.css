@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+article, section, nav, aside, header, footer, main {
+    display: block;
+}
+body {
+    width: 100%;
+    height: 1200px;
+    background-image: url("../images/Israel.jpg");
+}
+section {
+    width: 240px;
+    height: 120px;
+    margin: 25px;
+    float: left;
+    text-align: center;
+    padding: 8px;
+    font-family: Arial;
+    font-weight: 100;
+}
+header {
+    margin: 2%;
+    width: 100%;
+    height: 317px;
+    border: #000000 soild;
+}
+#wrapper {
+    width: 70%;
+    height: 100%;
+    margin: 3% auto;
+    border: #000000 solid;
+    background-color: #B7DBFF;
+}
+#num {
+    float: left;
+}
+#demo {
+    float: left;
+}
+#next {
+    text-decoration: none;
+    font-size: large;
+    float: right;
+    margin: 34px;
+}
+h1 {
+    text-align: center;
+}
+#pic {
+    width: 19%;
+    height: 274px;
+    position: relative;
+    float: right;
+    background-image: url("../images/benet.jpg");
+}
+h3 {
+    float: right;
+    margin: 8%;
+    font-size: 28px;
+}
+h4 {
+    margin-right: 24px;
+    font-size: 23px;
+    font-family: Arial;
+    float: right;
+}
+#activity {
+    float: right;
+    width: 100%;
+    height: 68px;
+}
+#questionnaire {
+    float: right;
+    width: 92%;
+    text-align: inherit;
+    height: 249px;
+}
+#questionnaire > p {
+    font-family: Arial;
+}
+#ques {
+    float: right;
+    width: 72%;
+}
+#answer {
+    float: right;
+    margin: 0%;
+    width: 22%;
+    height: 250px;
+}
+#presence {
+    float: right;
+    width: 46%;
+    margin: 1%;
+}
+#rules {
+    float: right;
+    margin: 1%;
+}
+#jew {
+    float: right;
+    height: 172px;
+    width: 100%;
+}
+article {
+    width: 77px;
+    height: 110px;
+    margin: 21px;
+}
+.pichome1 {
+    background-image: url("../images/BennettNaftali.jpg");
+    float: right;
+}
+.pichome2 {
+    background-image: url("../images/arieluriyehuda.jpg");
+    float: right;
+}
+.pichome3 {
+    background-image: url("../images/ShakedAyelet.jpg");
+    float: right;
+}
+.pichome4 {
+    background-image: url("../images/slomianskynisan-s.jpg");
+    float: right;
+}
+.pichome5 {
+    background-image: url("../images/WortzmanAvi.jpg");
+    float: right;
+}
+.pichome6 {
+    background-image: url("../images/BenDahanEliahu.jpg");
+    float: right;
+}
+.pichome7 {
+    background-image: url("../images/OrbachUri.jpg");
+    float: right;
+}
