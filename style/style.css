@@ -135,6 +135,7 @@ h1 {
 	float: left;
 	text-align: center;
 }
+
 main {
 	padding-top: 20px;
 	background-color: #EAE9E4;
@@ -162,9 +163,9 @@ header > h1 {
 	padding-top: 0%;
 }
 #frame {
-    width: 99.4%;
-    height: 416px;
-    background-image: url("../images/movie.jpg");
+	width: 99.4%;
+	height: 416px;
+	background-image: url("../images/movie.jpg");
 }
 #choice {
 	background-image: url("../images/choice.jpg");
@@ -453,3 +454,73 @@ article {
 #pichome7 {
 	float: right;
 }
+/*navigation results css*/
+.p {
+	position: relative;
+	top: 12px;
+	float: left;
+	height: 0px;
+}
+#liquid1 {
+	background: transparent;
+	padding: 0 ;
+	border-radius: 0px;
+	border: none;
+}
+#liquid1 .wrapper ul li {
+	margin: 0 !important;
+	padding: 0;
+	border: none;
+	width: 135px;
+}
+
+#liquid1 .wrapper ul li a {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	padding: 0;
+	margin: 0;
+}
+
+#liquid1 .wrapper ul li a img {
+	width: 135px;
+	height: 150px;
+	box-shadow: none;
+}
+.selected {
+	content: url('../images/selected_bg.png');
+	background: transparent !important;
+	height: 191px !important;
+	color: #ffffff;text-
+	}
+
+	.liquid .previous {
+	background-image: url("../images/resultsArrow.png") !important;
+	background-repeat: no-repeat;
+	width: 47px !important;
+	height: 150px !important;
+}
+
+
+.sac {
+	display:block;
+	width:100%;
+	text-align:right;
+	font-style:italic;
+	margin-bottom:45px;
+	font-size:12px;
+}
+
+pre, blockquote {
+	-moz-border-radius:10px 10px 10px 10px;
+	-webkit-border-radius:10px 10px 10px 10px;
+	border-radius:10px 10px 10px 10px;
+	background-color:#DFE7DD;
+	margin:15px 0;
+	padding:15px;
+}
+
+pre, code {
+	font-family:monospace;
+	font-size:12px;
+}
+

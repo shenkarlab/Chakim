@@ -3,139 +3,142 @@
 <html dir="rtl">
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<script src="js/jquery-1.11.2.min.js"></script>
-		<script src="js/calcalistFunctions.js"></script>
+		<meta name="description" content="jQuery Liquid carousel plugin"/>
 		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<link type='text/css' rel='stylesheet' href="style/liquidcarousel.css" />
+		<script src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/jquery.liquidcarousel.pack.js"></script>
+		<script src="js/calcalistFunctions.js"></script>
 		<title>שאלון</title>
 	</head>
 	<body>
 		<section id="container">
-			<section id="formContainer">
-				<header id="formHeader"></header>
-				<form name="message" method="post" onsubmit="return checkform(this)">
-					<section class="questions" id="fisrtQuestion">
-						<section class="questionConcept" id="Questionconcept1"></section>
-						<h3>יוקר המחייה</h3>
-						<p>
-							צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-						</p>
-						<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-						<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-						<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-					</section>
-					<section class="questions" id="secondQuestion">
-						<section class="questionConcept"  id="Questionconcept2"></section>
-						<h3>תקציב הביטחון</h3>
-						<p>
-							חייבים להגדיל את תקציב הביטחון בשנה הבאה במידה ניכרת, גם אם הדבר בא על חשבון תקציבים אזרחיים
-						</p>
-						<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-						<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-						<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-					</section>
-					<section class="questions" id="thirdQuestion">
-						<section class="questionConcept" id="Questionconcept3"></section>
-						<h3>יוקר המחייה</h3>
-						<p>
-							צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-						</p>
-						<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-						<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-						<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-					</section>
-					<section class="questions" id="forthQuestion">
-						<section class="questionConcept" id="Questionconcept4"></section>
-						<h3>יוקר המחייה</h3>
-						<p>
-							צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-						</p>
-						<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-						<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-						<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-					</section>
-					<section class="questions" id="fifthQuestion">
-						<section class="questionConcept" id="Questionconcept5"></section>
-						<h3>יוקר המחייה</h3>
-						<p>
-							צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-						</p>
-						<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-						<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-						<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-					</section>
-					<section class="questions" id="sixQuestion">
-						<section class="questionConcept" id="Questionconcept6"></section>
-						<h3>יוקר המחייה</h3>
-						<p>
-							צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-						</p>
-						<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-						<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-						<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-					</section>
-					<section class="questions" id="seventhQuestion">
-						<section class="questionConcept" id="Questionconcept7"></section>
-						<h3>יוקר המחייה</h3>
-						<p>
-							צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-						</p>
-						<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-						<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-						<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-					</section>
-					<section class="questions" id="eightQuestion">
-						<section class="questionConcept" id="Questionconcept8"></section>
-						<h3>יוקר המחייה</h3>
-						<p>
-							צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-						</p>
-						<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-						<a href="#" value"no" id="chooseNo" class="inputButton"></a>
-						<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-					</section>
-					<section class="questions" id="nineQuestion">
-						<section class="questionConcept" id="Questionconcept9"></section>
-						<h3>יוקר המחייה</h3>
-						<p>
-							צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-						</p>
-						<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-						<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-						<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-					</section>
-					<section class="questions" id="tenQuestion">
-						<section class="questionConcept" id="Questionconcept10"></section>
-						<h3>יוקר המחייה</h3>
-						<p>
-							צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-						</p>
-						<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-						<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-						<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-					</section>
-					<section class="questions" id="elevenQuestion">
-						<section class="questionConcept" id="Questionconcept11"></section>
-						<h3>יוקר המחייה</h3>
-						<p>
-							צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-						</p>
-						<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-						<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-						<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-					</section>
-					<section class="questions" id="welveQestion">
-						<section class="questionConcept" id="Questionconcept12"></section>
-						<h3>יוקר המחייה</h3>
-						<p>
-							צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-						</p>
-						<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-						<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-						<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-					</section>
-					<input id="nextQuestionButton" type="submit" value="לשאלה הבאה" />
-				</form>
+			<!-- <section id="formContainer">
+			<header id="formHeader"></header>
+			<form name="message" method="post" onsubmit="return checkform(this)">
+			<section class="questions" id="fisrtQuestion">
+			<section class="questionConcept" id="Questionconcept1"></section>
+			<h3>יוקר המחייה</h3>
+			<p>
+			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
+			</p>
+			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
+			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
+			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
 			</section>
+			<section class="questions" id="secondQuestion">
+			<section class="questionConcept"  id="Questionconcept2"></section>
+			<h3>תקציב הביטחון</h3>
+			<p>
+			חייבים להגדיל את תקציב הביטחון בשנה הבאה במידה ניכרת, גם אם הדבר בא על חשבון תקציבים אזרחיים
+			</p>
+			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
+			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
+			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
+			</section>
+			<section class="questions" id="thirdQuestion">
+			<section class="questionConcept" id="Questionconcept3"></section>
+			<h3>יוקר המחייה</h3>
+			<p>
+			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
+			</p>
+			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
+			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
+			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
+			</section>
+			<section class="questions" id="forthQuestion">
+			<section class="questionConcept" id="Questionconcept4"></section>
+			<h3>יוקר המחייה</h3>
+			<p>
+			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
+			</p>
+			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
+			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
+			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
+			</section>
+			<section class="questions" id="fifthQuestion">
+			<section class="questionConcept" id="Questionconcept5"></section>
+			<h3>יוקר המחייה</h3>
+			<p>
+			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
+			</p>
+			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
+			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
+			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
+			</section>
+			<section class="questions" id="sixQuestion">
+			<section class="questionConcept" id="Questionconcept6"></section>
+			<h3>יוקר המחייה</h3>
+			<p>
+			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
+			</p>
+			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
+			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
+			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
+			</section>
+			<section class="questions" id="seventhQuestion">
+			<section class="questionConcept" id="Questionconcept7"></section>
+			<h3>יוקר המחייה</h3>
+			<p>
+			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
+			</p>
+			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
+			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
+			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
+			</section>
+			<section class="questions" id="eightQuestion">
+			<section class="questionConcept" id="Questionconcept8"></section>
+			<h3>יוקר המחייה</h3>
+			<p>
+			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
+			</p>
+			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
+			<a href="#" value"no" id="chooseNo" class="inputButton"></a>
+			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
+			</section>
+			<section class="questions" id="nineQuestion">
+			<section class="questionConcept" id="Questionconcept9"></section>
+			<h3>יוקר המחייה</h3>
+			<p>
+			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
+			</p>
+			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
+			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
+			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
+			</section>
+			<section class="questions" id="tenQuestion">
+			<section class="questionConcept" id="Questionconcept10"></section>
+			<h3>יוקר המחייה</h3>
+			<p>
+			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
+			</p>
+			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
+			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
+			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
+			</section>
+			<section class="questions" id="elevenQuestion">
+			<section class="questionConcept" id="Questionconcept11"></section>
+			<h3>יוקר המחייה</h3>
+			<p>
+			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
+			</p>
+			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
+			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
+			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
+			</section>
+			<section class="questions" id="welveQestion">
+			<section class="questionConcept" id="Questionconcept12"></section>
+			<h3>יוקר המחייה</h3>
+			<p>
+			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
+			</p>
+			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
+			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
+			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
+			</section>
+			<input id="nextQuestionButton" type="submit" value="לשאלה הבאה" />
+			</form>
+			</section> -->
 			<section id="partyPage">
 				<header id = header1>
 					<h1>השאלון</h1>
@@ -148,6 +151,50 @@
 				<section id="titel">
 					<h3>בהתאם לדעותיך הכלכליות, המפלגה שהכי מתאימה לך היא: </h3>
 				</section>
+				<div id="liquid1" class="liquid">
+					<span class="previous"> </span>
+					<div class="wrapper">
+						<ul>
+							<li>
+								<a href="#"><span class="p">pppppp</span><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><img src="images/results_bg.png" /></a>
+							</li>
+						</ul>
+					</div>
+					<span class="next"> </span>
+				</div>
 				<iframe id="frame"></iframe>
 				<main>
 					<h4> פעילות המפלגה על פי הכנסת ה-19:</h4>

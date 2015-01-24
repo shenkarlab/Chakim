@@ -5,6 +5,19 @@ var chkimAns = [0, 0, 0, 0, 0, 0, 0, 0];
 var result = ["14", "16", "15", "17", "18", "26", "20", "22"];
 var i;
 var selection = "";
+var allImages = $("#liquid1 .wrapper ul li a img");
+
+$("#liquid1 .wrapper ul li a img").bind('click', function() {
+	console.log(allImages);
+	var me = $(this);
+	$.each(allImages, function(index, value) {
+		console.log(($(value)));
+		if ($(value).hasClass('selected'))
+			$(value).removeClass('selected');
+	});
+	me.addClass('selected');
+});
+
 function Party(name, id, numberOS, mem) {
 	return {
 		name : name,
@@ -26,7 +39,12 @@ function avgParty(id, avgMonth, avgWeek) {
 var partiesAvg = [];
 
 $(document).ready(function() {
-	$("section#partyPage").hide();
+	$('#liquid1').liquidcarousel({
+		height : 191,
+		duration : 100,
+		hidearrows : false
+	});
+	// $("section#partyPage").hide();
 	$('section.questions:not(:first)').hide();
 	sectionId = $('section.questions').find("section").attr('id');
 	sectionPosition = $('section.questions').attr('id');
@@ -34,7 +52,7 @@ $(document).ready(function() {
 	console.log(sectionPosition);
 });
 
-$(document).on("click", 'a', function(e) {
+$(document).on("click", '.inputButton', function(e) {
 	selection = $(this).attr('value');
 	console.log(selection);
 });
