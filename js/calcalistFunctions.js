@@ -44,7 +44,7 @@ $(document).ready(function() {
 		duration : 100,
 		hidearrows : false
 	});
-	// $("section#partyPage").hide();
+ 	$("section#partyPage").hide();
 	$('section.questions:not(:first)').hide();
 	sectionId = $('section.questions').find("section").attr('id');
 	sectionPosition = $('section.questions').attr('id');
