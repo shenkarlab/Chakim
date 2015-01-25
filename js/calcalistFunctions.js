@@ -2,6 +2,7 @@ var sectionId;
 var q_num = 1;
 var answers = [];
 var chkimAns = [0, 0, 0, 0, 0, 0, 0, 0];
+var percent = [0, 0, 0, 0, 0, 0, 0, 0];
 var result = ["14", "16", "15", "17", "18", "26", "20", "22"];
 var i;
 var selection = "";
@@ -27,13 +28,13 @@ function avgParty(id, avgMonth, avgWeek) {
 var partiesAvg = [];
 
 $(document).ready(function() {
-	
+
 	$('#liquid1').liquidcarousel({
 		height : 191,
 		duration : 100,
 		hidearrows : false
 	});
-	
+
 	var allImages = $("#liquid1 .wrapper ul li a img");
 
 	$("#liquid1 .wrapper ul li a img").bind('click', function() {
@@ -95,6 +96,7 @@ function checkAns() {
 	//console.log(answers);
 	$.getJSON("js/answer.json", function(data) {
 		var dataAnswer = data.Answers;
+		var eachPercent = 0;
 		$.each(dataAnswer, function(index, value) {
 			//parties.push(Party(value.name, value.id, value.number_of_seats, value.members))
 			console.log(value.licod);
@@ -122,10 +124,25 @@ function checkAns() {
 			if (answers[index] != value.hadashe) {
 				chkimAns[7]++;
 			}
+			for ( i = 0; i < chkimAns.length; i++) {
+				eachPercent = 100 - ((chkimAns[i] * 100) / 12);
+				percent[i] = parseInt(eachPercent);
+			}
+
 		});
 		console.log(chkimAns + " המרחק מהתשובות של המפלגות:\n");
-		var index = 0,
-		    smaller = 10;
+		var temp = "";
+		var tempName = ["licod", "avoda", "yeshAtid", "abityehudi", "culanu", "israelbitnu", "mertz", "hadashe"];
+		/*var tName = "";
+		$.each(dataAnswer[0], function(key, val) {
+			tempName.push[key];
+		});*/
+		for ( i = 0; i < percent.length; i++) {
+			temp = percent[i] + " " + "%"; debugger;
+			$('.p' + i).append(tempName[i] + "<br />" + temp);
+		}
+
+		var index = 0, smaller = 10;
 		for ( i = 0; i < 8; i++)
 			if (smaller > chkimAns[i]) {
 				smaller = chkimAns[i];
