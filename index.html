@@ -1,12 +1,15 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
 "http://www.w3.org/TR/html4/loose.dtd">
-<html dir="rtl">
+<html dir="rtl" >
 	<head>
+
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="description" content="jQuery Liquid carousel plugin"/>
 		<link rel="stylesheet" type="text/css" href="style/style.css">
 		<link type='text/css' rel='stylesheet' href="style/liquidcarousel.css" />
 		<script src="js/jquery-1.11.2.min.js"></script>
+		<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 		<script type="text/javascript" src="js/jquery.liquidcarousel.pack.js"></script>
 		<script src="js/calcalistFunctions.js"></script>
 		<title>שאלון</title>
@@ -14,148 +17,121 @@
 	<body>
 		<section id="container">
 			<section id="formContainer">
-			<header id="formHeader"></header>
-			<form name="message" method="post" onsubmit="return checkform(this)">
-			<section class="questions" id="fisrtQuestion">
-			<section class="questionConcept" id="Questionconcept1"></section>
-			<h3>יוקר המחייה</h3>
-			<p>
-			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-			</p>
-			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-			</section>
-			<section class="questions" id="secondQuestion">
-			<section class="questionConcept"  id="Questionconcept2"></section>
-			<h3>תקציב הביטחון</h3>
-			<p>
-			חייבים להגדיל את תקציב הביטחון בשנה הבאה במידה ניכרת, גם אם הדבר בא על חשבון תקציבים אזרחיים
-			</p>
-			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-			</section>
-			<section class="questions" id="thirdQuestion">
-			<section class="questionConcept" id="Questionconcept3"></section>
-			<h3>יוקר המחייה</h3>
-			<p>
-			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-			</p>
-			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-			</section>
-			<section class="questions" id="forthQuestion">
-			<section class="questionConcept" id="Questionconcept4"></section>
-			<h3>יוקר המחייה</h3>
-			<p>
-			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-			</p>
-			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-			</section>
-			<section class="questions" id="fifthQuestion">
-			<section class="questionConcept" id="Questionconcept5"></section>
-			<h3>יוקר המחייה</h3>
-			<p>
-			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-			</p>
-			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-			</section>
-			<section class="questions" id="sixQuestion">
-			<section class="questionConcept" id="Questionconcept6"></section>
-			<h3>יוקר המחייה</h3>
-			<p>
-			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-			</p>
-			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-			</section>
-			<section class="questions" id="seventhQuestion">
-			<section class="questionConcept" id="Questionconcept7"></section>
-			<h3>יוקר המחייה</h3>
-			<p>
-			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-			</p>
-			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-			</section>
-			<section class="questions" id="eightQuestion">
-			<section class="questionConcept" id="Questionconcept8"></section>
-			<h3>יוקר המחייה</h3>
-			<p>
-			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-			</p>
-			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-			<a href="#" value"no" id="chooseNo" class="inputButton"></a>
-			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-			</section>
-			<section class="questions" id="nineQuestion">
-			<section class="questionConcept" id="Questionconcept9"></section>
-			<h3>יוקר המחייה</h3>
-			<p>
-			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-			</p>
-			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-			</section>
-			<section class="questions" id="tenQuestion">
-			<section class="questionConcept" id="Questionconcept10"></section>
-			<h3>יוקר המחייה</h3>
-			<p>
-			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-			</p>
-			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-			</section>
-			<section class="questions" id="elevenQuestion">
-			<section class="questionConcept" id="Questionconcept11"></section>
-			<h3>יוקר המחייה</h3>
-			<p>
-			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-			</p>
-			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-			</section>
-			<section class="questions" id="welveQestion">
-			<section class="questionConcept" id="Questionconcept12"></section>
-			<h3>יוקר המחייה</h3>
-			<p>
-			צריך להוריד את המע"מ על מוצרי מזון בסיסיים
-			</p>
-			<a href="#" value="yes" id="chooseYes" class="inputButton"></a>
-			<a href="#" value="no" id="chooseNo" class="inputButton"></a>
-			<a href="#" value="don't know" id="chooseDontKnow" class="inputButton"></a>
-			</section>
-			<input id="nextQuestionButton" type="submit" value="לשאלה הבאה" />
-			</form>
-			</section>			<section id="partyPage">
-				<header id = header1>
-					<h1>השאלון</h1>
+				<header id = "formHeader">
+					<h1>הבחירה הכלכלית</h1>
 					<h2>למי תצביעו בבחירות 2015? </h2>
 				</header>
-				<section id="choice">
-					<div id="pic"></div>
-					<h3 id="subTitle"></h3>
-				</section>
+				<form name="message" method="post" onsubmit="return checkform(this)">
+					<section class="questions" id="fisrtQuestion">
+						<section class="questionConcept" id="Questionconcept1"></section>
+						<h3>יוקר המחייה</h3>
+						<p>
+							צריך להוריד את המע"מ על מוצרי מזון בסיסיים
+						</p>
+					</section>
+					<section class="questions" id="secondQuestion">
+						<section class="questionConcept"  id="Questionconcept2"></section>
+						<h3>תקציב הביטחון</h3>
+						<p>
+							חייבים להגדיל את תקציב הביטחון בשנה הבאה במידה ניכרת, גם אם הדבר בא על חשבון תקציבים אזרחיים
+						</p>
+					</section>
+					<section class="questions" id="thirdQuestion">
+						<section class="questionConcept" id="Questionconcept3"></section>
+						<h3>רפואה</h3>
+						<p>
+							צריך לאפשר לבתי החולים הציבוריים להציע ניתוחים פרטיים בתשלום כדי להזרים כסף למערכת הבריאות הציבורית
+						</p>
+					</section>
+					<section class="questions" id="forthQuestion">
+						<section class="questionConcept" id="Questionconcept4"></section>
+						<h3>שכר בכירים במשק</h3>
+						<p>
+							צריך לחוקק חוק שיגביל את שכר המנהלים הבכירים בחברות ציבוריות בכל המשק
+						</p>
+					</section>
+					<section class="questions" id="fifthQuestion">
+						<section class="questionConcept" id="Questionconcept5"></section>
+						<h3>גיל פרישה</h3>
+						<p>
+							בגלל העלייה בתוחלת החיים, אין ברירה אלא להעלות את גיל הפרישה
+						</p>
+					</section>
+					<section class="questions" id="sixQuestion">
+						<section class="questionConcept" id="Questionconcept6"></section>
+						<h3>קצבאות זקנה</h3>
+						<p>
+							הצעד הראשון שצריך לנקוט כדי לטפל בעוני הוא להגדיל את קצבאות הביטוח הלאומי
+						</p>
+					</section>
+					<section class="questions" id="seventhQuestion">
+						<section class="questionConcept" id="Questionconcept7"></section>
+						<h3>פנסיה</h3>
+						<p>
+							צריך לקצץ בפנסיה התקציבית בצה"ל ובשירות המדינה
+						</p>
+					</section>
+					<section class="questions" id="eightQuestion">
+						<section class="questionConcept" id="Questionconcept8"></section>
+						<h3>גרעון במשק</h3>
+						<p>
+							המדינה צריכה להטיל מסים גבוהים יותר ולתת בתמורה שירותים ציבוריים נרחבים יותר
+						</p>
+					</section>
+					<section class="questions" id="nineQuestion">
+						<section class="questionConcept" id="Questionconcept9"></section>
+						<h3>גז</h3>
+						<p>
+							התערבות ממשלתית בשוק הגז הטבעי תבריח משקיעים זרים מישראל
+						</p>
+					</section>
+					<section class="questions" id="welveQestion">
+						<section class="questionConcept" id="Questionconcept12"></section>
+						<h3>יוקר המחייה</h3>
+						<p>
+							המדינה לא צריכה להציל מפעלים שנמצאים במצוקה. אין סיבה שכספי המסים של כולנו יסבסדו עסקים לא יעילים
+						</p>
+					</section>
+					<ol class="ol-search">
+						<li class="li-search active" id="1" data-prev="" data-next="#2"></li>
+						<li class="li-search" id="2" data-prev="#1" data-next="#3"></li>
+						<li class="li-search" id="3" data-prev="#2" data-next="#4"></li>
+						<li class="li-search" id="4" data-prev="#3" data-next="#5"></li>
+						<li class="li-search" id="5" data-prev="#4" data-next="#6"></li>
+						<li class="li-search" id="6" data-prev="#5" data-next="#7"></li>
+						<li class="li-search" id="7" data-prev="#6" data-next="#8"></li>
+						<li class="li-search" id="8" data-prev="#7" data-next="#9"></li>
+						<li class="li-search" id="9" data-prev="#8" data-next="#10"></li>
+						<li class="li-search" id="10" data-prev="#9" data-next=""></li>
+					</ol>
+					<a href="#" value="yes" id="chooseYes" class="inputButton">
+					<p id="yesText">
+						מסכים
+					</p> </a>
+					<a href="#" value="no" id="chooseNo" class="inputButton">
+					<p id="noText">
+						לא מסכים
+					</p> </a>
+					<a href="#" value="don't know" id="chooseDontKnow" class="inputButton">
+					<p id="dontKnowText">
+						לא יודע
+					</p> </a>
+				</form>
+			</section>
+			<section id="partyPage">
+				<header id = "formHeader">
+					<h1>הבחירה הכלכלית</h1>
+					<h2>למי תצביעו בבחירות 2015? </h2>
+				</header>
 				<section id="titel">
-					<h3>בהתאם לדעותיך הכלכליות, המפלגה שהכי מתאימה לך היא: </h3>
+					<h3>בהתאם לתשובותיך, המפלגה שהכי מתאימה לך היא: </h3>
 				</section>
 				<div id="liquid1" class="liquid">
 					<span class="previous"> </span>
 					<div class="wrapper">
 						<ul>
 							<li>
-								<a href="#"><span class="p0"></span><img src="images/results_bg.png" /></a>
+								<a href="#"><span class="p0"></span><img src="images/results_bg.png" class="selected"/></a>
 							</li>
 							<li>
 								<a href="#"><span class="p1"></span><img src="images/results_bg.png" /></a>
@@ -178,94 +154,216 @@
 							<li>
 								<a href="#"><span class="p7"></span><img src="images/results_bg.png" /></a>
 							</li>
-							<li>
-								<a href="#"><span class="p8"></span><img src="images/results_bg.png" /></a>
-							</li>
-							<li>
-								<a href="#"><span class="p9"></span><img src="images/results_bg.png" /></a>
-							</li>
-							<li>
-								<a href="#"><span class="p10"></span><img src="images/results_bg.png" /></a>
-							</li>
-							<li>
-								<a href="#"><span class="p11"></span><img src="images/results_bg.png" /></a>
-							</li>
 						</ul>
 					</div>
 					<span class="next"> </span>
 				</div>
-				<iframe id="frame"></iframe>
+				<section id="choice">
+					<h1 id="subTitle"></h1>
+					<p id="percentOf"></p>
+					<h3 >התאמה עם דעותיך הכלכליות</h3>
+				</section>
+				<iframe id="frame" frameborder="0" allowfullscreen></iframe>
 				<main>
-					<h4> פעילות המפלגה על פי הכנסת ה-19:</h4>
-					<section id="activity" class="partySection">
-						<p id="presence"></p>
-						<p id="rules">
-							<b>הצעות חוק (ממוצע לחבר מפלגה): </b>
-							<br />
-							הצעות חוק בקידום המלגה: 306
-							<br />
-							הצעות חוק שעוברו: 22
-						</p>
-					</section>
-
 					<section id="questionnaire" class="partySection">
 						<h4>תגובת המפלגה:</h4>
 						<article class="answer1">
 							<p id="icon"></p>
 							<h5 >דיור</h5>
-							<h6>האם חוק מע״מ אפס יוביל לירידה במחירי הדיור?</h6>
+							<h6>צריך לחוקק חוק שיגביל את שכר המנהלים הבכירים בחברות ציבוריות בכל המשק</h6>
 							<section id="theAns">
 								<section>
-									אתם עניתם:
+									את/ה ענית:
 								</section>
-								<section id="like"></section>
-								<section>
-									הליכוד ענו :
-								</section>
-								<section id="dislike"></section>
+								<section id="myAnswer" class="myAnswer0"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer0"></section>
 							</section>
 							<p class="summerAns">
 								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
 							</p>
-							<a href="#">לתשובה המלאה</a>
+							<button id="button0">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns0">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
 						</article>
 						<article class="answer1">
 							<p id="icon"></p>
 							<h5 >פנסיה</h5>
-							<h6>האם חוק מע״מ אפס יוביל לירידה במחירי הדיור?</h6>
+							<h6>חייבים להגדיל את תקציב הביטחון בשנה הבאה במידה ניכרת</h6>
 							<section id="theAns">
 								<section>
-									אתם עניתם:
+									את/ה ענית:
 								</section>
-								<section id="like"></section>
-								<section>
-									הליכוד ענו :
-								</section>
-								<section id="dislike"></section>
+								<section id="myAnswer" class="myAnswer1"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer1"></section>
 							</section>
 							<p class="summerAns">
 								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
 							</p>
-							<a href="#">לתשובה המלאה</a>
+							<button id="button1">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns1">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
 						</article>
 						<article class="answer1">
 							<p id="icon"></p>
 							<h5 >תקציב ביטחון</h5>
-							<h6>האם חוק מע״מ אפס יוביל לירידה במחירי הדיור?</h6>
+							<h6>המדינה לא צריכה להציל מפעלים שנמצאים במצוקה</h6>
 							<section id="theAns">
 								<section>
-									אתם עניתם:
+									את/ה ענית:
 								</section>
-								<section id="like"></section>
-								<section>
-									הליכוד ענו :
-								</section>
-								<section id="dislike"></section>
+								<section id="myAnswer" class="myAnswer2"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer2"></section>
 							</section>
 							<p class="summerAns">
 								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
 							</p>
-							<a href="#">לתשובה המלאה</a>
+							<button id="button2">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns2">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
+						</article>
+						<article class="answer1">
+							<p id="icon"></p>
+							<h5 >בריאות</h5>
+							<h6>בגלל העלייה בתוחלת החיים, אין ברירה אלא להעלות את גיל הפרישה</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer3"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer3"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button3">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns3">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
+						</article>
+						<article class="answer1">
+							<p id="icon"></p>
+							<h5 >בריאות</h5>
+							<h6>המדינה צריכה להטיל מסים גבוהים יותר ולתת בתמורה שירותים ציבוריים נרחבים יותר</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer4"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer4"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button4">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns4">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
+						</article>
+						<article class="answer1">
+							<p id="icon"></p>
+							<h5 >בריאות</h5>
+							<h6>צריך לקצץ בפנסיה התקציבית בצה"ל ובשירות המדינה</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer5"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer5"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button5">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns5">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
+						</article>
+						<article class="answer1">
+							<p id="icon"></p>
+							<h5 >בריאות</h5>
+							<h6>הצעד הראשון שצריך לנקוט כדי לטפל בעוני הוא להגדיל את קצבאות הביטוח הלאומי</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer6"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer6"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button6">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns6">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
+						</article>
+						<article class="answer1">
+							<p id="icon"></p>
+							<h5 >בריאות</h5>
+							<h6>התערבות ממשלתית בשוק הגז הטבעי תבריח משקיעים זרים מישראל</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer7"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer7"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button7">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns7">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
+						</article>
+						<article class="answer1">
+							<p id="icon"></p>
+							<h5 >בריאות</h5>
+							<h6>צריך לאפשר לבתי החולים הציבוריים להציע ניתוחים פרטיים בתשלום</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer8"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer8"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button8">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns8">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
 						</article>
 						<article class="answer1">
 							<p id="icon"></p>
@@ -273,159 +371,97 @@
 							<h6>האם חוק מע״מ אפס יוביל לירידה במחירי הדיור?</h6>
 							<section id="theAns">
 								<section>
-									אתם עניתם:
+									את/ה ענית:
 								</section>
-								<section id="like"></section>
-								<section>
-									הליכוד ענו :
-								</section>
-								<section id="dislike"></section>
+								<section id="myAnswer" class="myAnswer9"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer9"></section>
 							</section>
 							<p class="summerAns">
 								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
 							</p>
-							<a href="#">לתשובה המלאה</a>
-						</article>
-						<article class="answer1">
-							<p id="icon"></p>
-							<h5 >בריאות</h5>
-							<h6>האם חוק מע״מ אפס יוביל לירידה במחירי הדיור?</h6>
-							<section id="theAns">
-								<section>
-									אתם עניתם:
-								</section>
-								<section id="like"></section>
-								<section>
-									הליכוד ענו :
-								</section>
-								<section id="dislike"></section>
-							</section>
-							<p class="summerAns">
-								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
-							</p>
-							<a href="#">לתשובה המלאה</a>
-						</article>
-						<article class="answer1">
-							<p id="icon"></p>
-							<h5 >בריאות</h5>
-							<h6>האם חוק מע״מ אפס יוביל לירידה במחירי הדיור?</h6>
-							<section id="theAns">
-								<section>
-									אתם עניתם:
-								</section>
-								<section id="like"></section>
-								<section>
-									הליכוד ענו :
-								</section>
-								<section id="dislike"></section>
-							</section>
-							<p class="summerAns">
-								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
-							</p>
-							<a href="#">לתשובה המלאה</a>
-						</article>
-						<article class="answer1">
-							<p id="icon"></p>
-							<h5 >בריאות</h5>
-							<h6>האם חוק מע״מ אפס יוביל לירידה במחירי הדיור?</h6>
-							<section id="theAns">
-								<section>
-									אתם עניתם:
-								</section>
-								<section id="like"></section>
-								<section>
-									הליכוד ענו :
-								</section>
-								<section id="dislike"></section>
-							</section>
-							<p class="summerAns">
-								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
-							</p>
-							<a href="#">לתשובה המלאה</a>
-						</article>
-						<article class="answer1">
-							<p id="icon"></p>
-							<h5 >בריאות</h5>
-							<h6>האם חוק מע״מ אפס יוביל לירידה במחירי הדיור?</h6>
-							<section id="theAns">
-								<section>
-									אתם עניתם:
-								</section>
-								<section id="like"></section>
-								<section>
-									הליכוד ענו :
-								</section>
-								<section id="dislike"></section>
-							</section>
-							<p class="summerAns">
-								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
-							</p>
-							<a href="#">לתשובה המלאה</a>
-						</article>
-						<article class="answer1">
-							<p id="icon"></p>
-							<h5 >בריאות</h5>
-							<h6>האם חוק מע״מ אפס יוביל לירידה במחירי הדיור?</h6>
-							<section id="theAns">
-								<section>
-									אתם עניתם:
-								</section>
-								<section id="like"></section>
-								<section>
-									הליכוד ענו :
-								</section>
-								<section id="dislike"></section>
-							</section>
-							<p class="summerAns">
-								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
-							</p>
-							<a href="#">לתשובה המלאה</a>
-						</article>
-						<article class="answer1">
-							<p id="icon"></p>
-							<h5 >בריאות</h5>
-							<h6>האם חוק מע״מ אפס יוביל לירידה במחירי הדיור?</h6>
-							<section id="theAns">
-								<section>
-									אתם עניתם:
-								</section>
-								<section id="like"></section>
-								<section>
-									הליכוד ענו :
-								</section>
-								<section id="dislike"></section>
-							</section>
-							<p class="summerAns">
-								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
-							</p>
-							<a href="#">לתשובה המלאה</a>
+							<button id="button9">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns9">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
 						</article>
 					</section>
-					<section id="bill" class="partySection">
-						<h4>הצעות חוק</h4>
-						<article class="offerbills">
-							<p id="sumBill">
-								215
-							</p>
-							<section></section>
-							<p>
-								חוקים שהוגשו
-							</p>
-						</article>
-						<article class="bills">
-							<p id="inBill">
-								62
-							</p>
-							<section></section>
-							<p>
-								חוקים שעברו
-							</p>
-						</article>
+					<section id="activity" class="partySection">
+						<h4>פעילות המפלגה:</h4>
+						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+							<ul>
+								<li>
+									<button id="committee">
+										נוכחות במשכן
+									</button>
+								</li>
+								<li>
+									<button id="residence">
+										נוכחות בוועדות
+									</button>
+								</li>
+								<li>
+									<button id="submission">
+										הצעות חוק שהוגשו
+									</button>
+								</li>
+								<li>
+									<button id="approve">
+										הצעות חוק שהועברו
+									</button>
+								</li>
+							</ul>
+						</nav>
+						<section id="partiesName">
+							<ul>
+								<li>
+									הליכוד
+								</li>
+								<li>
+									מרצ
+								</li>
+								<li>
+									הבית היהודי
+								</li>
+								<li>
+									יש עתיד
+								</li>
+								<li>
+									ישראל ביתנו
+								</li>
+								<li>
+									העבודה
+								</li>
+								<li>
+									חדש
+								</li>
+								<li>
+									כולנו
+								</li>
+							</ul>
+						</section>
+						<div id="deynmicActive">
+							<div id="14ProgressBar"></div>
+							<div id="20ProgressBar"></div>
+							<div id="17ProgressBar"></div>
+							<div id="15ProgressBar"></div>
+							<div id="26ProgressBar"></div>
+							<div id="16ProgressBar"></div>
+							<div id="22ProgressBar"></div>
+							<div id="noData">
+								מפלגה חדשה, אין נתונים!
+							</div>
+						</div>
 					</section>
 					<section id="list">
-						<h4>רשימת הליכוד לכנסת ה-20 </h4>
+						<h4>הרשימה לכנסת ה-20 </h4>
 						<ul id="imagesList">
-							<li></li>
+							<li>
+								<section></section>
+								<p></p>
+							</li>
 						</ul>
 					</section>
 				</main>

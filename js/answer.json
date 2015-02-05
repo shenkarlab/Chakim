@@ -90,24 +90,6 @@
 			"israelbitnu": "yes",
 			"mertz": "no",
 			"hadashe": "no"
-		}, {
-			"licod": "yes",
-			"avoda": "no",
-			"yeshAtid": "yes",
-			"abityehudi": "yes",
-			"culanu": "no",
-			"israelbitnu": "no",
-			"mertz": "yes",
-			"hadashe": "no"
-		}, {
-			"licod": "no",
-			"avoda": "yes",
-			"yeshAtid": "no",
-			"abityehudi": "no",
-			"culanu": "no",
-			"israelbitnu": "yes",
-			"mertz": "yes",
-			"hadashe": "no"
 		}
 	]
 }
