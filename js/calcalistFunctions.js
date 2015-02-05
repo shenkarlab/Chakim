@@ -174,7 +174,7 @@ $(function() {
 });
 
 function checkform(obj) {
-	checkAns();
+	//checkAns();
 	if (q_num >= 9) {
 		console.log("bigger then 9");
 		q_num = sectionId.substr(sectionId.length - 2, sectionId.length);
@@ -614,6 +614,9 @@ function daynamicFunc(num) {
 	$.each(parties, function(index, value) {
 		if (value.id == num && num != 10) {
 			$('#subTitle').html(value.name);
+			$('#choice').css({
+				"background-image" : "url('images/resultParty"+num+".jpg')"
+			});
 			for ( i = 0; i < 27; i++) {
 
 				if ($(("#" + i + "ProgressBar")).hasClass('selected1')) {
@@ -691,7 +694,6 @@ function daynamicFunc(num) {
 		}
 		if (num == 10) {
 			for ( i = 0; i < tempName.length; i++) {
-				debugger;
 				if (tempName[i].id == 10) {
 
 					$('#subTitle').html(tempName[i].name);
@@ -705,8 +707,7 @@ function daynamicFunc(num) {
 					//	$('#frame').src = "'"+tempName[i].video+"'";
 					console.log(tempName[i].video);
 					myAnsfunc();
-					for ( j = 0; j < 10; j++) {
-						debugger;
+					for ( j = 0; j < 10; j++) { debugger;
 						if (tempName[i].answers[j] == "yes")
 							$('#theAns .partyAnswer' + j).css({
 								"backgroundImage" : "url('images/smalLike.jpg')"
@@ -766,7 +767,8 @@ function daynamicFunc(num) {
 	 $('#presence').append(sHTML);
 	 */
 }
-var u=0;
+
+var u = 0;
 function myAnsfunc() {
 	for ( u = 0; u < 10; u++) {
 		if (answers[u] == "yes")
