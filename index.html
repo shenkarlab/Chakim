@@ -1,245 +1,466 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-"http://www.w3.org/TR/html4/loose.dtd">
-<html dir="rtl">
+<!DOCTYPE HTML>
+<html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="description" content="שאלון כלכליסט"/>
+		<link type="text/css" rel="stylesheet" href="style/liquidcarousel.css" />
+		<link type="text/css" rel="stylesheet" href="style/animate.css" />
+		<link type="text/css" rel="stylesheet" href="style/style.css">
+		<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
 		<script src="js/jquery-1.11.2.min.js"></script>
+		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/jquery.liquidcarousel.pack.js"></script>
 		<script src="js/calcalistFunctions.js"></script>
-		<link rel="stylesheet" type="text/css" href="style/style.css">
-		<title>שאלון</title>
+		<title>שאלון כלכליסט</title>
 	</head>
 	<body>
 		<section id="container">
 			<section id="formContainer">
-				<h1>במי אתם הייתם בוחרים?</h1>
+				<header id = "formHeader">
+					<h1>הבחירה הכלכלית</h1>
+					<h2>למי תצביעו בבחירות 2015? </h2>
+				</header>
 				<form name="message" method="post" onsubmit="return checkform(this)">
-					<section class="questions" id="Question1">
-						<h3>האם תקדם את תוכנית מע״מ 0 על דירות לזוגות צעירים?</h3>
-						<br />
-						<br />
-						<br />
-						<!-- <a href="#chooseYes" id="chooseYes" class="inputButton">כן</a>
-						<a href="#chooseNo" id="chooseNo" class="inputButton">לא</a>
-						<a href="#chooseDontKnow" id="chooseDontKnow" class="inputButton">לא יודע</a> -->
-						<input type="radio" name="question1choices" value="yes">
-						כן
-						<input type="radio" name="question1choices" value="no">
-						לא
-						<input type="radio" name="question1choices" value="i don't know">
-						לא יודע
-						<br>
-					</section>
-					<section class="questions" id="Question2">
-						<h3>האם תקדם את המלצות ועדת גרמן להגבלת מערכת הבריאות הפרטית ולחיזוק מערכת הבריאות הציבורית? האם את/ה בעד הכנסת שר״פ למערכת הציבורית?</h3>
-						<br />
-						<br />
-						<br />
-						<input type="radio" name="question2choices" value="yes">
-						כן
-						<input type="radio" name="question2choices" value="no">
-						לא
-						<input type="radio" name="question2choices" value="i don't know">
-						לא יודע
-						<br>
-					</section>
-					<section class="questions" id="Question3">
-						<h3>האם אתה תומך בהגבלת שכר הבכירים במשק? האם תקדם את חוק הגבלת שכר הבכירים בגופים פיננסיים עד 3.5 מיליון שקל בשנה?</h3>
-						<br />
-						<br />
-						<br />
-						<input type="radio" name="question3choices" value="yes">
-						כן
-						<input type="radio" name="question3choices" value="no">
-						לא
-						<input type="radio" name="question3choices" value="i don't know">
-						לא יודע
-						<br>
-					</section>
-					<section class="questions" id="Question4">
-						<h3>מה עמדתך ביחס לתקציב הביטחון? במערכת הביטחון דורשים תוספת של 11 מיליארד שקל לשנת 2015 ועוד מיליארדים בשנים הבאות, ובאוצר מוכנים להסתפק רק ב-6 מיליארד ודורשים רפורמה בפנסיה הצבאית. במה תבחר?</h3>
-						<br />
-						<br />
-						<br />
-						<input type="radio" name="question4choices" value="yes">
-						כן
-						<input type="radio" name="question4choices" value="no">
-						לא
-						<input type="radio" name="question4choices" value="i don't know">
-						לא יודע
-						<br>
-					</section>
-					<section class="questions" id="Question5">
-						<h3>האם לדעתכם ניתן לקצץ בתקציב הביטחון שלא באמצעות התייעלות פנימיתמה הבעיה הכלכלית הדחופה ביותר של הממשלה הבאה לטפל בה?</h3>
-						<br />
-						<br />
-						<br />
-						<input type="radio" name="question5choices" value="yes">
-						כן
-						<input type="radio" name="question5choices" value="no">
-						לא
-						<input type="radio" name="question5choices" value="i don't know">
-						לא יודע
-						<br>
-					</section>
-					<section class="questions" id="Question6">
-						<h3>מהו האתגר החשוב ביותר לטיפול בשוק העבודה וכיצד תטפל בו?</h3>
-						<br />
-						<br />
-						<br />
-						<input type="radio" name="question6choices" value="yes">
-						כן
-						<input type="radio" name="question6choices" value="no">
-						לא
-						<input type="radio" name="question6choices" value="i don't know">
-						לא יודע
-						<br>
-					</section>
-					<section class="questions" id="Question7">
-						<h3>האם גיל הפרישה במשק הוא מיטבי? אם לא, כיצד ולמה תשנה אותו?</h3>
-						<br />
-						<br />
-						<br />
-						<input type="radio" name="question7choices" value="yes">
-						כן
-						<input type="radio" name="question7choices" value="no">
-						לא
-						<input type="radio" name="question7choices" value="i don't know">
-						לא יודע
-						<br>
-					</section>
-					<section class="questions" id="Question8">
-						<h3>האם יש מקום לרפורמה בפנסיה התקציבית?</h3>
-						<br />
-						<br />
-						<br />
-						<input type="radio" name="question8choices" value="yes">
-						כן
-						<input type="radio" name="question8choices" value="no">
-						לא
-						<input type="radio" name="question8choices" value="i don't know">
-						לא יודע
-						<br>
-					</section>
-					<section class="questions" id="Question9">
-						<h3>איך מתמודדים עם האיומים על הפנסיה של מעמד הביניים?</h3>
-						<br />
-						<br />
-						<br />
-						<input type="radio" name="question9choices" value="yes">
-						כן
-						<input type="radio" name="question9choices" value="no">
-						לא
-						<input type="radio" name="question9choices" value="i don't know">
-						לא יודע
-						<br>
-					</section>
-					<section class="questions" id="Question10">
-						<h3>האם בכוונתכם לשנות את מבנה ההעסקה במגזר הציבורי?</h3>
-						<br />
-						<br />
-						<br />
-						<input type="radio" name="question10choices" value="yes">
-						כן
-						<input type="radio" name="question10choices" value="no">
-						לא
-						<input type="radio" name="question10choices" value="i don't know">
-						לא יודע
-						<br>
-					</section>
-					<section class="questions" id="Question11">
-						<h3>האם תתמכו בחוק לצמצום הריכוזיות תפעלו לקידומו?</h3>
-						<br />
-						<br />
-						<br />
-						<input type="radio" name="question11choices" value="yes">
-						כן
-						<input type="radio" name="question11choices" value="no">
-						לא
-						<input type="radio" name="question11choices" value="i don't know">
-						לא יודע
-						<br>
-					</section>
-					<section class="questions" id="Question12">
-						<h3>האם התיקונים האחרונים בחוק ירסנו  שכר הבכירים?</h3>
-						<br />
-						<br />
-						<br />
-						<input type="radio" name="question12choices" value="yes">
-						כן
-						<input type="radio" name="question12choices" value="no">
-						לא
-						<input type="radio" name="question12choices" value="i don't know">
-						לא יודע
-						<br>
-					</section>
-					<input id="nextQuestionButton" type="submit" value="לשאלה הבאה" />
+					<div id="questionsList">
+						<section class="questions animated" id="fisrtQuestion">
+							<section class="questionConcept" id="Questionconcept1"></section>
+							<h3>יוקר המחייה</h3>
+							<p>
+								צריך להוריד את המע"מ על מוצרי מזון בסיסיים
+							</p>
+						</section>
+						<section class="questions animated" id="secondQuestion">
+							<section class="questionConcept"  id="Questionconcept2"></section>
+							<h3>תקציב הביטחון</h3>
+							<p>
+								חייבים להגדיל את תקציב הביטחון בשנה הבאה במידה ניכרת, גם אם הדבר בא על חשבון תקציבים אזרחיים
+							</p>
+						</section>
+						<section class="questions animated" id="thirdQuestion">
+							<section class="questionConcept" id="Questionconcept3"></section>
+							<h3>רפואה</h3>
+							<p>
+								צריך לאפשר לבתי החולים הציבוריים להציע ניתוחים פרטיים בתשלום כדי להזרים כסף למערכת הבריאות הציבורית
+							</p>
+						</section>
+						<section class="questions animated" id="forthQuestion">
+							<section class="questionConcept" id="Questionconcept4"></section>
+							<h3>שכר בכירים במשק</h3>
+							<p>
+								צריך לחוקק חוק שיגביל את שכר המנהלים הבכירים בחברות ציבוריות בכל המשק
+							</p>
+						</section>
+						<section class="questions animated" id="fifthQuestion">
+							<section class="questionConcept" id="Questionconcept5"></section>
+							<h3>גיל פרישה</h3>
+							<p>
+								בגלל העלייה בתוחלת החיים, אין ברירה אלא להעלות את גיל הפרישה
+							</p>
+						</section>
+						<section class="questions animated" id="sixQuestion">
+							<section class="questionConcept" id="Questionconcept6"></section>
+							<h3>קצבאות זקנה</h3>
+							<p>
+								הצעד הראשון שצריך לנקוט כדי לטפל בעוני הוא להגדיל את קצבאות הביטוח הלאומי
+							</p>
+						</section>
+						<section class="questions animated" id="seventhQuestion">
+							<section class="questionConcept" id="Questionconcept7"></section>
+							<h3>פנסיה</h3>
+							<p>
+								צריך לקצץ בפנסיה התקציבית בצה"ל ובשירות המדינה
+							</p>
+						</section>
+						<section class="questions animated" id="eightQuestion">
+							<section class="questionConcept" id="Questionconcept8"></section>
+							<h3>גרעון במשק</h3>
+							<p>
+								המדינה צריכה להטיל מסים גבוהים יותר ולתת בתמורה שירותים ציבוריים נרחבים יותר
+							</p>
+						</section>
+						<section class="questions animated" id="nineQuestion">
+							<section class="questionConcept" id="Questionconcept9"></section>
+							<h3>גז</h3>
+							<p>
+								התערבות ממשלתית בשוק הגז הטבעי תבריח משקיעים זרים מישראל
+							</p>
+						</section>
+						<section class="questions animated" id="welveQestion">
+							<section class="questionConcept" id="Questionconcept12"></section>
+							<h3>יוקר המחייה</h3>
+							<p>
+								המדינה לא צריכה להציל מפעלים שנמצאים במצוקה. אין סיבה שכספי המסים של כולנו יסבסדו עסקים לא יעילים
+							</p>
+						</section>						
+					</div>
+						
+					<ol class="ol-search">
+						<li class="li-search active" id="1" data-prev="" data-next="#2"></li>
+						<li class="li-search" id="2" data-prev="#1" data-next="#3"></li>
+						<li class="li-search" id="3" data-prev="#2" data-next="#4"></li>
+						<li class="li-search" id="4" data-prev="#3" data-next="#5"></li>
+						<li class="li-search" id="5" data-prev="#4" data-next="#6"></li>
+						<li class="li-search" id="6" data-prev="#5" data-next="#7"></li>
+						<li class="li-search" id="7" data-prev="#6" data-next="#8"></li>
+						<li class="li-search" id="8" data-prev="#7" data-next="#9"></li>
+						<li class="li-search" id="9" data-prev="#8" data-next="#10"></li>
+						<li class="li-search" id="10" data-prev="#9" data-next=""></li>
+					</ol>
+					<div id="chooses">
+						<a href="javascript:void(0);" value="yes" id="chooseYes" class="inputButton">
+							<span id="yesText">מסכים</span>
+						</a>
+						<a href="javascript:void(0);" value="no" id="chooseNo" class="inputButton">
+							<span id="noText">לא מסכים</span>
+						</a>
+						<a href="javascript:void(0);" value="don't know" id="chooseDontKnow" class="inputButton">
+							<span id="dontKnowText">לא יודע</span>
+						</a>						
+					</div>
 				</form>
 			</section>
 			<section id="partyPage">
-				<header>
-					<h1>הכי הגיוני שתצביע:</h1>
-					<div id="pic"></div>
-					<h3 id="subTitle"> הבית היהודי!</h3>
+				<header id = "formHeader">
+					<h1>הבחירה הכלכלית</h1>
+					<h2>למי תצביעו בבחירות 2015? </h2>
 				</header>
+				<section id="titel">
+					<h3>בהתאם לתשובותיך, המפלגה שהכי מתאימה לך היא: </h3>
+				</section>
+				<div id="liquid1" class="liquid">
+					<span class="previous"> </span>
+					<div class="wrapper">
+						<ul>
+							<li>
+								<a href="#"><span class="p0"></span><img src="images/results_bg.png" class="selected"/></a>
+							</li>
+							<li>
+								<a href="#"><span class="p1"></span><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><span class="p2"></span><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><span class="p3"></span><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><span class="p4"></span><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><span class="p5"></span><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><span class="p6"></span><img src="images/results_bg.png" /></a>
+							</li>
+							<li>
+								<a href="#"><span class="p7"></span><img src="images/results_bg.png" /></a>
+							</li>
+						</ul>
+					</div>
+					<span class="next"> </span>
+				</div>
+				<section id="choice">
+					<div id="logo"></div>
+					<h1 id="subTitle"></h1>
+					<p id="percentOf"></p>
+					<h3 >התאמה עם דעותיך הכלכליות</h3>
+				</section>
+				<iframe id="frame" frameborder="0" allowfullscreen></iframe>
 				<main>
-					<h4> פעילות המפלגה על פי הכנסת ה-19:</h4>
-					<section id="activity" class="partySection">
-						<p id="presence">
-							<b>נוכחות </b>
-							<br />
-							נוכחות במשכן: 48%
-							<br />
-							נוכחות בוועדות: 25%
-						</p>
-						<p id="rules">
-							<b>הצעות חוק (ממוצע לחבר מפלגה): </b>
-							<br />
-							הצעות חוק בקידום המלגה: 306
-							<br />
-							הצעות חוק שעוברו: 22
-						</p>
-					</section>
-					<h4> תשובות המפלגה שלך :</h4>
 					<section id="questionnaire" class="partySection">
-						<p id="ques">
-							1	האם תקדם את תוכנית מע״מ 0% על דירות לזוגות צעירים?
-							<br />
-							2	האם תקדם את המלצות ועדת גרמן להגבלת מערכת הבריאות הפרטית ולחיזוק מערכת הבריאות הציבורית? האם את/ה בעד הכנסת שר״פ למערכת הציבורית?	האם אתה בעד שר״פ במערכת הבריאות הציבורית?
-							<br />
-							3	האם אתה תומך בהגבלת שכר הבכירים במשק? האם תקדם את חוק הגבלת שכר הבכירים בגופים פיננסיים עד 3.5 מיליון שקל בשנה?	האם אתה תומך בהגבלת שכר הבכירים במשק?
-							<br />
-							4	מה עמדתך ביחס לתקציב הביטחון? במערכת הביטחון דורשים תוספת של 11 מיליארד שקל לשנת 2015 ועוד מיליארדים בשנים הבאות, ובאוצר מוכנים להסתפק רק ב-6 מיליארד ודורשים רפורמה בפנסיה הצבאית. במה תבחר?	האם אתה תומך בהרחבת תקציב הביטחון בשנה הבאה במידה ניכרת, גם אם על חשבון התקציבים האזרחיים?
-							<br />
-							5	מה הבעיה הכלכלית הדחופה ביותר של הממשלה הבאה לטפל בה?
-							<br />
-							6	מהו האתגר החשוב ביותר לטיפול בשוק העבודה וכיצד תטפל בו?
-							<br />
-							7	האם גיל הפרישה במשק הוא מיטבי? אם לא, כיצד ולמה תשנה אותו?	האם צריך להעלות את גיל הפרישה לנשים?
-						</p>
-						<p id="answer">
-							1 כן
-							<br />
-							2 לא
-							<br />
-							3 לא יודע
-							<br />
-							4 כן
-							<br />
-							5 לא
-							<br />
-							6 כן
-							<br />
-							7 לא יודע
-						</p>
+						<h4>תגובת המפלגה</h4>
+						<article id="artAns" class="answer0">
+							<p id="icon"></p>
+							<h5 >דיור</h5>
+							<h6>צריך לחוקק חוק שיגביל את שכר המנהלים הבכירים בחברות ציבוריות בכל המשק</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer0"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer0"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button0">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns0">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
+						</article>
+						<article id="artAns" class="answer1">
+							<p id="icon"></p>
+							<h5 >פנסיה</h5>
+							<h6>חייבים להגדיל את תקציב הביטחון בשנה הבאה במידה ניכרת</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer1"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer1"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button1">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns1">
+							השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+						</div>
+						</article>
+						<article id="artAns" class="answer2">
+							<p id="icon"></p>
+							<h5 >תקציב ביטחון</h5>
+							<h6>המדינה לא צריכה להציל מפעלים שנמצאים במצוקה</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer2"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer2"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button2">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns2">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
+						</article>
+						<article id="artAns" class="answer3">
+							<p id="icon"></p>
+							<h5 >בריאות</h5>
+							<h6>בגלל העלייה בתוחלת החיים, אין ברירה אלא להעלות את גיל הפרישה</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer3"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer3"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button3">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns3">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
+						</article>
+						<article id="artAns" class="answer4">
+							<p id="icon"></p>
+							<h5 >בריאות</h5>
+							<h6>המדינה צריכה להטיל מסים גבוהים יותר ולתת בתמורה שירותים ציבוריים נרחבים יותר</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer4"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer4"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button4">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns4">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
+						</article>
+						<article id="artAns" class="answer5">
+							<p id="icon"></p>
+							<h5 >בריאות</h5>
+							<h6>צריך לקצץ בפנסיה התקציבית בצה"ל ובשירות המדינה</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer5"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer5"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button5">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns5">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
+						</article>
+						<article id="artAns" class="answer6">
+							<p id="icon"></p>
+							<h5 >בריאות</h5>
+							<h6>הצעד הראשון שצריך לנקוט כדי לטפל בעוני הוא להגדיל את קצבאות הביטוח הלאומי</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer6"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer6"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button6">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns6">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
+						</article>
+						<article id="artAns" class="answer7">
+							<p id="icon"></p>
+							<h5 >בריאות</h5>
+							<h6>התערבות ממשלתית בשוק הגז הטבעי תבריח משקיעים זרים מישראל</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer7"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer7"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button7">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns7">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
+						</article>
+						<article id="artAns" class="answer8">
+							<p id="icon"></p>
+							<h5 >בריאות</h5>
+							<h6>צריך לאפשר לבתי החולים הציבוריים להציע ניתוחים פרטיים בתשלום</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer8"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer8"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button8">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns8">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
+						</article>
+						<article id="artAns" class="answer9">
+							<p id="icon"></p>
+							<h5 >בריאות</h5>
+							<h6>האם חוק מע״מ אפס יוביל לירידה במחירי הדיור?</h6>
+							<section id="theAns">
+								<section>
+									את/ה ענית:
+								</section>
+								<section id="myAnswer" class="myAnswer9"></section>
+								<section class="partyNameTrue"></section>
+								<section id="partyAnswer" class="partyAnswer9"></section>
+							</section>
+							<p class="summerAns">
+								צריך לקדם את חוק מעמ האפס בכנסת הבאה כדי לעזור לצעירים לרכוש דירה.
+							</p>
+							<button id="button9">
+								לתשובה המלאה
+							</button>
+							<div id="fullAnswers" class="fullAns9">
+								השריף מתכנן לפתוח במערך של ארבעה שחקני הגנה ושני קשרים אחוריים, כשיורגן קולין יפנה את מקומו במרכז ההגנה ובמקומו יפתח מתן אוחיון. מוחמד אבו אל היג'א, שלא שותף מול הפועל פתח תקווה, ישוב לעמדת המגן הימני.
+							</div>
+						</article>
 					</section>
-					<section id="jew" class="partySection">
-						<article class="pichome1"></article>
-						<article class="pichome2"></article>
-						<article class="pichome3"></article>
-						<article class="pichome4"></article>
-						<article class="pichome5"></article>
-						<article class="pichome6"></article>
-						<article class="pichome7"></article>
+					<section id="activity" class="partySection">
+						<h4>פעילות המפלגה</h4>
+						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
+							<ul>
+								<li>
+									<button id="committee">
+										נוכחות במשכן
+									</button>
+								</li>
+								<li>
+									<button id="residence">
+										נוכחות בוועדות
+									</button>
+								</li>
+								<li>
+									<button id="submission">
+										הצעות חוק שהוגשו
+									</button>
+								</li>
+								<li>
+									<button id="approve">
+										הצעות חוק שהועברו
+									</button>
+								</li>
+							</ul>
+						</nav>
+						<section id="partiesName">
+							<ul>
+								<li>
+									הליכוד
+								</li>
+								<li>
+									מרצ
+								</li>
+								<li>
+									הבית היהודי
+								</li>
+								<li>
+									יש עתיד
+								</li>
+								<li>
+									ישראל ביתנו
+								</li>
+								<li>
+									העבודה
+								</li>
+								<li>
+									חדש
+								</li>
+								<li>
+									כולנו
+								</li>
+							</ul>
+						</section>
+						<div id="deynmicActive">
+							<div class="progressBar" id="14ProgressBar"></div>
+							<div class="progressBar" id="20ProgressBar"></div>
+							<div class="progressBar" id="17ProgressBar"></div>
+							<div class="progressBar" id="15ProgressBar"></div>
+							<div class="progressBar" id="26ProgressBar"></div>
+							<div class="progressBar" id="16ProgressBar"></div>
+							<div class="progressBar" id="22ProgressBar"></div>
+							<div id="noData">
+								מפלגה חדשה, אין נתונים!
+							</div>
+						</div>
+					</section>
+					<section id="list">
+						<h4>הרשימה לכנסת ה-20 </h4>
+						<ul id="imagesList">
+						</ul>
 					</section>
 				</main>
 			</section>
