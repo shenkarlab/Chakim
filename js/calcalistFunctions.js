@@ -215,7 +215,7 @@ $(function() {
 });
 //compare form results with party results
 function checkform(obj) {
-	checkAns();
+	// checkAns();
 	if (q_num >= 9) {
 		q_num = sectionId.substr(sectionId.length - 2, sectionId.length);
 		console.log(q_num);
