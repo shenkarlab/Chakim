@@ -7,7 +7,8 @@
  * http://www.gnu.org/licenses/gpl.html
  *
  */
-
+var _left= 0;
+var _right=48;
 (function($){
 	$.fn.liquidcarousel = function(options) {
 
@@ -29,6 +30,7 @@
 			$('> .wrapper', divobj).css('float', 'left');
 
 			$('> .wrapper > ul', divobj).height(options.height);
+			
 			$('> .wrapper > ul', divobj).css('float', 'left');
 			$('> .wrapper > ul', divobj).css('margin', '0');
 			$('> .wrapper > ul', divobj).css('padding', '0');
@@ -82,8 +84,8 @@
 						additionalmargin = Math.floor((divwidth - (totallis * liwidth))/totallis);
 						halfadditionalmargin = Math.floor(additionalmargin/2);
 						totalwidth = liwidth + additionalmargin;
-						$('> .wrapper > ul > li', divobj).css('marginRight', originalmarginright + halfadditionalmargin);
-						$('> .wrapper > ul > li', divobj).css('marginLeft', originalmarginleft + halfadditionalmargin);
+						$('> .wrapper > ul > li', divobj).css('marginRight', originalmarginright + halfadditionalmargin );
+						$('> .wrapper > ul > li', divobj).css('marginLeft', originalmarginleft + halfadditionalmargin );
 					}
 					$('> .wrapper', divobj).width(totallis * totalwidth);
 					$('> ul', divobj).width(totallis * totalwidth);
@@ -98,7 +100,8 @@
 			});
 
 			$('> .next', divobj).click(function(){
-
+				//_right=48;
+				$('.wrapper > ul').css('width','');
 				if (totallis <= visiblelis) {
 					currentposition = 0;
 				} else if ((currentposition + (visiblelis*2)) < totallis) {
@@ -107,19 +110,23 @@
 					currentposition = totallis - visiblelis;
 				}
 				$('> .wrapper > ul', divobj).stop();
-				$('> .wrapper > ul', divobj).animate({'marginLeft': -(currentposition * totalwidth)}, options.duration);
+				$('> .wrapper > ul', divobj).animate({'marginLeft': -(currentposition * totalwidth)+_right}, options.duration);
+				
 			});
 
 			$('> .previous', divobj).click(function(){
+				_left=0;
+				$('.wrapper > ul').css('width','890px');
 				if ((currentposition - visiblelis) > 0) {
 					currentposition -= visiblelis;
 				} else if ((currentposition - (visiblelis*2)) <= 0) {
 					currentposition = 0;
 				}
 				$('> .wrapper > ul', divobj).stop();
-				$('> .wrapper > ul', divobj).animate({'marginLeft': -(currentposition * totalwidth)}, options.duration);
+				$('> .wrapper > ul', divobj).animate({'marginLeft': -(currentposition * totalwidth)+_left}, options.duration);
+				
 			});
-
+			
 			$('> .next', divobj).dblclick(function(e){
 				e.preventDefault();
 				clearSelection();
