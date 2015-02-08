@@ -324,7 +324,7 @@ header > h2 {
 	/* width: 114%; */
 	font-size: 20px;
 	height: 56px;
-	font-family: shual-bold;
+	font-family: shual-regular;
 }
 #deynmicActive {
 	float: right;
@@ -339,7 +339,7 @@ header > h2 {
 	height: 20px !important;
 	color: white !important;
 	font-family: shual-light !important;
-	font-size: 20px !important;
+	font-size: 18px !important;
 }
 
 .progressBar, .ui-progressbar, .ui-widget, .ui-widget-content, .ui-corner-all {
@@ -431,7 +431,7 @@ h4 {
 	float: right;
 	width: 100%;
 	text-align: inherit;
-	height: 1525px;
+	height: 10%;
 	background-color: #ffffff;
 	border-bottom: 20px;
 	border-bottom-color: #eae9e4;
@@ -461,7 +461,7 @@ h4 {
 	margin-top: 25px;
 	float: initial;
 	font-size: 36px;
-	font-family: shual-bold;
+	font-family: shual-regular;
 }
 #questionnaire > article > a {
 	float: right;
@@ -478,7 +478,7 @@ h4 {
 h5 {
 	font-size: larger;
 	margin: 0%;
-	color: #0089d0;
+	color: #454545;
 	right: 2%;
 	top: 31px;
 	position: relative;
@@ -487,14 +487,14 @@ h5 {
 	font-size: 24px;
 }
 h6 {
-	font-size: initial;
 	float: right;
 	position: relative;
 	top: 13px;
 	right: 3%;
-	font-family: shaul-bold;
+	font-family: shual-regular;
 	font-size: 18px;
 	font-weight: 500;
+	color: #454545;
 }
 #theAns {
 	float: right;
@@ -505,26 +505,28 @@ h6 {
 	position: relative;
 	border-top-color: #eae9e4;
 	border-top-style: solid;
-	border-top-width: 2px;
+	border-top-width: 1px;
 	border-bottom-color: #eae9e4;
 	border-bottom-style: solid;
-	border-bottom-width: 2px;
+	border-bottom-width: 1px;
 }
 #theAns > section {
 	margin-left: 2%;
 	float: right;
 	font-family: shual-regular;
 	font-size: 14px;
-	margin-top : 7px;
-	margin-bottom : 7px;
+	margin-top: 7px;
 }
+
 .summerAns {
 	float: right;
 	top: 42px;
 	position: relative;
 	margin-top: 2%;
-	font-family: shual-regular;
+	margin-right: 4%;
+	font-family: shual-light;
 	font-size: 18px;
+	color: #454545;
 }
 #fullAnswers {
 	width: 100%;
@@ -647,6 +649,17 @@ h6 {
 	font-size: 22px;
 	color: #4C4C4C;
 }
+
+#activity > p {
+	font-family: shual-regular;
+	font-size: 18px;
+	color: #454545;
+	margin-top: 80px;
+	margin-right: 24px;
+	text-align: right;
+	margin-left: 40px;
+	margin-bottom: 20px;
+}
 article {
 	width: 77px;
 	height: 110px;
@@ -679,7 +692,7 @@ article {
 	float: initial;
 	padding-right: 5%;
 	font-size: 36px;
-	font-family: shual-bold;
+	font-family: shual-regular;
 }
 #list > ul > li {
 	float: right;
@@ -724,11 +737,11 @@ article {
 	float: right;
 }
 #activity > h4 {
-	margin: 3% 0% 7%;
+	margin-right: 24px;
+	margin-top: 20px;
 	float: right;
-	padding-right: 5%;
 	font-size: 36px;
-	font-family: shual-bold;
+	font-family: shual-regular;
 }
 /*navigation results css*/
 .p {
@@ -871,9 +884,9 @@ pre, code {
 #noData {
 	float: right;
 	position: absolute;
-	top: 3260px;
+	top: 3264px;
 	left: 62%;
-	font-family: shual-bold;
+	font-family: shual-regular;
 	font-size: 20px;
 	color: #4c4c4c;
 }
