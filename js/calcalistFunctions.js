@@ -215,7 +215,7 @@ $(function() {
 });
 //compare form results with party results
 function checkform(obj) {
-	// checkAns();
+	checkAns();
 	if (q_num >= 9) {
 		q_num = sectionId.substr(sectionId.length - 2, sectionId.length);
 		console.log(q_num);
@@ -327,7 +327,8 @@ function checkAns() {
 		}
 		//update full partys answer
 		$(".answer0 #button0").click(function() {
-			$("div.fullAns0").slideToggle("slide");
+			$("div.fullAns0").slideToggle("fast");
+			// $(this).next().slideToggle("fast");
 			if ($('.answer0').height() == "240")
 				$('.answer0').css({
 					"height" : "480px "
@@ -338,7 +339,7 @@ function checkAns() {
 				});
 		});
 		$(".answer1 #button1").click(function() {
-			$("div.fullAns1").slideToggle("");
+			$("div.fullAns1").slideToggle("fast");
 			if ($('.answer1').height() == "240")
 				$('.answer1').css({
 					"height" : "480px "
@@ -349,7 +350,7 @@ function checkAns() {
 				});
 		});
 		$(".answer2 #button2").click(function() {
-			$("div.fullAns2").slideToggle("");
+			$("div.fullAns2").slideToggle("fast");
 			if ($('.answer2').height() == "240")
 				$('.answer2').css({
 					"height" : "480px "
@@ -360,7 +361,7 @@ function checkAns() {
 				});
 		});
 		$(".answer3 #button3").click(function() {
-			$("div.fullAns3").slideToggle("");
+			$("div.fullAns3").slideToggle("fast");
 			if ($('.answer3').height() == "240") {
 				$('.answer3').css({
 					"height" : "480px"
@@ -372,7 +373,7 @@ function checkAns() {
 			}
 		});
 		$(".answer4 #button4").click(function() {
-			$("div.fullAns4").slideToggle("");
+			$("div.fullAns4").slideToggle("fast");
 			if ($('.answer4').height() == "240")
 				$('.answer4').css({
 					"height" : "480px "
@@ -383,7 +384,7 @@ function checkAns() {
 				});
 		});
 		$(".answer5 #button5").click(function() {
-			$("div.fullAns5").slideToggle("");
+			$("div.fullAns5").slideToggle("fast");
 			if ($('.answer5').height() == "240")
 				$('.answer5').css({
 					"height" : "480px "
@@ -394,7 +395,7 @@ function checkAns() {
 				});
 		});
 		$(".answer6 #button6").click(function() {
-			$("div.fullAns6").slideToggle("");
+			$("div.fullAns6").slideToggle("fast");
 			if ($('.answer6').height() == "240")
 				$('.answer6').css({
 					"height" : "480px "
@@ -405,7 +406,7 @@ function checkAns() {
 				});
 		});
 		$(".answer7 #button7").click(function() {
-			$("div.fullAns7").slideToggle("");
+			$("div.fullAns7").slideToggle("fast");
 			if ($('.answer7').height() == "240")
 				$('.answer7').css({
 					"height" : "480px "
@@ -416,7 +417,7 @@ function checkAns() {
 				});
 		});
 		$(".answer8 #button8").click(function() {
-			$("div.fullAns8").slideToggle("");
+			$("div.fullAns8").slideToggle("fast");
 			if ($('.answer8').height() == "240")
 				$('.answer8').css({
 					"height" : "480px "
@@ -427,7 +428,7 @@ function checkAns() {
 				});
 		});
 		$(".answer9 #button9").click(function() {
-			$("div.fullAns9").slideToggle("");
+			$("div.fullAns9").slideToggle("fast");
 			if ($('.answer9').height() == "240")
 				$('.answer9').css({
 					"height" : "480px "

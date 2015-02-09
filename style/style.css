@@ -74,19 +74,38 @@ form {
 }
 
 .questionConcept {
-	height: 211px;
+	height: 220px;
+	width: 500px;
+	position: relative;
 	margin-top: 49px;
 	background-repeat: no-repeat;
-	margin-left: 20%;
+	left: -20%;
 }
 
 #Questionconcept1 {
-	background-image: url("../images/bg_yokerHamihya.png");
+	background-image: url("");
 }
 
 #Questionconcept2 {
-	background-image: url("../images/bg_taktsivHabitahon.png");
+	background-image: url("../images/Art_products.png");
 }
+
+#Questionconcept3 {
+	background-image: url("../images/Art_security.png");
+}
+
+#Questionconcept4 {
+	background-image: url("../images/Art_factory.png");
+}
+
+#Questionconcept5 {
+	background-image: url("../images/Art_city.png");
+}
+
+#Questionconcept12 {
+	background-image: url("../images/Art_medical.png");
+}
+
 .questions > h3 {
 	font-family: shual-Regular;
 	margin-top: 50px;
@@ -263,6 +282,14 @@ header > h2 {
 	color: #59a7b3;
 	padding-top: 30px;
 	padding-right: 2%;
+}
+
+#navBorder {
+	border-bottom: 1px solid grey;
+	margin-top: 45px;
+	position: absolute;
+	z-index: 10;
+	width: 100%;
 }
 
 .ui-progressbar {
@@ -856,7 +883,7 @@ pre, code {
 .horizontal-nav ul {
 	float: right;
 	text-align: center;
-	border-bottom: 1px solid grey;
+	/*border-bottom: 1px solid grey;*/
 	text-decoration: none;
 	list-style: none;
 	width: 100%;
@@ -874,7 +901,8 @@ pre, code {
 .horizontal-nav ul li button {
 	display: block;
 	width: 100%;
-	padding: 10px 20px;
+	padding: 19px 1px;
+	background-image: url("../images/mertzActivityMenu.png");
 	color: #000000;
 	border: 1px solid rgba(255,255,255, 0.25);
 	background: #ffffff;
@@ -884,8 +912,10 @@ pre, code {
 .horizontal-nav ul li:first-child a {
 	border-left: 0 none;
 }
+
+/*hover on activityMenu*/
 .horizontal-nav ul li button:hover {
-	background: #A6A6A6;
+	background: transparent;
 	color: #ffffff;
 }
 /*horizontal-nav ul li button:focus {
@@ -899,9 +929,9 @@ pre, code {
 }
 #noData {
 	float: right;
-	position: absolute;
-	top: 3264px;
-	left: 62%;
+	position: relative;
+	top: 76px;
+	left: 20%;
 	font-family: shual-regular;
 	font-size: 20px;
 	color: #4c4c4c;
