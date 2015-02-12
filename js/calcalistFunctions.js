@@ -4,9 +4,7 @@ var answers = [];
 var chkimAns = [0, 0, 0, 0, 0, 0, 0, 0];
 var percent = [0, 0, 0, 0, 0, 0, 0, 0];
 var result = [14, 16, 15, 17, 18, 26, 20, 22];
-var i,
-    j,
-    y;
+var i, j, y;
 var selection = "";
 var numParty = 0;
 var bouncer;
@@ -44,8 +42,7 @@ function avgParty(id, avgMonth, avgWeek) {
 		average_weekly_presence : avgWeek
 	};
 }
-
-var tempName = [partySection(14, "הליכוד", "", "//www.youtube.com/embed/ZA23LiWIHzM", 49.3, 3.2, "#265da0", 10), partySection(16, "העבודה", "", "//www.youtube.com/embed/J5eDRryp9uY", 61.7, 2.9, "#265da0", 10), partySection(15, "יש עתיד", "", "//www.youtube.com/embed/pKVrFwJ2CVc", 29.3, 2.1, "#265da0", 0), partySection(17, "הבית היהודי", "", "//www.youtube.com/embed/oSwCtvH9838", 38.5, 2.7, "#a2c739", 7), partySection(10, "כולנו", "", "//www.youtube.com/embed/YujaXY3jyKM", 0, 0, "#6600CC", 0), partySection(26, "ישראל ביתנו", "", "//www.youtube.com/embed/5hO4mnG-wLU", 39.5, 2.4, "#6600CC", 0), partySection(20, "מרצ", "", "//www.youtube.com/embed/IF2yLwB0Qa0", 119.7, 5, "#3d9c3f", 0), partySection(22, "חדש", "", "//www.youtube.com/embed/ZxPuED8HZIk", 215, 5.5, "#3d9c3f", 0)];
+var tempName = [partySection(14, "הליכוד", "", "//www.youtube.com/embed/ZA23LiWIHzM", 49.3, 3.2, "#22599c", 10), partySection(16, "המחנה הציוני", "", "//www.youtube.com/embed/J5eDRryp9uY", 61.7, 2.9, "#265da0", 10), partySection(15, "יש עתיד", "", "//www.youtube.com/embed/pKVrFwJ2CVc", 29.3, 2.1, "#16477e", 0), partySection(17, "הבית היהודי", "", "//www.youtube.com/embed/oSwCtvH9838", 38.5, 2.7, "#a2c739", 7), partySection(10, "כולנו", "", "//www.youtube.com/embed/YujaXY3jyKM", 0, 0, "#30b4e7", 0), partySection(26, "ישראל ביתנו", "", "//www.youtube.com/embed/5hO4mnG-wLU", 39.5, 2.4, "#255a70", 0), partySection(20, "מרצ", "", "//www.youtube.com/embed/IF2yLwB0Qa0", 119.7, 5, "#3d9c3f", 0), partySection(22, "חדש", "", "//www.youtube.com/embed/ZxPuED8HZIk", 215, 5.5, "#009138", 0)];
 
 var partiesAvg = [];
 
@@ -147,7 +144,21 @@ $(document).ready(function() {
 		$(this).css("opacity", "0.6");
 		clearInterval(bouncer);
 	});
+	
+	
 });
+
+function dodo(){
+	$( ".pluginButtonImage button[type=submit]" ).click();
+	// $( ".pluginButtonImage button" ).submit(function( event ) {
+		  // event.preventDefault();
+		  // console.log("ddd")
+		// });
+	// $( ".pluginButtonImage button" ).click(function( event ) {
+	  // event.preventDefault();
+	  // console.log("ddd")
+	// });
+}
 //bounce animation in form
 function doBounce(element, times, distance, speed) {
 	for ( i = 0; i < times; i++) {
@@ -161,61 +172,21 @@ function doBounce(element, times, distance, speed) {
 
 //initialize all progress bar
 $(function() {
-	var progressbar = $("#l4ProgressBar");
-	$("#14ProgressBar").progressbar({
-		max : 100,
+	$.each(result, function(index, val) {
+		if (val==10)return;
+	  var progressbar = $("#"+val+"ProgressBar");
+		$("#"+val+"ProgressBar").progressbar({
+			max : 100,
+		});
+		$("#"+val+"ProgressBar").css({
+			"background" : "#a6a6a6"
+		});
 	});
-	$("#14ProgressBar").css({
-		"background" : "#a6a6a6"
-	});
-	var progressbar = $("#20ProgressBar");
-	$("#20ProgressBar").progressbar({
-		max : 100,
-	});
-	$("#20ProgressBar").css({
-		"background" : "#a6a6a6"
-	});
-	var progressbar = $("#17ProgressBar");
-	$("#17ProgressBar").progressbar({
-		max : 100,
-	});
-	$("#17ProgressBar").css({
-		"background" : "#a6a6a6"
-	});
-	var progressbar = $("#15ProgressBar");
-	$("#15ProgressBar").progressbar({
-		max : 100,
-		"background-color" : "#a6a6a6"
-	});
-	$("#15ProgressBar").css({
-		"background" : "#a6a6a6"
-	});
-	var progressbar = $("#26ProgressBar");
-	$("#26ProgressBar").progressbar({
-		max : 100,
-	});
-	$("#26ProgressBar").css({
-		"background" : "#a6a6a6"
-	});
-	var progressbar = $("#16ProgressBar");
-	$("#16ProgressBar").progressbar({
-		max : 100,
-	});
-	$("#16ProgressBar").css({
-		"background" : "#a6a6a6"
-	});
-	var progressbar = $("#22ProgressBar");
-	$("#22ProgressBar").progressbar({
-		max : 100,
-	});
-	$("#22ProgressBar").css({
-		"background" : "#a6a6a6"
-	});
-
 });
+
 //compare form results with party results
 function checkform(obj) {
-	checkAns();
+	// checkAns();
 	if (q_num >= 9) {
 		q_num = sectionId.substr(sectionId.length - 2, sectionId.length);
 		console.log(q_num);
@@ -326,120 +297,44 @@ function checkAns() {
 			$('.p' + i).parent().attr('id', 'newID' + tempName[i].id);
 		}
 		//update full partys answer
+		
 		$(".answer0 #button0").click(function() {
 			$("div.fullAns0").slideToggle("fast");
 			// $(this).next().slideToggle("fast");
-			if ($('.answer0').height() == "240")
+			
 				$('.answer0').css({
-					"height" : "480px "
+					"display" : "block",'height':'auto','position':'relative'
 				});
-			else
-				$('.answer0').css({
-					"height" : "240px "
-				});
+			
 		});
 		$(".answer1 #button1").click(function() {
 			$("div.fullAns1").slideToggle("fast");
-			if ($('.answer1').height() == "240")
-				$('.answer1').css({
-					"height" : "480px "
-				});
-			else
-				$('.answer1').css({
-					"height" : "240px "
-				});
 		});
 		$(".answer2 #button2").click(function() {
 			$("div.fullAns2").slideToggle("fast");
-			if ($('.answer2').height() == "240")
-				$('.answer2').css({
-					"height" : "480px "
-				});
-			else
-				$('.answer2').css({
-					"height" : "240px "
-				});
 		});
 		$(".answer3 #button3").click(function() {
 			$("div.fullAns3").slideToggle("fast");
-			if ($('.answer3').height() == "240") {
-				$('.answer3').css({
-					"height" : "480px"
-				});
-			} else {
-				$('.answer3').css({
-					"height" : "240px"
-				});
-			}
 		});
 		$(".answer4 #button4").click(function() {
 			$("div.fullAns4").slideToggle("fast");
-			if ($('.answer4').height() == "240")
-				$('.answer4').css({
-					"height" : "480px "
-				});
-			else
-				$('.answer4').css({
-					"height" : "240px "
-				});
 		});
 		$(".answer5 #button5").click(function() {
 			$("div.fullAns5").slideToggle("fast");
-			if ($('.answer5').height() == "240")
-				$('.answer5').css({
-					"height" : "480px "
-				});
-			else
-				$('.answer5').css({
-					"height" : "240px "
-				});
 		});
 		$(".answer6 #button6").click(function() {
 			$("div.fullAns6").slideToggle("fast");
-			if ($('.answer6').height() == "240")
-				$('.answer6').css({
-					"height" : "480px "
-				});
-			else
-				$('.answer6').css({
-					"height" : "240px "
-				});
 		});
 		$(".answer7 #button7").click(function() {
 			$("div.fullAns7").slideToggle("fast");
-			if ($('.answer7').height() == "240")
-				$('.answer7').css({
-					"height" : "480px "
-				});
-			else
-				$('.answer7').css({
-					"height" : "240px "
-				});
 		});
 		$(".answer8 #button8").click(function() {
 			$("div.fullAns8").slideToggle("fast");
-			if ($('.answer8').height() == "240")
-				$('.answer8').css({
-					"height" : "480px "
-				});
-			else
-				$('.answer8').css({
-					"height" : "240px "
-				});
 		});
 		$(".answer9 #button9").click(function() {
 			$("div.fullAns9").slideToggle("fast");
-			if ($('.answer9').height() == "240")
-				$('.answer9').css({
-					"height" : "480px "
-				});
-			else
-				$('.answer9').css({
-					"height" : "240px "
-				});
 		});
-		var index = 0,
-		    smaller = 10;
+		var index = 0, smaller = 10;
 		//move first result to start
 		$(".next").click();
 		//choose the first result
@@ -461,12 +356,13 @@ function updateButton(num) {
 	console.log(tempName);
 	allButton = ["committee", "residence", "submission", "approve"];
 	//check menu state and show according to state
-	$(document).on('click', "button", function() {
+	$(document).on('click', "li button", function() {
 		for ( i = 0; i < 4; i++) {
 			if ($("#" + allButton[i]).hasClass('selected2')) {
 				$('.selected2').css({
 					"background" : "#FFFFFF",
-					color : "#000000"
+					color : "#000000",
+					"z-index":"0"
 				});
 				$("#" + allButton[i]).removeClass('selected2');
 			}
@@ -474,8 +370,10 @@ function updateButton(num) {
 		//change manu button according to party color
 		$(this).addClass('selected2');
 		$(this).css({
-			"background" : (tempName[idNum].color),
-			color : "#ffffff"
+			"background-image":"url('images/button14.png')",
+			color : "#ffffff",
+			"z-index":"2",
+			"position":"relative"
 		});
 	});
 	//update bar according to the menu state
@@ -483,58 +381,58 @@ function updateButton(num) {
 		$("button#residence").addClass('selected2');
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#14ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#15ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#16ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#17ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#26ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#20ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#22ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#14ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#15ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#16ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#17ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#26ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#20ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#22ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
 			}
 		}
 	});
@@ -542,58 +440,58 @@ function updateButton(num) {
 		$(this).addClass('selected2');
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#14ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#15ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#16ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#17ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#26ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#20ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#22ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#14ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#15ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#16ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#17ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#26ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#20ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#22ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
 			}
 		}
 
@@ -602,58 +500,58 @@ function updateButton(num) {
 		$(this).addClass('selected2');
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#14ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#15ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#16ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#17ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#26ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#20ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#22ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#14ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#15ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#16ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#17ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#26ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#20ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#22ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
 			}
 		}
 	});
@@ -661,58 +559,58 @@ function updateButton(num) {
 		$(this).addClass('selected2');
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission ) * 3) + "px"
-				});
-				$("#14ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
-				});
-				$("#15ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
-				});
-				$("#16ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
-				});
-				$("#17ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
-				});
-				$("#26ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
-				});
-				$("#20ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : "500px"
-				});
-				$("#22ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : ((tempName[i].rulesSubmission ) * 3) + "px"
+					});
+					$("#14ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					});
+					$("#15ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					});
+					$("#16ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					});
+					$("#17ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					});
+					$("#26ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					});
+					$("#20ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : "500px"
+					});
+					$("#22ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
 			}
 		}
 	});
@@ -730,10 +628,9 @@ function moveToPartyPage() {
 function daynamicFunc(num) {
 	$.each(parties, function(index, value) {
 		if (value.id == num && num != 10) {
-			$('#headLogo').css({
-				"background-image" : "url('images/headOf1.png')"
-			});
-			$('#subTitle').html("");
+			/*$('#headLogo').css({
+			 "background-image" : "url('images/headOf1.png')"
+			 });*/
 			$('#logo').css({
 				"background-image" : "url('images/logo" + num + ".png')"
 			});
@@ -804,7 +701,7 @@ function daynamicFunc(num) {
 						"background" : ((tempName[i].color))
 					});
 					$('.selected2').css({
-						"background" : (tempName[i].color)
+						"background-image":"url('images/button14.png')"
 					}, {
 						color : "#ffffff"
 					});
@@ -814,6 +711,7 @@ function daynamicFunc(num) {
 					$('#questionnaire h4').css({
 						"color" : tempName[i].color
 					});
+					$('#list h4').html("רשימת " + tempName[i].name + " לכנסת ה-20 ");
 					$('#list h4').css({
 						"color" : tempName[i].color
 					});
@@ -825,10 +723,9 @@ function daynamicFunc(num) {
 		if (num == 10) {
 			for ( i = 0; i < tempName.length; i++) {
 				if (tempName[i].id == 10) {
-					$('#headLogo').css({
-						"background-image" : "url('images/headOf1.png')"
+					$('#logo').css({
+						"background-image" : "url('images/logo" + num + ".png')"
 					});
-					$('#subTitle').html("");
 					$('#percentOf').html(tempName[i].percent + "%");
 					$('#choice').css({
 						"background-image" : "url('images/resultParty14.jpg')"
@@ -874,6 +771,7 @@ function daynamicFunc(num) {
 					$('#questionnaire h4').css({
 						"color" : tempName[i].color
 					});
+					$('#list h4').html("רשימת " + tempName[i].name + " לכנסת ה-20 ")
 					$('#list h4').css({
 						"color" : tempName[i].color
 					});
