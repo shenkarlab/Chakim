@@ -105,7 +105,8 @@ body {
 		height: 672px;
 		width: 100%;
 		/*background-image: url("../images/bg-image.jpg");*/
-		background: linear-gradient(124deg, #fcc531, #ffe933);
+		/*background: linear-gradient(left top,124deg, #fcc531, #ffe933);*/
+		background: linear-gradient(to top left, #fcc531, #ffe933);
 		margin-top: 8px;
 	}
 
@@ -1096,7 +1097,8 @@ body {
 	form {
 		display: inline-block;
 		text-align: center;
-		height: auto;
+		height: 100vh;
+		/*height: auto;*/
 		width: 100%;
 		/*background-image: url("../images/bg-image.jpg");*/
 		background: linear-gradient(124deg, #fcc531, #ffe933);
@@ -1325,7 +1327,7 @@ body {
 		float: right;
 		clear: right;
 	}
-	
+
 	#choice {
 		/*background-image: url("../images/backgroundParty.jpg");*/
 		background-color: #ffffff;
@@ -2017,7 +2019,6 @@ body {
 		position: relative;
 		bottom: 195px;
 	}
-
 
 	.wrapper > ul > li > a > span {
 		position: relative;
