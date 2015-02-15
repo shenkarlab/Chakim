@@ -121,7 +121,7 @@ $(document).ready(function() {
 		allImages = $("#liquid1 .wrapper ul li a img");
 		$('#liquid1').liquidcarousel({
 			height : 191,
-			duration : 100,
+			duration : 500,
 			hidearrows : false
 		});
 		//form hide all sections but the first question
@@ -199,7 +199,7 @@ $(function() {
 
 //compare form results with party results
 function checkform(obj) {
-	 checkAns();
+	 // checkAns();
 	if (q_num >= 9) {
 		q_num = sectionId.substr(sectionId.length - 2, sectionId.length);
 		console.log(q_num);
@@ -352,7 +352,7 @@ function checkAns() {
 		var index = 0,
 		    smaller = 10;
 		//move first result to start
-		$(".next").click();
+		$(".next").click();$(".next").click();$(".next").click();$(".next").click();
 		//choose the first result
 		$("#liquid1 .wrapper ul li a img:last").click();
 		//show party results

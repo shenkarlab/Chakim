@@ -136,15 +136,15 @@ body {
 	}
 
 	#Questionconcept5 {
-		background-image: url("../images/Art_city.png");
+		background-image: url("../images/Art_retire.png");
 	}
 
 	#Questionconcept6 {
-		background-image: url("../images/Art_city.png");
+		background-image: url("../images/Art_taxes.png");
 	}
 
 	#Questionconcept7 {
-		background-image: url("../images/Art_city.png");
+		background-image: url("../images/Art_pension.png");
 	}
 
 	#Questionconcept8 {
@@ -559,6 +559,10 @@ body {
 		width: 86%;
 		height: auto;
 		margin-top: 25px;
+	}
+
+	#icon_executives{
+		background-image: url("../images/icon_executives.png"); 
 	}
 
 	#army_icon {
@@ -1060,7 +1064,7 @@ body {
 	}
 
 	#shareB {
-		width: 80%;
+		/*width: 80%;*/
 		margin-right: 70%;
 		position: relative;
 		bottom: 195px;
@@ -1181,7 +1185,7 @@ body {
 		text-decoration: none;
 		font-size: 20px;
 		color: #fff8e2;
-		line-height: 250px;
+		line-height: 220px;
 		opacity: 0.5;
 		background-repeat: no-repeat;
 		font-family: shual-light;
@@ -1371,7 +1375,7 @@ body {
 	#partiesName > ul > li {
 		padding-top: 15px;
 		/* width: 114%; */
-		font-size: 20px;
+		font-size: 16px;
 		height: 56px;
 		font-family: shual-regular;
 	}
@@ -1573,7 +1577,7 @@ body {
 		position: relative;
 		top: 48px;
 		font-family: alef-regular;
-		font-size: 18px;
+		font-size: 14px;
 		cursor: pointer;
 		background-color: #ffffff !important;
 		color: #008acd !important;
@@ -1592,7 +1596,7 @@ body {
 		position: relative;
 		float: right;
 		font-family: shual-bold;
-		font-size: 24px;
+		font-size: 20px;
 	}
 	h6 {
 		float: right;
@@ -1600,7 +1604,7 @@ body {
 		top: 13px;
 		right: 3%;
 		font-family: shual-regular;
-		font-size: 18px;
+		font-size: 16px;
 		font-weight: 500;
 		color: #454545;
 	}
@@ -1633,7 +1637,7 @@ body {
 		margin-top: 2%;
 		margin-right: 4%;
 		font-family: shual-light;
-		font-size: 18px;
+		font-size: 14px;
 		color: #454545;
 	}
 	.fullAnswers {
@@ -1648,6 +1652,7 @@ body {
 		margin-right: 4%;
 		font-family: alef-regular;
 		margin-bottom: 27px;
+		font-size: 14px;
 	}
 
 	#partyAnswer {
