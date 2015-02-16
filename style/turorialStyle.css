@@ -66,13 +66,13 @@ body {
     margin-left: auto;
     margin-right: auto;
     background-color: #eae9e4;
-    width: 100%;
+    /*width: 100%;*/
     min-height: 100%;
 }
 
 #tutorial {
     background: linear-gradient(to top left, #fcc531, #ffe933);
-    height: 672px;
+    height: 617px;
 }
 
 #explantion {
