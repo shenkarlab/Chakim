@@ -69,9 +69,9 @@ body {
 }
 
 @media (min-width: 641px) {
-	body {
+	/*body {
 		width: 800px;
-	}
+	}*/
 
 	b {
 		font-size: 50px;
