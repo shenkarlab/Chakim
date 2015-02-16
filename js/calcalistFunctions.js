@@ -1,12 +1,11 @@
 var sectionId;
+var spani;
 var q_num = 1;
 var answers = [];
-var chkimAns = [0, 0, 0, 0, 0, 0, 0, 0];
-var percent = [0, 0, 0, 0, 0, 0, 0, 0];
-var result = [14, 16, 15, 17, 18, 26, 20, 22];
-var i,
-    j,
-    y;
+var chkimAns = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+var percent = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+var result = [14, 16, 15, 17, 10, 26, 20, 22, 11];
+var i, j, y, p;
 var selection = "";
 var numParty = 0;
 var bouncer;
@@ -45,7 +44,7 @@ function avgParty(id, avgMonth, avgWeek) {
 	};
 }
 
-var tempName = [partySection(14, "הליכוד", "", "//www.youtube.com/embed/ZA23LiWIHzM", 49.3, 3.2, "#22599c", 10), partySection(16, "המחנה הציוני", "", "//www.youtube.com/embed/J5eDRryp9uY", 61.7, 2.9, "#265da0", 10), partySection(15, "יש עתיד", "", "//www.youtube.com/embed/pKVrFwJ2CVc", 29.3, 2.1, "#16477e", 0), partySection(17, "הבית היהודי", "", "//www.youtube.com/embed/oSwCtvH9838", 38.5, 2.7, "#a2c739", 7), partySection(10, "כולנו", "", "//www.youtube.com/embed/YujaXY3jyKM", 0, 0, "#30b4e7", 0), partySection(26, "ישראל ביתנו", "", "//www.youtube.com/embed/5hO4mnG-wLU", 39.5, 2.4, "#255a70", 0), partySection(20, "מרצ", "", "//www.youtube.com/embed/IF2yLwB0Qa0", 119.7, 5, "#3d9c3f", 0), partySection(22, "חדש", "", "//www.youtube.com/embed/ZxPuED8HZIk", 215, 5.5, "#009138", 0)];
+var tempName = [partySection(14, "הליכוד", "", "//www.youtube.com/embed/ZA23LiWIHzM", 49.3, 3.2, "#22599c", 10), partySection(16, "המחנה הציוני", "", "//www.youtube.com/embed/J5eDRryp9uY", 61.7, 2.9, "#265da0", 10), partySection(15, "יש עתיד", "", "//www.youtube.com/embed/pKVrFwJ2CVc", 29.3, 2.1, "#16477e", 10), partySection(17, "הבית היהודי", "", "//www.youtube.com/embed/oSwCtvH9838", 38.5, 2.7, "#a2c739", 10), partySection(10, "כולנו", "", "//www.youtube.com/embed/YujaXY3jyKM", 0, 0, "#30b4e7", 10), partySection(26, "ישראל ביתנו", "", "//www.youtube.com/embed/5hO4mnG-wLU", 39.5, 2.4, "#255a70", 10), partySection(20, "מרצ", "", "//www.youtube.com/embed/IF2yLwB0Qa0", 119.7, 5, "#3d9c3f", 10), partySection(22, "הרשימה הערבית", "", "//www.youtube.com/embed/ZxPuED8HZIk", 215, 5.5, "#009138", 10), partySection(11, 'ש"ס', "", "//www.youtube.com/embed/ZxPuED8HZIk", 53, 2.2, "#000000", 10)];
 
 var partiesAvg = [];
 
@@ -56,7 +55,6 @@ function calcResidence() {
 		$.each(kneset, function(index, value) {
 			parties.push(Party(value.name, value.id, value.number_of_seats, value.members));
 		});
-		//console.log("נוכחות במשכן שעות שבועיות בממוצע")
 		$.each(parties, function(index, value) {
 			var calcWeek = 0;
 			var calcComm = 0;
@@ -76,11 +74,8 @@ function calcResidence() {
 				}
 			}
 
-			//console.log(value.name + " " + y + " נוכחות במשכן:");
-			//console.log(value.name + " " + x + " נוכחות בוועדה:");
 		});
-		console.log(tempName)
-		console.log("--------------------------");
+
 	});
 };
 
@@ -92,12 +87,19 @@ $(document).ready(function() {
 		var me = $(this).find("img");
 		//add class selected to the clicked result
 		$.each(allImages, function(index, value) {
-			console.log(($(value)));
 			if ($(value).hasClass('selected')) {
+				$("span").css({
+					"color" : "#4c4c4c",
+				})
 				$(value).removeClass('selected');
+				$(value).mouseover(function() {
+					$(this).css('opacity', '0.5');
+				});
+				$(value).mouseout(function() {
+					$(this).css('opacity', '1');
+				});
 				//add selected image for explorer and firefox
 				$(value).attr('src', 'images/results_bg.png');
-
 			}
 			//undo border for explorer and firefox
 			$(value).css('border', 'none')
@@ -105,8 +107,14 @@ $(document).ready(function() {
 		me.addClass('selected');
 		//add un selected image for explorer and firefox
 		me.attr('src', 'images/selected_bg.png');
-		me.css('border', 'none')
-		numParty = me.parent().attr('id')
+		me.css({
+			'border' : 'none',
+			'opacity' : '1.0'
+		});
+		numParty = me.parent().attr('id');
+		$("a#" + numParty + " span").css({
+			"color" : "#FFFFFF"
+		})
 		numParty = numParty.replace(/[^\d.]/g, '');
 		daynamicFunc(numParty);
 		//update page with party results
@@ -121,7 +129,7 @@ $(document).ready(function() {
 		allImages = $("#liquid1 .wrapper ul li a img");
 		$('#liquid1').liquidcarousel({
 			height : 191,
-			duration : 500,
+			duration : 400,
 			hidearrows : false
 		});
 		//form hide all sections but the first question
@@ -132,6 +140,7 @@ $(document).ready(function() {
 
 		//calculate the party activity
 		calcResidence();
+
 	});
 	//get the value clicked in form
 	$(document).on("click", '.inputButton', function(e) {
@@ -139,7 +148,6 @@ $(document).ready(function() {
 		selection = $(this).attr('value');
 		if (selection != "") {
 			$("form").submit();
-			console.log(selection);
 		}
 	});
 	//change animation on hover form
@@ -161,14 +169,6 @@ $(document).ready(function() {
 
 function dodo() {
 	$(".pluginButtonImage button[type=submit]").click();
-	// $( ".pluginButtonImage button" ).submit(function( event ) {
-	// event.preventDefault();
-	// console.log("ddd")
-	// });
-	// $( ".pluginButtonImage button" ).click(function( event ) {
-	// event.preventDefault();
-	// console.log("ddd")
-	// });
 }
 
 //bounce animation in form
@@ -199,54 +199,41 @@ $(function() {
 
 //compare form results with party results
 function checkform(obj) {
-	 // checkAns();
+	//checkAns();
 	if (q_num >= 9) {
 		q_num = sectionId.substr(sectionId.length - 2, sectionId.length);
-		console.log(q_num);
 	} else {
 		q_num = sectionId.substr(sectionId.length - 1, sectionId.length);
-		console.log(q_num);
 	}
 	var aArray = $("#" + sectionId + " a");
 	if (selection == "")
 		return false;
 	answers.push(selection);
 	selection = "";
-	console.log(answers);
 	if (parseInt(q_num, 10) == 12) {//update to num of questions
-		console.log(answers);
 		checkAns();
 	}
 
 	//change question sections
 	var currentSection = "#" + sectionPosition;
-	console.log("currentSection=" + currentSection);
 
-	console.log(sectionPosition);
 	sectionPosition = $("#" + sectionPosition).next().attr("id");
-	console.log("#" + sectionPosition);
 
 	var nextSection = "#" + sectionPosition;
-	console.log("nextSection=" + nextSection);
 
-	$(currentSection).addClass('fadeOutLeft');
-	$(nextSection).addClass('fadeInRight').show();
+	$(currentSection).addClass('fadeOutRight');
+	$(nextSection).addClass('fadeInLeft').show();
 
 	var active = $(".active");
-	console.log(active.attr("data-next"));
 	$(active.attr("data-next")).addClass("active");
 	active.removeClass("active").addClass('seen');
 	sectionId = $("#" + sectionPosition).find("section").attr('id');
-	console.log(sectionId);
-	window.location = "#" + sectionPosition;
 	return false;
 
 }
 
 //calculate percentage from choosen party
 function checkAns() {
-	console.log("in check answers");
-	//console.log(answers);
 	$.getJSON("js/answer.json", function(data) {
 		var dataAnswer = data.Answers;
 		var eachPercent = 0;
@@ -276,6 +263,9 @@ function checkAns() {
 			if (answers[index] != value.hadashe) {
 				chkimAns[7]++;
 			}
+			if (answers[index] != value.shess) {
+				chkimAns[8]++;
+			}
 			tempName[0].answers[index] = value.licod;
 			tempName[1].answers[index] = value.avoda;
 			tempName[2].answers[index] = value.yeshAtid;
@@ -284,6 +274,7 @@ function checkAns() {
 			tempName[5].answers[index] = value.israelbitnu;
 			tempName[6].answers[index] = value.mertz;
 			tempName[7].answers[index] = value.hadashe;
+			tempName[8].answers[index] = value.shess;
 		});
 
 		for ( i = 0; i < chkimAns.length; i++) {
@@ -306,7 +297,7 @@ function checkAns() {
 		} while (swapped);
 		//append results to  result menu
 		for ( i = 0; i < percent.length; i++) {
-			$('.p' + i).append(tempName[i].percent + "%" + "<br />" + tempName[i].name);
+			$('.p' + i).append("<b>" + tempName[i].percent + "%" + "</b>" + "<br />" + tempName[i].name);
 			$('.p' + i).parent().attr('id', 'newID' + tempName[i].id);
 		}
 		//update full partys answer
@@ -349,10 +340,9 @@ function checkAns() {
 		$(".answer9 #button9").click(function() {
 			$("div.fullAns9").slideToggle("fast");
 		});
-		var index = 0,
-		    smaller = 10;
+		var index = 0, smaller = 10;
 		//move first result to start
-		$(".next").click();$(".next").click();$(".next").click();$(".next").click();
+		$(".next").click();
 		//choose the first result
 		$("#liquid1 .wrapper ul li a img:last").click();
 		//show party results
@@ -360,6 +350,7 @@ function checkAns() {
 		//check if works
 		$("#committee").trigger("click");
 	});
+
 }
 
 //update progress bar with results
@@ -369,7 +360,6 @@ function updateButton(num) {
 		if (num == tempName[i].id)
 			idNum = i;
 	}
-	console.log(tempName);
 	allButton = ["committee", "residence", "submission", "approve"];
 	//check menu state and show according to state
 	$(document).on('click', "li button", function() {
@@ -386,247 +376,298 @@ function updateButton(num) {
 		//change manu button according to party color
 		$(this).addClass('selected2');
 		$(this).css({
-			"background-image" : "url('images/button14.png')",
+			"background-image" : "url('images/button" + num + ".png')",
 			color : "#ffffff",
 			"z-index" : "2",
 			"position" : "relative"
 		});
+
 	});
+	$('li button').mouseover(function() {
+		if (!$(this).hasClass('selected2'))
+			$(this).css({
+				"background-image" : "url('images/buttonHover" + num + ".png')",
+				'color' : "#ffffff"
+			});
+	});
+	$('li button').mouseout(function() {
+		if (!$(this).hasClass('selected2'))
+			$(this).css({
+				"background-image" : "none",
+				'color' : "#000000"
+			});
+	});
+
 	//update bar according to the menu state
 	$("button#residence").click(function() {
 		$("button#residence").addClass('selected2');
+		$('#hour').html("*שעות שבועיות");
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#14ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#15ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#16ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#17ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#26ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#20ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#22ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#14ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#15ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#16ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#17ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#26ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#20ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#22ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 11: {
+					$("#11ProgressBar").animate({
+						"width" : ((7.5) * 10) + "px"
+					});
+					$("#11ProgressBar").html(7.5);
+					break;
+				}
 			}
 		}
 	});
 	$("button#committee").click(function() {
 		$(this).addClass('selected2');
+		$('#hour').html("*שעות שבועיות");
+
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#14ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#15ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#16ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#17ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#26ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#20ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#22ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#14ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#15ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#16ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#17ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#26ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#20ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#22ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 11: {
+					$("#11ProgressBar").animate({
+						"width" : ((14) * 10) + "px"
+					});
+					$("#11ProgressBar").html(14);
+					break;
+				}
 			}
 		}
 
 	});
 	$("button#approve").click(function() {
 		$(this).addClass('selected2');
+		$('#hour').html("");
+
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#14ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#15ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#16ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#17ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#26ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#20ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#22ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#14ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#15ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#16ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#17ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#26ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#20ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#22ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 11: {
+					$("#11ProgressBar").animate({
+						"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#11ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
 			}
 		}
 	});
 	$("button#submission").click(function() {
 		$(this).addClass('selected2');
+		$('#hour').html("");
+
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission ) * 3) + "px"
-				});
-				$("#14ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
-				});
-				$("#15ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
-				});
-				$("#16ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
-				});
-				$("#17ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
-				});
-				$("#26ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
-				});
-				$("#20ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : "500px"
-				});
-				$("#22ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : ((tempName[i].rulesSubmission ) * 3) + "px"
+					});
+					$("#14ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					});
+					$("#15ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					});
+					$("#16ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					});
+					$("#17ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					});
+					$("#26ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					});
+					$("#20ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : "500px"
+					});
+					$("#22ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 11: {
+					$("#11ProgressBar").animate({
+						"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					});
+					$("#11ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
 			}
 		}
 	});
@@ -634,7 +675,6 @@ function updateButton(num) {
 
 //show party page result
 function moveToPartyPage() {
-	console.log("in party page");
 	$("section#formContainer").hide();
 	$("section#partyPage").show();
 
@@ -642,25 +682,26 @@ function moveToPartyPage() {
 
 //update page with choosen party
 function daynamicFunc(num) {
+	$.getJSON("js/full.json", function(d) {
+		var dataFull = d.fullAnswers;
+		//$('#fullAns' + index).html(v);
+		$.each(result, function(index, val) {
+			if (val == num) {
+				$.each(dataFull[index], function(x, v) {
+					$('#fullAns' + x).html(v);
+				});
+			}
+			return;
+		});
+	});
+
 	$.each(parties, function(index, value) {
-		if (value.id == num && num != 10) {
-			/*$('#headLogo').css({
-			 "background-image" : "url('images/headOf1.png')"
-			 });*/
+		if (value.id == num && num != 10 && num != 11) {
+
 			$('#logo').css({
 				"background-image" : "url('images/logo" + num + ".png')"
 			});
 
-			//$('#subTitle').html(value.name);
-			if (value.id == 17 || value.id == 20) {
-				$('#choice').css({
-					"background-image" : "url('images/resultParty" + num + ".jpg')"
-				});
-			} else {
-				$('#choice').css({
-					"background-image" : "url('images/resultParty14.jpg')"
-				});
-			}
 			i = 0;
 			$.each(result, function(i, v) {
 				if ($(("#" + v + "ProgressBar")).hasClass('selected1')) {
@@ -671,36 +712,16 @@ function daynamicFunc(num) {
 				}
 			});
 			$("#" + value.id + "ProgressBar").addClass('selected1');
-			/*$("#" + value.id + "ProgressBar").css({
-			 "background" : "#4C4C4C",
-			 "color" : "#ffffff"
-			 });*/
-			/*		var mem = value.members;
-			 $.each(mem, function(i, v) {
-			 console.log(v.img_url);
-			 $('#pichome'+i).css('background-image',v.img_url);
-			 });*/
 
 			$('section.partyNameTrue').each(function() {
 				$(this).html(value.name + " ענו:")
 			});
-			/*$('#myAnswer').each(function(i,v) {
-			if (answers[i] == "yes")
-			$(this).css({"background-image": "images/smalLike.jpg"});
-			else {
-			if (answers[i] == "no")
-			$(this).css({"background-image": "images/smallDisLike.jpg"});
 
-			}
-			});*/
-			//my results from form
 			myAnsfunc();
 
 			for ( i = 0; i < tempName.length; i++) {
 				if (tempName[i].id == value.id) {
 					$('#percentOf').html(tempName[i].percent + "%");
-					//append video
-					// document.getElementById("frame").src = tempName[i].video;
 
 					for ( j = 0; j < 10; j++) {
 						if (tempName[i].answers[j] == "yes")
@@ -713,12 +734,18 @@ function daynamicFunc(num) {
 									"backgroundImage" : "url('images/smallDisLike.png')"
 								});
 						}
+						if (tempName[i].answers[j] == "") {
+							$('#theAns .partyAnswer' + j).css({
+								"backgroundImage" : "url('images/no_comment.png')"
+							});
+						}
 					}
+					$("#" + value.id + "ProgressBar").addClass('selected1');
 					$('.selected1').css({
 						"background" : ((tempName[i].color))
 					});
 					$('.selected2').css({
-						"background-image" : "url('images/button14.png')"
+						"background-image" : "url('images/button" + num + ".png')"
 					}, {
 						color : "#ffffff"
 					});
@@ -728,34 +755,27 @@ function daynamicFunc(num) {
 					$('#questionnaire h4').css({
 						"color" : tempName[i].color
 					});
-					$('#list h4').html("רשימת " + tempName[i].name + " לכנסת ה-20 ");
+					$('#list h4').html("המועמדים המובילים במפלגת " + tempName[i].name);
 					$('#list h4').css({
 						"color" : tempName[i].color
 					});
-					console.log(tempName[i].color);
+
 					break;
 				}
+
 			}
 		}
 		if (num == 10) {
 			for ( i = 0; i < tempName.length; i++) {
-				if (tempName[i].id == 10) {
+				if (tempName[i].id == 10 ) {
 					$('#logo').css({
 						"background-image" : "url('images/logo" + num + ".png')"
 					});
 					$('#percentOf').html(tempName[i].percent + "%");
-					$('#choice').css({
-						"background-image" : "url('images/resultParty14.jpg')"
-					})
 					$('section.partyNameTrue').each(function() {
 						$(this).html(tempName[i].name + " ענו:")
 					});
 
-					//append video
-					// document.getElementById("frame").src = tempName[i].video;
-
-					//	$('#frame').src = "'"+tempName[i].video+"'";
-					console.log(tempName[i].video);
 					myAnsfunc();
 					for ( j = 0; j < 10; j++) {
 						if (tempName[i].answers[j] == "yes")
@@ -768,6 +788,11 @@ function daynamicFunc(num) {
 									"backgroundImage" : "url('images/smallDisLike.png')"
 								});
 						}
+						if (tempName[i].answers[j] == "") {
+							$('#theAns .partyAnswer' + j).css({
+								"backgroundImage" : "url('images/no_comment.png')"
+							});
+						}
 					}
 					y = 0;
 					$.each(result, function(y, v) {
@@ -778,8 +803,12 @@ function daynamicFunc(num) {
 							$(("#" + v + "ProgressBar")).removeClass('selected1');
 						}
 					});
+					$("#" + num + "ProgressBar").addClass('selected1');
+					$('.selected1').css({
+						"background" : ((tempName[i].color))
+					});
 					$('.selected2').css({
-						"background" : (tempName[i].color)
+						"background-image" : "url('images/button" + num + ".png')"
 					}, {
 						color : "#ffffff"
 					});
@@ -789,7 +818,69 @@ function daynamicFunc(num) {
 					$('#questionnaire h4').css({
 						"color" : tempName[i].color
 					});
-					$('#list h4').html("רשימת " + tempName[i].name + " לכנסת ה-20 ")
+					$('#list h4').html("המועמדים המובילים במפלגת " + tempName[i].name);
+					$('#list h4').css({
+						"color" : tempName[i].color
+					});
+					break;
+				}
+			}
+		}
+		if (num == 11) {
+
+			for ( i = 0; i < tempName.length; i++) {
+				if ( tempName[i].id == 11) {
+					$('#logo').css({
+						"background-image" : "url('images/logo" + num + ".png')"
+					});
+					$('#percentOf').html(tempName[i].percent + "%");
+					$('section.partyNameTrue').each(function() {
+						$(this).html(tempName[i].name + " ענו:")
+					});
+
+					myAnsfunc();
+					for ( j = 0; j < 10; j++) {
+						if (tempName[i].answers[j] == "yes")
+							$('#theAns .partyAnswer' + j).css({
+								"backgroundImage" : "url('images/smalLike.png')"
+							});
+						else {
+							if (tempName[i].answers[j] == "no")
+								$('#theAns .partyAnswer' + j).css({
+									"backgroundImage" : "url('images/smallDisLike.png')"
+								});
+						}
+						if (tempName[i].answers[j] == "") {
+							$('#theAns .partyAnswer' + j).css({
+								"backgroundImage" : "url('images/no_comment.png')"
+							});
+						}
+					}
+					y = 0;
+					$.each(result, function(y, v) {
+						if ($(("#" + v + "ProgressBar")).hasClass('selected1')) {
+							$('.selected1').css({
+								"background" : "#a6a6a6"
+							});
+							$(("#" + v + "ProgressBar")).removeClass('selected1');
+						}
+					});
+					$("#" + num + "ProgressBar").addClass('selected1');
+					$('.selected1').css({
+						"background" : ((tempName[i].color))
+					});
+					$('.selected2').css({
+						"background-image" : "url('images/button" + num + ".png')"
+					}, {
+						color : "#ffffff"
+					});
+					$('#activity h4').css({
+						"color" : tempName[i].color
+					});
+					$('#questionnaire h4').css({
+						"color" : tempName[i].color
+					});
+					$('#list h4').html("המועמדים המובילים במפלגת " + tempName[i].name);
 					$('#list h4').css({
 						"color" : tempName[i].color
 					});
@@ -802,10 +893,10 @@ function daynamicFunc(num) {
 	for ( j = 1; j < tempName[i].members + 1; j++) {
 		images[j] = 'images/' + num + '/' + num + '.' + j + '.png';
 	}
-	console.log(images);
 	var sHTML = "";
 	for ( j = 1; j < images.length; j++) {
 		sHTML += '<li><img src="' + images[j] + '" /></li>';
+
 	};
 	$('#imagesList').html(sHTML);
 }
@@ -825,22 +916,9 @@ function myAnsfunc() {
 				});
 			else if (answers[u] == "don't know") {
 				$('#theAns .myAnswer' + u).css({
-					"backgroundImage" : "url('images/smallDisLike.png')"
+					"backgroundImage" : "url('images/dontKnow.png')"
 				});
 			}
 		}
 	}
 }
-
-/*
- function calcCommittee() {
- console.log("נוכחות בוועדות ישיבות בחודש בממוצע");
- $.each(parties, function(index, value) {
- var calc = 0;
- $.each(value.members, function(index, value) {
- calc += parseInt(value.average_monthly_committee_presence, 10);
- });
- var x=calc / value.number_of_seats;
- console.log(value.name + " " + x + "נוכוחות בועדות: ");
- });
- }*/

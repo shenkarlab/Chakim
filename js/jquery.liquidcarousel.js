@@ -8,7 +8,7 @@
  *
  */
 var _left= 0;
-var _right=48;
+var _right=54;
 (function($){
 	$.fn.liquidcarousel = function(options) {
 

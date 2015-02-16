@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+article, section, nav, aside, header, footer, main {
+    display: block;
+}
+
+@font-face {
+    font-family: Shual-Black;
+    src: url("../fonts/Shual-Black.otf");
+}
+
+@font-face {
+    font-family: Shual-Bold;
+    src: url("../fonts/Shual-Bold.otf");
+}
+
+@font-face {
+    font-family: Shual-Light;
+    src: url("../fonts/Shual-Light.otf");
+}
+
+@font-face {
+    font-family: Shual-Regular;
+    src: url("../fonts/Shual-Regular.otf");
+}
+@font-face {
+    font-family: Swatch-Bold;
+    src: url("../fonts/Swatch-Bold.otf");
+}
+
+@font-face {
+    font-family: Swatch-Normal;
+    src: url("../fonts/Swatch-Normal.otf");
+}
+
+@font-face {
+    font-family: Alef-regular;
+    src: url("../fonts/Alef-regular.ttf");
+}
+
+@font-face {
+    font-family: Alef-bold;
+    src: url("../fonts/Alef-bold.ttf");
+}
+
+#formHeader {
+    background-color: #d72f37;
+    width: 100%;
+    height: 82px;
+}
+
+header > h1 {
+    font-family: swatch-bold !important;
+    color: #ffffff;
+    float: right;
+    font-size: 55px;
+    margin-right: 26%;
+    line-height: 82px;
+    letter-spacing: 2.5px;
+}
+
+body {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #eae9e4;
+    /*width: 100%;*/
+    min-height: 100%;
+}
+
+#tutorial {
+    background: linear-gradient(to top left, #fcc531, #ffe933);
+    height: 617px;
+}
+
+#explantion {
+background-image: url("../images/explenationToturial.png");
+background-repeat: no-repeat;
+height: 300px;
+top: 74px;
+position: relative;
+color: #ef7430;
+float: left;
+}
+
+#explantion > p {
+    width: 245px;
+    word-wrap: break-word;
+    float: left;
+    position: relative;
+    top: 85px;
+    left: -25%;
+    text-align: right;
+    font-family: alef-regular;
+    font-size: 16px;
+    direction: rtl;
+}
+
+#explantion > h3 {
+    /*width: 245px;*/
+float: left;
+position: relative;
+color: #ef7430;
+top: 52px;
+left: 46%;
+font-family: shual-regular;
+font-size: 32px;
+}
+#tutorial > h4 {
+color: #ef7430;
+float: right;
+font-size: 22px;
+width: 50%;
+direction: rtl;
+font-family: shual-regular;
+margin: 28px;
+margin-bottom: 0;
+position: relative;
+right: 3%;
+
+}
+#tutorial > h2 {
+color: #ef7430;
+float: right;
+font-size: 41px;
+margin: 26px;
+margin-top: 0;
+width: 50%;
+font-family: shual-regular;
+direction: rtl;
+position: relative;
+right: 3%;
+}
+#pic {
+width: 356px;
+height: 217px;
+background-image: url("../images/tutorialExplanation.png");
+float: right;
+position: relative;
+margin-top: 0px;
+margin: 26px;
+right: 3%;
+}
+#kalpi {
+width: 130px;
+height: 180px;
+background-image: url("../images/calfy.png");
+float: left;
+left: 7%;
+position: relative;
+top: 0px;
+}
+#toTheQuestionier {
+background-image: url("../images/toTheQuestionier.png");
+width: 293px;
+height: 69px;
+position: relative;
+float: right;
+top: 15px;
+right: 7%;
+}
+
+/*#toTheQuestionier > a {
+ font-size: 45px;
+ font-family: shual-regular;
+ text-decoration: none;
+ height: auto;
+ position: relative;
+ color: #ffefac;
+ }*/
+

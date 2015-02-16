@@ -2,94 +2,104 @@
 	"Answers": [
 		{
 			"licod": "no",
-			"avoda": "no",
-			"yeshAtid": "yes",
-			"abityehudi": "no",
-			"culanu": "no",
-			"israelbitnu": "no",
-			"mertz": "no",
-			"hadashe": "no"
-		}, {
-			"licod": "yes",
-			"avoda": "no",
-			"yeshAtid": "no",
-			"abityehudi": "yes",
-			"culanu": "no",
-			"israelbitnu": "yes",
-			"mertz": "no",
-			"hadashe": "no"
-		}, {
-			"licod": "no",
 			"avoda": "yes",
 			"yeshAtid": "yes",
 			"abityehudi": "no",
 			"culanu": "yes",
 			"israelbitnu": "no",
 			"mertz": "yes",
-			"hadashe": "yes"
+			"hadashe": "yes",
+			"shess": ""
 		}, {
 			"licod": "yes",
-			"avoda": "no",
-			"yeshAtid": "no",
-			"abityehudi": "no",
-			"culanu": "no",
-			"israelbitnu": "yes",
-			"mertz": "no",
-			"hadashe": "no"
-		}, {
-			"licod": "yes",
-			"avoda": "no",
-			"yeshAtid": "yes",
-			"abityehudi": "no",
-			"culanu": "no",
-			"israelbitnu": "yes",
-			"mertz": "no",
-			"hadashe": "no"
-		}, {
-			"licod": "no",
 			"avoda": "yes",
-			"yeshAtid": " no",
+			"yeshAtid": "no",
 			"abityehudi": "no",
 			"culanu": "yes",
 			"israelbitnu": "no",
 			"mertz": "yes",
-			"hadashe": "no"
+			"hadashe": "yes",
+			"shess": "yes"
+		}, {
+			"licod": "yes",
+			"avoda": "no",
+			"yeshAtid": "no",
+			"abityehudi": "no",
+			"culanu": "no",
+			"israelbitnu": "no",
+			"mertz": "no",
+			"hadashe": "no",
+			"shess": ""
+		}, {
+			"licod": "yes",
+			"avoda": "",
+			"yeshAtid": "",
+			"abityehudi": "yes",
+			"culanu": "",
+			"israelbitnu": "yes",
+			"mertz": "",
+			"hadashe": "",
+			"shess": ""
 		}, {
 			"licod": "yes",
 			"avoda": "no",
 			"yeshAtid": "no",
 			"abityehudi": "yes",
-			"culanu": "yes",
+			"culanu": "no",
+			"israelbitnu": "no",
+			"mertz": "no",
+			"hadashe": "no",
+			"shess": ""
+		}, {
+			"licod": "no",
+			"avoda": "no",
+			"yeshAtid": "no",
+			"abityehudi": "no",
+			"culanu": "no",
 			"israelbitnu": "no",
 			"mertz": "yes",
-			"hadashe": "no"
-		}, {
-			"licod": "no",
-			"avoda": "no",
-			"yeshAtid": "yes",
-			"abityehudi": "yes",
-			"culanu": "no",
-			"israelbitnu": "yes",
-			"mertz": "no",
-			"hadashe": "yes"
-		}, {
-			"licod": "yes",
-			"avoda": "yes",
-			"yeshAtid": "yes",
-			"abityehudi": "yes",
-			"culanu": "no",
-			"israelbitnu": "yes",
-			"mertz": "no",
-			"hadashe": "no"
+			"hadashe": "no",
+			"shess": ""
 		}, {
 			"licod": "no",
 			"avoda": "no",
 			"yeshAtid": "no",
-			"abityehudi": "yes",
+			"abityehudi": "no",
 			"culanu": "yes",
 			"israelbitnu": "yes",
+			"mertz": "yes",
+			"hadashe": "",
+			"shess": ""
+		}, {
+			"licod": "no",
+			"avoda": "yes",
+			"yeshAtid": "no",
+			"abityehudi": "no",
+			"culanu": "no",
+			"israelbitnu": "yes",
+			"mertz": "yes",
+			"hadashe": "yes",
+			"shess": ""
+		}, {
+			"licod": "yes",
+			"avoda": "no",
+			"yeshAtid": "",
+			"abityehudi": "yes",
+			"culanu": "no",
+			"israelbitnu": "yes",
 			"mertz": "no",
-			"hadashe": "no"
+			"hadashe": "",
+			"shess": ""
+		}, {
+			"licod": "yes",
+			"avoda": "no",
+			"yeshAtid": "no",
+			"abityehudi": "yes",
+			"culanu": "no",
+			"israelbitnu": "yes",
+			"mertz": "no",
+			"hadashe": "no",
+			"shess": ""
 		}
 	]
 }
