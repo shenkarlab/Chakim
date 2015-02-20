@@ -14,8 +14,6 @@
 		<script src="js/jquery-1.11.2.min.js"></script>
 		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 		<link type="text/css" rel="stylesheet" href="style/liquidcarousel.css" />
-		<link type="text/css" rel="stylesheet" href="style/animate.css" />
-		<script src="js/jquery.liquidcarousel.js"></script>
 		<link type="text/css" rel="stylesheet" href="style/style.css">
 		<script src="js/calcalistFunctions.js"></script>
 		<title>שאלון כלכליסט</title>
@@ -29,73 +27,78 @@
 				<form name="message" method="post" onsubmit="return checkform(this)">
 					<div id="questionsList">
 						<section class="questions animated" id="fisrtQuestion">
-							<section class="questionConcept" id="Questionconcept1"></section>
+							<section class="questionConcept" id="Questionconcept1" data-num="1"></section>
 							<h3>שכר בכירים</h3>
 							<p>
-								צריך לחוקק חוק שיגביל את שכר המנהלים הבכירים<br> בחברות ציבוריות בכל המשק
+								צריך לחוקק חוק שיגביל את שכר המנהלים הבכירים
+								<br>
+								בחברות ציבוריות בכל המשק
 							</p>
 						</section>
 						<section class="questions animated" id="secondQuestion">
-							<section class="questionConcept"  id="Questionconcept2"></section>
+							<section class="questionConcept"  id="Questionconcept2" data-num="2"></section>
 							<h3>יוקר המחייה</h3>
 							<p>
 								צריך להוריד את המע"מ על מוצרי מזון בסיסיים
 							</p>
 						</section>
 						<section class="questions animated" id="thirdQuestion">
-							<section class="questionConcept" id="Questionconcept3"></section>
+							<section class="questionConcept" id="Questionconcept3" data-num="3"></section>
 							<h3>תקציב הביטחון</h3>
 							<p>
 								חייבים להגדיל את תקציב הביטחון בשנה הבאה במידה ניכרת, גם אם הדבר בא על חשבון תקציבים אזרחיים
 							</p>
 						</section>
 						<section class="questions animated" id="forthQuestion">
-							<section class="questionConcept" id="Questionconcept4"></section>
-							<h3>מפעלים במצוקה</h3>
+							<section class="questionConcept" id="Questionconcept4" data-num="4"></section>
+							<h3>גיל הפרישה</h3>
 							<p>
-								המדינה לא צריכה להציל מפעלים שנמצאים במצוקה. אין סיבה שכספי המסים של כולנו יסבסדו עסקים לא יעילים
+								בגלל העלייה בתוחלת החיים,
+								<br>
+								אין ברירה אלא להעלות את גיל הפרישה
 							</p>
 						</section>
 						<section class="questions animated" id="fifthQuestion">
-							<section class="questionConcept" id="Questionconcept5"></section>
-							<h3>גיל הפרישה</h3>
+							<section class="questionConcept" id="Questionconcept5" data-num="5"></section>
+							<h3>מיסוי</h3>
 							<p>
-								בגלל העלייה בתוחלת החיים,<br> אין ברירה אלא להעלות את גיל הפרישה
+								המדינה צריכה להטיל מסים גבוהים יותר
+								<br>
+								ולתת בתמורה שירותים ציבוריים נרחבים יותר
 							</p>
 						</section>
 						<section class="questions animated" id="sixQuestion">
-							<section class="questionConcept" id="Questionconcept6"></section>
-							<h3>מיסוי</h3>
+							<section class="questionConcept" id="Questionconcept6" data-num="6"></section>
+							<h3>פנסיה</h3>
 							<p>
-								המדינה צריכה להטיל מסים גבוהים יותר <br>ולתת בתמורה שירותים ציבוריים נרחבים יותר
+								כספי המסים צריכים לסבסד חלק גדול יותר
+								<br>
+								מהפנסיה של העובדים המבוגרים
 							</p>
 						</section>
 						<section class="questions animated" id="seventhQuestion">
-							<section class="questionConcept" id="Questionconcept7"></section>
-							<h3>פנסיה</h3>
-							<p>
-								כספי המסים צריכים לסבסד חלק גדול יותר <br>מהפנסיה של העובדים המבוגרים
-							</p>
-						</section>
-						<section class="questions animated" id="eightQuestion">
-							<section class="questionConcept" id="Questionconcept8"></section>
+							<section class="questionConcept" id="Questionconcept7" data-num="7"></section>
 							<h3>דיור</h3>
 							<p>
-								המדינה צריכה להשקיע מיליארדים <br>בבניית דיור ציבורי לשכבות חלשות
+								המדינה צריכה להשקיע מיליארדים
+								<br>
+								בבניית דיור ציבורי לשכבות חלשות
 							</p>
 						</section>
-						<section class="questions animated" id="nineQuestion">
-							<section class="questionConcept" id="Questionconcept9"></section>
+						<section class="questions animated" id="eigthQuestion">
+							<section class="questionConcept" id="Questionconcept8" data-num="8"></section>
 							<h3>גז</h3>
 							<p>
-								התערבות ממשלתית בשוק הגז הטבעי<br> תבריח משקיעים זרים מישראל
+								התערבות ממשלתית בשוק הגז הטבעי
+								<br>
+								תבריח משקיעים זרים מישראל
 							</p>
 						</section>
-						<section class="questions animated" id="welveQestion">
-							<section class="questionConcept" id="Questionconcept12"></section>
+						<section class="questions animated" id="ninethQestion">
+							<section class="questionConcept" id="Questionconcept9" data-num="9"></section>
 							<h3>רפואה</h3>
 							<p>
-								צריך לאפשר לבתי החולים הציבוריים להציע ניתוחים פרטיים בתשלום כדי להזרים כסף למערכת הבריאות הציבורית
+								הכנסת ניתוחים פרטיים בתשלום לבתי החולים הציבוריים תציל את מערכת הבריאות
 							</p>
 						</section>
 					</div>
@@ -109,8 +112,7 @@
 						<li class="li-search" id="6" data-prev="#5" data-next="#7"></li>
 						<li class="li-search" id="7" data-prev="#6" data-next="#8"></li>
 						<li class="li-search" id="8" data-prev="#7" data-next="#9"></li>
-						<li class="li-search" id="9" data-prev="#8" data-next="#10"></li>
-						<li class="li-search" id="10" data-prev="#9" data-next=""></li>
+						<li class="li-search" id="9" data-prev="#8" data-next=""></li>
 					</ol>
 					<div id="chooses">
 						<a href="javascript:void(0);" value="yes" id="chooseYes" class="inputButton"> <span id="yesText">מסכים</span> </a>
@@ -126,41 +128,76 @@
 				<section id="titel">
 					<h3>בהתאם לתשובותיך, המפלגה שהכי מתאימה לך היא: </h3>
 				</section>
-				<div id="liquid1" class="liquid">
-					<span class="previous"> </span>
-					<div class="wrapper">
-						<ul>
-							<li>
-								<a href="#"><span class="p0"></span><img src="images/results_bg.png" class="selected"/></a>
-							</li>
-							<li>
-								<a href="#"><span class="p1"></span><img src="images/results_bg.png" /></a>
-							</li>
-							<li>
-								<a href="#"><span class="p2"></span><img src="images/results_bg.png" /></a>
-							</li>
-							<li>
-								<a href="#"><span class="p3"></span><img src="images/results_bg.png" /></a>
-							</li>
-							<li>
-								<a href="#"><span class="p4"></span><img src="images/results_bg.png" /></a>
-							</li>
-							<li>
-								<a href="#"><span class="p5"></span><img src="images/results_bg.png" /></a>
-							</li>
-							<li>
-								<a href="#"><span class="p6"></span><img src="images/results_bg.png" /></a>
-							</li>
-							<li>
-								<a href="#"><span class="p7"></span><img src="images/results_bg.png" /></a>
-							</li>
-							<li>
-								<a href="#"><span class="p8"></span><img src="images/results_bg.png" /></a>
-							</li>
-						</ul>
-					</div>
-					<span class="next"> </span>
+				<script></script>
+
+				<a href="#" class="previous" id="previous" ></a>
+				<a href="#" class="next" id="next"></a>
+				<ul id="menu" dir="rtl">
+
+					<li>
+						<a href="#"><span class="p0"></span><img src="images/results_bg.png" class="selected"/></a>
+					</li>
+					<li>
+						<a href="#"><span class="p1"></span><img src="images/results_bg.png" /></a>
+					</li>
+					<li>
+						<a href="#"><span class="p2"></span><img src="images/results_bg.png" /></a>
+					</li>
+					<li>
+						<a href="#"><span class="p3"></span><img src="images/results_bg.png" /></a>
+					</li>
+					<li>
+						<a href="#"><span class="p4"></span><img src="images/results_bg.png" /></a>
+					</li>
+					<li>
+						<a href="#"><span class="p5"></span><img src="images/results_bg.png" /></a>
+					</li>
+					<li>
+						<a href="#"><span class="p6"></span><img src="images/results_bg.png" /></a>
+					</li>
+					<li>
+						<a href="#"><span class="p7"></span><img src="images/results_bg.png" /></a>
+					</li>
+					<li>
+						<a href="#"><span class="p8"></span><img src="images/results_bg.png" /></a>
+					</li>
+				</ul>
+
+				<!-- <div id="liquid1" class="liquid">
+				<span class="previous"> </span>
+				<div class="wrapper">
+				<ul>
+				<li>
+				<a href="#"><span class="p0"></span><img src="images/results_bg.png" class="selected"/></a>
+				</li>
+				<li>
+				<a href="#"><span class="p1"></span><img src="images/results_bg.png" /></a>
+				</li>
+				<li>
+				<a href="#"><span class="p2"></span><img src="images/results_bg.png" /></a>
+				</li>
+				<li>
+				<a href="#"><span class="p3"></span><img src="images/results_bg.png" /></a>
+				</li>
+				<li>
+				<a href="#"><span class="p4"></span><img src="images/results_bg.png" /></a>
+				</li>
+				<li>
+				<a href="#"><span class="p5"></span><img src="images/results_bg.png" /></a>
+				</li>
+				<li>
+				<a href="#"><span class="p6"></span><img src="images/results_bg.png" /></a>
+				</li>
+				<li>
+				<a href="#"><span class="p7"></span><img src="images/results_bg.png" /></a>
+				</li>
+				<li>
+				<a href="#"><span class="p8"></span><img src="images/results_bg.png" /></a>
+				</li>
+				</ul>
 				</div>
+				<span class="next"> </span>
+				</div> -->
 				<section id="choice">
 					<!-- facebook-share -->
 					<div id="fb-root"></div>
@@ -199,7 +236,7 @@
 							return false;
 						}
 					</script>
-					<div id="logo"></div>
+					<img id="logo"></img>
 					<div id="shareB" >
 						<p>
 							שתפו את התוצאה:
@@ -234,8 +271,7 @@
 								<button id="button0">
 									לתשובה המלאה
 								</button>
-								<div id="fullAns0" class="fullAns0 fullAnswers">
-								</div>
+								<div id="fullAns0" class="fullAns0 fullAnswers"></div>
 							</article>
 							<article id="artAns2" class="answer2 artAns ansR">
 								<p id="army_icon" class="icon"></p>
@@ -252,8 +288,7 @@
 								<button id="button2">
 									לתשובה המלאה
 								</button>
-								<div id="fullAns2" class="fullAns2 fullAnswers">
-								</div>
+								<div id="fullAns2" class="fullAns2 fullAnswers"></div>
 							</article>
 							<article id="artAns4" class="answer4 artAns ansR">
 								<p id="retire_icon" class="icon"></p>
@@ -270,8 +305,7 @@
 								<button id="button4">
 									לתשובה המלאה
 								</button>
-								<div id="fullAns4" class="fullAns4 fullAnswers">
-								</div>
+								<div id="fullAns4" class="fullAns4 fullAnswers"></div>
 							</article>
 							<article id="artAns6" class="answer6 artAns ansR">
 								<p id="pension_icon" class="icon"></p>
@@ -288,8 +322,7 @@
 								<button id="button6">
 									לתשובה המלאה
 								</button>
-								<div id="fullAns6" class="fullAns6 fullAnswers">
-								</div>
+								<div id="fullAns6" class="fullAns6 fullAnswers"></div>
 							</article>
 							<article id="artAns8" class="answer8 artAns ansR">
 								<p id="icon_gas" class="icon"></p>
@@ -306,8 +339,7 @@
 								<button id="button8">
 									לתשובה המלאה
 								</button>
-								<div id="fullAns8" class="fullAns8 fullAnswers">
-								</div>
+								<div id="fullAns8" class="fullAns8 fullAnswers"></div>
 							</article>
 						</div>
 						<div id="left">
@@ -326,8 +358,7 @@
 								<button id="button1">
 									לתשובה המלאה
 								</button>
-								<div id="fullAns1" class="fullAns1 fullAnswers ">
-								</div>
+								<div id="fullAns1" class="fullAns1 fullAnswers "></div>
 							</article>
 
 							<article id="artAns3" class="answer3 artAns ansL">
@@ -345,8 +376,7 @@
 								<button id="button3">
 									לתשובה המלאה
 								</button>
-								<div id="fullAns3" class="fullAns3 fullAnswers">
-								</div>
+								<div id="fullAns3" class="fullAns3 fullAnswers"></div>
 							</article>
 
 							<article id="artAns5" class="answer5 artAns ansL">
@@ -364,8 +394,7 @@
 								<button id="button5">
 									לתשובה המלאה
 								</button>
-								<div id="fullAns5" class="fullAns5 fullAnswers">
-								</div>
+								<div id="fullAns5" class="fullAns5 fullAnswers"></div>
 							</article>
 
 							<article id="artAns7" class="answer7 artAns ansL">
@@ -383,8 +412,7 @@
 								<button id="button7">
 									לתשובה המלאה
 								</button>
-								<div id="fullAns7" class="fullAns7 fullAnswers">
-								</div>
+								<div id="fullAns7" class="fullAns7 fullAnswers"></div>
 							</article>
 
 							<article id="artAns9" class="answer9 artAns ansL">
@@ -402,8 +430,7 @@
 								<button id="button9">
 									לתשובה המלאה
 								</button>
-								<div id="fullAns9" class="fullAns9 fullAnswers">
-								</div>
+								<div id="fullAns9" class="fullAns9 fullAnswers"></div>
 							</article>
 						</div>
 					</section>
@@ -412,6 +439,12 @@
 						<p>
 							למפלגות שמרכיבות את הקואליציה יש פחות נציגים בכנסת, משום שחלק מהנציגים שלהן משמשים בתור שרים בממשלה. לכן יש להם גם פחות נוכחות בכנסת, והם מגישים פחות הצעות חוק.
 						</p>
+						<select id="comboBox" >
+							<option value="committee" id="boxCommittee">נוכחות במשכן</option>
+							<option value="residence" id="boxResidence">נוכחות בוועדות</option>
+							<option value="submission" id="boxSubmission">הצעות חוק שהוגשו</option>
+							<option value="approve" id="boxApprove">הצעות חוק שהועברו</option>
+						</select>
 						<div id="navBorder"></div>
 						<nav class="horizontal-nav full-width horizontalNav-notprocessed">
 							<ul>
@@ -478,11 +511,11 @@
 							<div class="progressBar" id="16ProgressBar"></div>
 							<div class="progressBar" id="22ProgressBar"></div>
 							<div class="progressBar" id="11ProgressBar"></div>
-							
+
 						</div>
 						<div id="noData">
-								מפלגה חדשה, אין נתונים!
-							</div>
+							מפלגה חדשה, אין נתונים!
+						</div>
 					</section>
 					<section id="list">
 						<h4>הרשימה לכנסת ה-20 </h4>

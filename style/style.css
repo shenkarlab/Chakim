@@ -85,7 +85,7 @@ body {
 		margin: 0 auto;
 	}
 
-	.wrapper > ul > li > a > span {
+	#menu > li > a > span {
 		position: relative;
 		top: 54px;
 		left: 27%;
@@ -96,8 +96,9 @@ body {
 		font-size: x-large;
 		text-align: center;
 		line-height: 20px;
+		z-index: 99;
+		font-family: shual-bold;
 	}
-
 
 	form {
 		display: inline-block;
@@ -130,30 +131,26 @@ body {
 	}
 
 	#Questionconcept4 {
-		background-image: url("../images/Art_factory.png");
-	}
-
-	#Questionconcept5 {
 		background-image: url("../images/Art_retire.png");
 	}
 
-	#Questionconcept6 {
+	#Questionconcept5 {
 		background-image: url("../images/Art_taxes.png");
 	}
 
-	#Questionconcept7 {
+	#Questionconcept6 {
 		background-image: url("../images/Art_pension.png");
 	}
 
-	#Questionconcept8 {
+	#Questionconcept7 {
 		background-image: url("../images/Art_city.png");
 	}
 
-	#Questionconcept9 {
+	#Questionconcept8 {
 		background-image: url("../images/Art_gas.png");
 	}
 
-	#Questionconcept12 {
+	#Questionconcept9 {
 		background-image: url("../images/Art_medical.png");
 	}
 
@@ -210,7 +207,7 @@ body {
 		width: 33.3%;
 		height: 170px;
 		background-position: center 20px;
-		right: 0;
+		left: 67%;
 		top: 0;
 		text-align: center;
 	}
@@ -445,15 +442,13 @@ body {
 		text-decoration: none;
 		font-size: large;
 		float: right;
-		margin: 34px;
 	}
 
 	#logo {
-		width: 99%;
+		width: 100%;
 		height: 206px;
 		position: relative;
-		top: -1px;
-		background-repeat: no-repeat;
+		top: 3px;
 	}
 	#subTitle {
 		float: right;
@@ -776,10 +771,11 @@ body {
 
 	#hour {
 		position: relative;
-		right: 85%;
-		top: -6px;
+		float: left;
+		top: 4px;
+		left: 2%;
 		font-family: shual-regular;
-		height: 21px;
+		height: 0px;
 		width: 11%;
 	}
 
@@ -826,18 +822,18 @@ body {
 		font-size: 36px;
 		font-family: shual-regular;
 	}
-	
-	#imagesList{
-		margin-right : 5%;
+
+	#imagesList {
+		margin-right: 5%;
 	}
-	
+
 	#list > ul > li {
 		float: right;
 		list-style: none;
 		width: 142px;
 		height: 155px;
-		margin-bottom : 18px;
-		margin-top : 16px;
+		margin-bottom: 18px;
+		margin-top: 16px;
 	}
 	#list > ul > li > p {
 		width: 137px;
@@ -881,7 +877,7 @@ body {
 		font-size: 36px;
 		font-family: shual-regular;
 	}
-	
+
 	/*navigation results css*/
 	.p {
 		position: relative;
@@ -889,33 +885,88 @@ body {
 		float: left;
 		height: 0px;
 	}
-	#liquid1 {
-		background: transparent;
-		padding: 0;
-		border-radius: 0px;
-		border: none;
-		font-family: shual-bold;
+	#menu {
+		height: 191px;
+		white-space: nowrap;
+		overflow-x: hidden;
+		overflow-y: hidden;
 	}
-	#liquid1 .wrapper ul li {
+	#menu li {
+		height: 191px;
+		list-style-type: none;
+		/* padding: 5px; */
+		width: 133px;
+		display: inline-block;
+	}
+	#menu li a {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		padding: 0;
+		margin: 0;
+	}
+	#menu li a img {
+		position: relative;
+		width: 135px;
+		height: 150px;
+		float: right;
+	}
+	.previous {
+		background-image: url("../images/resultsArrow.png") !important;
+		background-repeat: no-repeat;
+		width: 42px !important;
+		height: 150px !important;
+	}
+	.previous:hover {
+		background-image: url("../images/prevH.png") !important;
+	}
+	/*.next {
+		background-image: url("images/next.png") !important;
+		background-repeat: no-repeat;
+		width: 42px !important;
+		height: 150px !important;
+	}*/
+	.next:hover {
+		background-image: url("../images/nextH.png") !important;
+	}
+	.previous {
+		display: block;
+		height: 126px;
+		width: 64px;
+		background-image: url('../images/previous.png');
+		float: left;
+		margin: 0;
+		padding: 0;
+	}
+	.next {
+		display: block;
+		height: 150px;
+		background-repeat: no-repeat;
+		width: 42px !important;
+		background-image: url('../images/next.png');
+		float: right;
+		margin: 0;
+		padding: 0;
+	}
+	#menu ul li {
 		margin: 0 !important;
 		padding: 0;
 		border: none;
 		width: 135px;
 	}
 
-	#liquid1 .wrapper ul li a {
+	#menu  li a {
 		-webkit-box-shadow: none;
 		box-shadow: none;
 		padding: 0;
 		margin: 0;
 	}
 
-	#liquid1 .wrapper ul li a img {
-		width: 135px;
-		height: 150px;
-		box-shadow: none;
-	}
-	#liquid1 > .wrapper > ul > li > a > img:hover {
+	/*#liquid1 .wrapper ul li a img {
+	 width: 135px;
+	 height: 150px;
+	 box-shadow: none;
+	 }*/
+	#menu > li > a > img:hover {
 		background: url('../images/selected_bgH.png') center no-repeat;
 		background-size: 100% 100%;
 		z-index: 999;
@@ -929,23 +980,23 @@ body {
 		color: white !important;
 	}
 
-	.liquid .previous {
-		background-image: url("../images/resultsArrow.png") !important;
-		background-repeat: no-repeat;
-		width: 47px !important;
-		height: 150px !important;
-	}
-	.liquid .previous:hover {
-		background-image: url("../images/prevH.png") !important;
-	}
-	.liquid .next {
-		background-repeat: no-repeat;
-		width: 47px !important;
-		height: 150px !important;
-	}
-	.liquid .next:hover {
-		background-image: url("../images/nextH.png") !important;
-	}
+	/*.liquid .previous {
+	 background-image: url("../images/resultsArrow.png") !important;
+	 background-repeat: no-repeat;
+	 width: 47px !important;
+	 height: 150px !important;
+	 }
+	 .liquid .previous:hover {
+	 background-image: url("../images/prevH.png") !important;
+	 }
+	 .liquid .next {
+	 background-repeat: no-repeat;
+	 width: 47px !important;
+	 height: 150px !important;
+	 }
+	 .liquid .next:hover {
+	 background-image: url("../images/nextH.png") !important;
+	 }*/
 	.sac {
 		display: block;
 		width: 100%;
@@ -1062,7 +1113,10 @@ body {
 	#shareB {
 		margin-right: 70%;
 		position: relative;
-		bottom: 195px;
+		bottom: 200px;
+	}
+	#comboBox {
+		display: none;
 	}
 }
 @media (max-width: 640px) {
@@ -1072,17 +1126,18 @@ body {
 		margin: 0 auto;
 	}
 	header > h1 {
-		font-size: 22px !important;
-		font-family: shual-black !important;
+		font-family: swatch-bold !important;
 		color: #ffffff;
 		float: right;
-		margin-top: 10px;
-		margin-right: 2%;
+		font-size: 26px;
+		margin-right: 19%;
+		line-height: 82px;
+		letter-spacing: 2.5px;
 	}
 	#formHeader {
-		background-color: #2d3a61;
+		background-color: #d72f37;
 		width: 100%;
-		height: 55px;
+		height: 82px;
 	}
 	header > h2 {
 		font-family: shual-light !important;
@@ -1306,10 +1361,10 @@ body {
 
 	#navBorder {
 		border-bottom: 1px solid grey;
-		margin-top: 45px;
-		position: absolute;
+		position: relative;
 		z-index: 1;
 		width: 100%;
+		float: right;
 	}
 
 	.ui-progressbar {
@@ -1327,7 +1382,7 @@ body {
 
 	#choice {
 		/*background-image: url("../images/backgroundParty.jpg");*/
-		background-color: #ffffff;
+		background: linear-gradient(to top left, #fcc531, #ffe933);
 		width: 100%;
 		height: 208px;
 		/*border-bottom: 20px;*/
@@ -1340,8 +1395,8 @@ body {
 		float: right;
 		position: relative;
 		color: #ffffff;
-		top: -130px;
-		right: 5%;
+		top: -40px;
+		right: 30%;
 		font-family: shual-light;
 	}
 	#percentOf {
@@ -1350,35 +1405,48 @@ body {
 		position: relative;
 		z-index: 1;
 		color: #ffffff;
-		top: -130px;
-		right: 3%;
+		top: -40px;
+		right: 29%;
 		font-family: shual-light;
 	}
 	#partiesName {
 		float: right;
-		padding: 2%;
-		width: 10%;
+		width: 23%;
+		position: relative;
 	}
 	#partiesName > ul {
 		list-style-type: none;
-		/* margin: 2%; */
-		padding-top: 5px;
+		margin-top: 14px;
+		padding-top: 7px;
 		color: #4c4c4c;
 	}
 	#partiesName > ul > li {
-		padding-top: 15px;
+		/* padding-top: 15px; */
 		/* width: 114%; */
-		font-size: 16px;
-		height: 56px;
+		position: relative;
+		font-size: 20px;
+		height: 39px;
 		font-family: shual-regular;
+		padding-bottom: 0px;
+		padding-top: 5px;
+	}
+	#comboBox {
+		width: 45%;
+		height: 33px;
+		direction: rtl;
+		float: right;
+		background: #4C4C4C;
+		color: #ffffff;
+		font-size: 16px;
 	}
 	#deynmicActive {
 		float: right;
-		margin-top: 37px;
+		margin-top: 24px;
 		/* padding-top: 19px; */
 		border-right-width: thin;
 		border-right-style: groove;
-		height: 525px;
+		height: 372px;
+		width: 76%
 	}
 
 	#headLogo {
@@ -1391,10 +1459,11 @@ body {
 	}
 
 	.progressBar {
-		height: 20px !important;
+		height: 27px !important;
 		color: white !important;
 		font-family: shual-light !important;
 		font-size: 18px !important;
+		margin-bottom: 17px;
 	}
 
 	.progressBar, .ui-progressbar, .ui-widget, .ui-widget-content, .ui-corner-all {
@@ -1431,7 +1500,6 @@ body {
 		text-decoration: none;
 		font-size: large;
 		float: right;
-		margin: 34px;
 	}
 	/*
 	 #pic {
@@ -1443,8 +1511,8 @@ body {
 	 }
 	 */
 	#logo {
-		width: 99%;
-		height: 206px;
+		width: 100%;
+		height: auto;
 		position: relative;
 		top: -11px;
 		background-repeat: no-repeat;
@@ -1475,7 +1543,7 @@ body {
 	#activity {
 		float: right;
 		width: 100%;
-		height: 812px;
+		height: auto;
 		background-color: #ffffff;
 		border-bottom: 20px;
 		border-bottom-color: #eae9e4;
@@ -1779,10 +1847,13 @@ body {
 	}
 	#list > ul > li {
 		float: right;
-		width: 142px;
-		height: 155px;
-		margin-bottom : 18px;
-		margin-top: 13px;
+		width: 33%;
+		text-decoration: none;
+		/* height: 155px; */
+		height: auto;
+		margin-bottom: 6px;
+		margin-top: 7px;
+		list-style: none;
 	}
 	#list > ul > li > p {
 		width: 137px;
@@ -1798,29 +1869,11 @@ body {
 		background-color: #EAE9E4;
 	}
 
-	#imagesList{
-		margin-right : 5%;
+	#imagesList {
+		margin-right: 5%;
 	}
-	#pichome1 {
-		float: right;
-	}
-	#pichome2 {
-		float: right;
-	}
-	#pichome3 {
-		float: right;
-	}
-	#pichome4 {
-		float: right;
-	}
-	#pichome5 {
-		float: right;
-	}
-	#pichome6 {
-		float: right;
-	}
-	#pichome7 {
-		float: right;
+	#imagesList > li > img {
+		width: 100%;
 	}
 	#activity > h4 {
 		margin-right: 24px;
@@ -1863,18 +1916,10 @@ body {
 		box-shadow: none;
 	}
 
-	/*#liquid1:hover .previous {
-	 visibility: visible !important;
-	 }
-
-	 #liquid1:hover .next {
-	 visibility: visible !important;
-	 }*/
-
 	.selected {
 		content: url('../images/selected_bg.png');
 		background: transparent !important;
-		height: 191px !important;
+		height: 164px !important;
 		color: white !important;
 	}
 
@@ -1922,6 +1967,7 @@ body {
 		background: #efefef;
 		border-radius: 6px;
 		width: 100%;
+		display: none;
 	}
 	.horizontal-nav ul {
 		float: right;
@@ -1968,8 +2014,8 @@ body {
 	#noData {
 		float: right;
 		position: relative;
-		top: 76px;
-		left: 20%;
+		top: -18px;
+		right: 1%;
 		font-family: shual-regular;
 		font-size: 20px;
 		color: #4c4c4c;
@@ -2010,18 +2056,17 @@ body {
 		font-size: 16px;
 		position: relative;
 		top: -17px;
-		left: 27%;
 		display: inline-block;
 	}
 
 	#shareB {
-		width: 100%;
-		margin-right: 33%;
+		width: 46%;
 		position: relative;
-		bottom: 195px;
+		height: auto;
+		float: left;
 	}
 
-	.wrapper > ul > li > a > span {
+	#menu > li > a > span {
 		position: relative;
 		top: 35px;
 		left: 26%;
@@ -2031,6 +2076,7 @@ body {
 		width: 68px;
 		font-size: x-large;
 		text-align: center;
+		z-index: 99;
 	}
 
 }
