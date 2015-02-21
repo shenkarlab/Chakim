@@ -2,9 +2,9 @@ var sectionId;
 var spani;
 var q_num = 1;
 var answers = [];
-var chkimAns = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-var percent = [0, 0, 0, 0, 0, 0, 0, 0, 0];
-var result = [14, 16, 15, 17, 10, 26, 20, 22, 11];
+var chkimAns = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var percent = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+var result = [14, 16, 15, 17, 10, 26, 20, 22, 18, 19];
 var i,
     j,
     y,
@@ -47,7 +47,7 @@ function avgParty(id, avgMonth, avgWeek) {
 	};
 }
 
-var tempName = [partySection(14, "הליכוד", "", "//www.youtube.com/embed/ZA23LiWIHzM", 49.3, 3.2, "#22599c", 10), partySection(16, "המחנה הציוני", "", "//www.youtube.com/embed/J5eDRryp9uY", 61.7, 2.9, "#265da0", 10), partySection(15, "יש עתיד", "", "//www.youtube.com/embed/pKVrFwJ2CVc", 29.3, 2.1, "#16477e", 10), partySection(17, "הבית היהודי", "", "//www.youtube.com/embed/oSwCtvH9838", 38.5, 2.7, "#a2c739", 10), partySection(10, "כולנו", "", "//www.youtube.com/embed/YujaXY3jyKM", 0, 0, "#30b4e7", 10), partySection(26, "ישראל ביתנו", "", "//www.youtube.com/embed/5hO4mnG-wLU", 39.5, 2.4, "#255a70", 10), partySection(20, "מרצ", "", "//www.youtube.com/embed/IF2yLwB0Qa0", 119.7, 5, "#3d9c3f", 10), partySection(22, "הרשימה הערבית", "", "//www.youtube.com/embed/ZxPuED8HZIk", 215, 5.5, "#009138", 10), partySection(11, 'ש"ס', "", "//www.youtube.com/embed/ZxPuED8HZIk", 53, 2.2, "#000000", 10)];
+var tempName = [partySection(14, "הליכוד", "", "//www.youtube.com/embed/ZA23LiWIHzM", 49.3, 3.2, "#22599c", 10), partySection(16, "המחנה הציוני", "", "//www.youtube.com/embed/J5eDRryp9uY", 61.7, 2.9, "#265da0", 10), partySection(15, "יש עתיד", "", "//www.youtube.com/embed/pKVrFwJ2CVc", 29.3, 2.1, "#16477e", 10), partySection(17, "הבית היהודי", "", "//www.youtube.com/embed/oSwCtvH9838", 38.5, 2.7, "#a2c739", 10), partySection(10, "כולנו", "", "//www.youtube.com/embed/YujaXY3jyKM", 0, 0, "#30b4e7", 10), partySection(26, "ישראל ביתנו", "", "//www.youtube.com/embed/5hO4mnG-wLU", 39.5, 2.4, "#255a70", 10), partySection(20, "מרצ", "", "//www.youtube.com/embed/IF2yLwB0Qa0", 119.7, 5, "#3d9c3f", 10), partySection(22, "הרשימה הערבית", "", "//www.youtube.com/embed/ZxPuED8HZIk", 215, 5.5, "#009138", 10), partySection(18, 'ש"ס', "", "//www.youtube.com/embed/ZxPuED8HZIk", 53, 2.2, "#000000", 10), partySection(19, "יהדות התורה", "", "//www.youtube.com/embed/ZxPuED8HZIk", 58.9, 3.0, "#1578ba", 10)];
 
 var partiesAvg = [];
 
@@ -108,12 +108,17 @@ $(document).ready(function() {
 			$(value).css('border', 'none')
 		});
 		me.addClass('selected');
+		$("#menu li a img.selected").css({
+			'opacity' : '1.0'
+		})
+
 		//add un selected image for explorer and firefox
 		me.attr('src', 'images/selected_bg.png');
 		me.css({
-			'border' : 'none',
-			'opacity' : '1.0'
+			'border' : 'none'
+
 		});
+
 		numParty = me.parent().attr('id');
 		$("a#" + numParty + " span").css({
 			"color" : "#FFFFFF"
@@ -159,7 +164,6 @@ $(document).ready(function() {
 	});
 	//change animation on hover form
 	$(document).on("mouseenter", '.inputButton', function(e) {
-		$(this).css("opacity", "1");
 		var $that = $(this);
 		doBounce($that, 0.8, '10px', 400);
 		bouncer = setInterval(function() {
@@ -168,9 +172,33 @@ $(document).ready(function() {
 	});
 	//stop animtion on hover form
 	$(document).on("mouseleave", '.inputButton', function(e) {
-		$(this).css("opacity", "0.6");
 		clearInterval(bouncer);
 	});
+
+	$(document).on("mouseenter", '#chooseYes', function(e) {
+		$(this).css("color", "#21cbc0");
+	});
+
+	$(document).on("mouseleave", '#chooseYes', function(e) {
+		$(this).css("color", "#494949");
+	});
+
+	$(document).on("mouseenter", '#chooseNo', function(e) {
+		$(this).css("color", "#ff6d1d");
+	});
+
+	$(document).on("mouseleave", '#chooseNo', function(e) {
+		$(this).css("color", "#494949");
+	});
+
+	$(document).on("mouseenter", '#chooseDontKnow', function(e) {
+		$(this).css("color", "#a3a3a3");
+	});
+
+	$(document).on("mouseleave", '#chooseDontKnow', function(e) {
+		$(this).css("color", "#494949");
+	});
+
 	$(function() {
 		$("#comboBox").on("change", function() {
 			console.log($("#comboBox").val());
@@ -219,7 +247,7 @@ $(function() {
 //compare form results with party results
 var clicked = false;
 function checkform(obj) {
-	//checkAns();
+	// checkAns();
 
 	if (clicked)
 		return false;
@@ -273,32 +301,35 @@ function checkAns() {
 		var eachPercent = 0;
 		$.each(dataAnswer, function(index, value) {
 			//parties.push(Party(value.name, value.id, value.number_of_seats, value.members))
-			if (answers[index] != value.licod) {
+			if (answers[index] == value.licod) {
 				chkimAns[0]++;
 			}
-			if (answers[index] != value.avoda) {
+			if (answers[index] == value.avoda) {
 				chkimAns[1]++;
 			}
-			if (answers[index] != value.yeshAtid) {
+			if (answers[index] == value.yeshAtid) {
 				chkimAns[2]++;
 			}
-			if (answers[index] != value.abityehudi) {
+			if (answers[index] == value.abityehudi) {
 				chkimAns[3]++;
 			}
-			if (answers[index] != value.culanu) {
+			if (answers[index] == value.culanu) {
 				chkimAns[4]++;
 			}
-			if (answers[index] != value.israelbitnu) {
+			if (answers[index] == value.israelbitnu) {
 				chkimAns[5]++;
 			}
-			if (answers[index] != value.mertz) {
+			if (answers[index] == value.mertz) {
 				chkimAns[6]++;
 			}
-			if (answers[index] != value.hadashe) {
+			if (answers[index] == value.hadashe) {
 				chkimAns[7]++;
 			}
-			if (answers[index] != value.shess) {
+			if (answers[index] == value.shess) {
 				chkimAns[8]++;
+			}
+			if (answers[index] == value.y_tora) {
+				chkimAns[9]++;
 			}
 			tempName[0].answers[index] = value.licod;
 			tempName[1].answers[index] = value.avoda;
@@ -309,10 +340,11 @@ function checkAns() {
 			tempName[6].answers[index] = value.mertz;
 			tempName[7].answers[index] = value.hadashe;
 			tempName[8].answers[index] = value.shess;
+			tempName[9].answers[index] = value.y_tora;
 		});
 
 		for ( i = 0; i < chkimAns.length; i++) {
-			eachPercent = 100 - ((chkimAns[i] * 100) / 9);
+			eachPercent = ((chkimAns[i] * 100) / 9);
 			percent[i] = parseInt(eachPercent);
 			tempName[i].percent = parseInt(eachPercent);
 		}
@@ -331,7 +363,18 @@ function checkAns() {
 		} while (swapped);
 		//append results to  result menu
 		for ( i = 0; i < percent.length; i++) {
-			$('.p' + i).append("<b>" + tempName[i].percent + "%" + "</b>" + "<br />" + tempName[i].name);
+			if (tempName[i].id == 16)
+				$('.p' + i).append("<b>" + tempName[i].percent + "%" + "</b>" + "<br />" + "המחנה<br />הציוני");
+			else if (tempName[i].id == 17)
+				$('.p' + i).append("<b>" + tempName[i].percent + "%" + "</b>" + "<br />" + "הבית<br />היהודי");
+			else if (tempName[i].id == 19)
+				$('.p' + i).append("<b>" + tempName[i].percent + "%" + "</b>" + "<br />" + "יהדות<br />התורה");
+			else if (tempName[i].id == 22)
+				$('.p' + i).append("<b>" + tempName[i].percent + "%" + "</b>" + "<br />" + "הרשימה<br />הערבית");
+			else if (tempName[i].id == 26)
+				$('.p' + i).append("<b>" + tempName[i].percent + "%" + "</b>" + "<br />" + "ישראל<br />ביתנו");
+			else
+				$('.p' + i).append("<b>" + tempName[i].percent + "%" + "</b>" + "<br />" + tempName[i].name);
 			$('.p' + i).parent().attr('id', 'newID' + tempName[i].id);
 		}
 		//update full partys answer
@@ -511,11 +554,18 @@ function updateButton(num) {
 				$("#22ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
 				break;
 			}
-			case 11: {
-				$("#11ProgressBar").animate({
-					"width" : ((7.5) * 10) + "px"
+			case 18: {
+				$("#18ProgressBar").animate({
+					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
 				});
-				$("#11ProgressBar").html(7.5);
+				$("#18ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+				break;
+			}
+			case 19: {
+				$("#19ProgressBar").animate({
+					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+				});
+				$("#19ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
 				break;
 			}
 			}
@@ -579,11 +629,18 @@ function updateButton(num) {
 				$("#22ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
 				break;
 			}
-			case 11: {
-				$("#11ProgressBar").animate({
-					"width" : ((14) * 10) + "px"
+			case 18: {
+				$("#18ProgressBar").animate({
+					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
 				});
-				$("#11ProgressBar").html(14);
+				$("#18ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+				break;
+			}
+			case 19: {
+				$("#19ProgressBar").animate({
+					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+				});
+				$("#19ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
 				break;
 			}
 			}
@@ -648,11 +705,18 @@ function updateButton(num) {
 				$("#22ProgressBar").html(tempName[i].rulesApprove);
 				break;
 			}
-			case 11: {
-				$("#11ProgressBar").animate({
+			case 18: {
+				$("#18ProgressBar").animate({
 					"width" : ((tempName[i].rulesApprove) * 20) + "px"
 				});
-				$("#11ProgressBar").html(tempName[i].rulesApprove);
+				$("#18ProgressBar").html(parseInt(tempName[i].rulesApprove));
+				break;
+			}
+			case 19: {
+				$("#19ProgressBar").animate({
+					"width" : ((tempName[i].rulesApprove) * 20) + "px"
+				});
+				$("#19ProgressBar").html(parseInt(tempName[i].rulesApprove));
 				break;
 			}
 			}
@@ -711,16 +775,23 @@ function updateButton(num) {
 			}
 			case 22: {
 				$("#22ProgressBar").animate({
-					"width" : "500px"
+					"width" : "400px"
 				});
 				$("#22ProgressBar").html(tempName[i].rulesSubmission);
 				break;
 			}
-			case 11: {
-				$("#11ProgressBar").animate({
+			case 18: {
+				$("#18ProgressBar").animate({
 					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
 				});
-				$("#11ProgressBar").html(tempName[i].rulesSubmission);
+				$("#18ProgressBar").html(parseInt(tempName[i].rulesSubmission));
+				break;
+			}
+			case 19: {
+				$("#19ProgressBar").animate({
+					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+				});
+				$("#19ProgressBar").html(parseInt(tempName[i].rulesSubmission));
 				break;
 			}
 			}
@@ -750,8 +821,7 @@ function daynamicFunc(num) {
 	});
 
 	$.each(parties, function(index, value) {
-		if (value.id == num && num != 10 && num != 11) {
-
+		if (value.id == num && num != 10) {
 			/*$('#logo').css({
 			 "background-image" : "url('images/logo" + num + ".png')"
 			 });*/
@@ -769,7 +839,7 @@ function daynamicFunc(num) {
 			$("#" + value.id + "ProgressBar").addClass('selected1');
 
 			$('section.partyNameTrue').each(function() {
-				$(this).html("עמדת " + value.name)
+				$(this).html("עמדת " + value.name + ":")
 			});
 
 			myAnsfunc();
@@ -777,7 +847,7 @@ function daynamicFunc(num) {
 			for ( i = 0; i < tempName.length; i++) {
 				if (tempName[i].id == value.id) {
 					$('#percentOf').html(tempName[i].percent + "%");
-
+					updateToggle(i);
 					for ( j = 0; j < 10; j++) {
 						if (tempName[i].answers[j] == "yes")
 							$('#theAns .partyAnswer' + j).css({
@@ -827,73 +897,10 @@ function daynamicFunc(num) {
 					// "background-image" : "url('images/logo" + num + ".png')"
 					// });
 					$('#logo').attr('src', "images/logo" + num + ".png");
-
+					updateToggle(i);
 					$('#percentOf').html(tempName[i].percent + "%");
 					$('section.partyNameTrue').each(function() {
-						$(this).html("עמדת " + tempName[i].name)
-					});
-
-					myAnsfunc();
-					for ( j = 0; j < 10; j++) {
-						if (tempName[i].answers[j] == "yes")
-							$('#theAns .partyAnswer' + j).css({
-								"backgroundImage" : "url('images/smalLike.png')"
-							});
-						else {
-							if (tempName[i].answers[j] == "no")
-								$('#theAns .partyAnswer' + j).css({
-									"backgroundImage" : "url('images/smallDisLike.png')"
-								});
-						}
-						if (tempName[i].answers[j] == "") {
-							$('#theAns .partyAnswer' + j).css({
-								"backgroundImage" : "url('images/no_comment.png')"
-							});
-						}
-					}
-					y = 0;
-					$.each(result, function(y, v) {
-						if ($(("#" + v + "ProgressBar")).hasClass('selected1')) {
-							$('.selected1').css({
-								"background" : "#a6a6a6"
-							});
-							$(("#" + v + "ProgressBar")).removeClass('selected1');
-						}
-					});
-					$("#" + num + "ProgressBar").addClass('selected1');
-					$('.selected1').css({
-						"background" : ((tempName[i].color))
-					});
-					$('.selected2').css({
-						"background-image" : "url('images/button" + num + ".png')"
-					}, {
-						color : "#ffffff"
-					});
-					$('#activity h4').css({
-						"color" : tempName[i].color
-					});
-					$('#questionnaire h4').css({
-						"color" : tempName[i].color
-					});
-					$('#list h4').html("רשימת " + tempName[i].name + " : " + "העשירייה הראשונה");
-					$('#list h4').css({
-						"color" : tempName[i].color
-					});
-					break;
-				}
-			}
-		}
-		if (num == 11) {
-
-			for ( i = 0; i < tempName.length; i++) {
-				if (tempName[i].id == 11) {
-					/*$('#logo').src({
-					 "background-image" : "url('images/logo" + num + ".png')"
-					 });*/
-					$('#logo').attr('src', "images/logo" + num + ".png");
-					$('#percentOf').html(tempName[i].percent + "%");
-					$('section.partyNameTrue').each(function() {
-						$(this).html("עמדת " + tempName[i].name )
+						$(this).html("עמדת " + tempName[i].name + ":")
 					});
 
 					myAnsfunc();
@@ -957,6 +964,13 @@ function daynamicFunc(num) {
 
 	};
 	$('#imagesList').html(sHTML);
+}
+
+function updateToggle(tog) {
+	for ( u = 0; u < 10; u++) {
+		$('#button' + u).html("עוד על עמדת " + tempName[tog].name)
+
+	}
 }
 
 //get user results

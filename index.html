@@ -13,7 +13,6 @@
 		<link href="http://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
 		<script src="js/jquery-1.11.2.min.js"></script>
 		<script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-		<link type="text/css" rel="stylesheet" href="style/liquidcarousel.css" />
 		<link type="text/css" rel="stylesheet" href="style/style.css">
 		<script src="js/calcalistFunctions.js"></script>
 		<title>שאלון כלכליסט</title>
@@ -26,12 +25,13 @@
 				</header>
 				<form name="message" method="post" onsubmit="return checkform(this)">
 					<div id="questionsList">
+						<div id = "top_questionier"></div>
 						<section class="questions animated" id="fisrtQuestion">
 							<section class="questionConcept" id="Questionconcept1" data-num="1"></section>
 							<h3>שכר בכירים</h3>
 							<p>
 								צריך לחוקק חוק שיגביל את שכר המנהלים הבכירים
-								<br>
+								
 								בחברות ציבוריות בכל המשק
 							</p>
 						</section>
@@ -54,7 +54,7 @@
 							<h3>גיל הפרישה</h3>
 							<p>
 								בגלל העלייה בתוחלת החיים,
-								<br>
+								
 								אין ברירה אלא להעלות את גיל הפרישה
 							</p>
 						</section>
@@ -63,7 +63,7 @@
 							<h3>מיסוי</h3>
 							<p>
 								המדינה צריכה להטיל מסים גבוהים יותר
-								<br>
+								
 								ולתת בתמורה שירותים ציבוריים נרחבים יותר
 							</p>
 						</section>
@@ -72,7 +72,7 @@
 							<h3>פנסיה</h3>
 							<p>
 								כספי המסים צריכים לסבסד חלק גדול יותר
-								<br>
+								
 								מהפנסיה של העובדים המבוגרים
 							</p>
 						</section>
@@ -81,7 +81,7 @@
 							<h3>דיור</h3>
 							<p>
 								המדינה צריכה להשקיע מיליארדים
-								<br>
+								
 								בבניית דיור ציבורי לשכבות חלשות
 							</p>
 						</section>
@@ -90,7 +90,7 @@
 							<h3>גז</h3>
 							<p>
 								התערבות ממשלתית בשוק הגז הטבעי
-								<br>
+								
 								תבריח משקיעים זרים מישראל
 							</p>
 						</section>
@@ -161,43 +161,11 @@
 					<li>
 						<a href="#"><span class="p8"></span><img src="images/results_bg.png" /></a>
 					</li>
+					<li>
+						<a href="#"><span class="p9"></span><img src="images/results_bg.png" /></a>
+					</li>
 				</ul>
 
-				<!-- <div id="liquid1" class="liquid">
-				<span class="previous"> </span>
-				<div class="wrapper">
-				<ul>
-				<li>
-				<a href="#"><span class="p0"></span><img src="images/results_bg.png" class="selected"/></a>
-				</li>
-				<li>
-				<a href="#"><span class="p1"></span><img src="images/results_bg.png" /></a>
-				</li>
-				<li>
-				<a href="#"><span class="p2"></span><img src="images/results_bg.png" /></a>
-				</li>
-				<li>
-				<a href="#"><span class="p3"></span><img src="images/results_bg.png" /></a>
-				</li>
-				<li>
-				<a href="#"><span class="p4"></span><img src="images/results_bg.png" /></a>
-				</li>
-				<li>
-				<a href="#"><span class="p5"></span><img src="images/results_bg.png" /></a>
-				</li>
-				<li>
-				<a href="#"><span class="p6"></span><img src="images/results_bg.png" /></a>
-				</li>
-				<li>
-				<a href="#"><span class="p7"></span><img src="images/results_bg.png" /></a>
-				</li>
-				<li>
-				<a href="#"><span class="p8"></span><img src="images/results_bg.png" /></a>
-				</li>
-				</ul>
-				</div>
-				<span class="next"> </span>
-				</div> -->
 				<section id="choice">
 					<!-- facebook-share -->
 					<div id="fb-root"></div>
@@ -239,7 +207,7 @@
 					<img id="logo"></img>
 					<div id="shareB" >
 						<p>
-							שתפו את התוצאה:
+							לשיתוף השאלון:
 						</p>
 						<div id="mImageBox">
 							<img class="fb-share-button" id='my_image' width="30" height="30" src='images/facebook.png' data-href="http://shenkarlab.github.io/Chakim/#/" data-layout="button" data-show-faces="true" data-share="true" alt='http://shenkarlab.github.io/Chakim/#/' width="auto" height="auto" onclick="fbs_click(this)"/>
@@ -361,24 +329,6 @@
 								<div id="fullAns1" class="fullAns1 fullAnswers "></div>
 							</article>
 
-							<article id="artAns3" class="answer3 artAns ansL">
-								<p id="icon_indusrty" class="icon"></p>
-								<h5 >מפעלים במצוקה</h5>
-								<h6>המדינה לא צריכה להציל מפעלים שנמצאים במצוקה. אין סיבה שכספי המסים של כולנו יסבסדו עסקים לא יעילים</h6>
-								<section id="theAns">
-									<section>
-										את/ה ענית:
-									</section>
-									<section id="myAnswer" class="myAnswer3"></section>
-									<section class="partyNameTrue"></section>
-									<section id="partyAnswer" class="partyAnswer3"></section>
-								</section>
-								<button id="button3">
-									לתשובה המלאה
-								</button>
-								<div id="fullAns3" class="fullAns3 fullAnswers"></div>
-							</article>
-
 							<article id="artAns5" class="answer5 artAns ansL">
 								<p id="icon_taxes" class="icon"></p>
 								<h5 >מיסוי</h5>
@@ -392,7 +342,7 @@
 									<section id="partyAnswer" class="partyAnswer5"></section>
 								</section>
 								<button id="button5">
-									לתשובה המלאה
+									עוד על עמדת ה
 								</button>
 								<div id="fullAns5" class="fullAns5 fullAnswers"></div>
 							</article>
@@ -489,13 +439,16 @@
 									ישראל ביתנו
 								</li>
 								<li>
-									העבודה
+									המחנה הציוני
 								</li>
 								<li>
 									הרשימה הערבית
 								</li>
 								<li>
 									ש"ס
+								</li>
+								<li>
+									יהדות התורה
 								</li>
 								<li>
 									כולנו
@@ -510,12 +463,13 @@
 							<div class="progressBar" id="26ProgressBar"></div>
 							<div class="progressBar" id="16ProgressBar"></div>
 							<div class="progressBar" id="22ProgressBar"></div>
-							<div class="progressBar" id="11ProgressBar"></div>
-
+							<div class="progressBar" id="18ProgressBar"></div>
+							<div class="progressBar" id="19ProgressBar"></div>
 						</div>
 						<div id="noData">
 							מפלגה חדשה, אין נתונים!
 						</div>
+						<h6 id="knesetPtoha">הנתונים מתוך: אתר כנסת פתוחה</h6>
 					</section>
 					<section id="list">
 						<h4>הרשימה לכנסת ה-20 </h4>

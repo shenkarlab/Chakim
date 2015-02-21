@@ -9,7 +9,8 @@
 			"israelbitnu": "no",
 			"mertz": "yes",
 			"hadashe": "yes",
-			"shess": ""
+			"shess": "",
+			"y_tora":""
 		}, {
 			"licod": "yes",
 			"avoda": "yes",
@@ -19,7 +20,8 @@
 			"israelbitnu": "no",
 			"mertz": "yes",
 			"hadashe": "yes",
-			"shess": "yes"
+			"shess": "yes",
+			"y_tora":"yes"
 		}, {
 			"licod": "yes",
 			"avoda": "no",
@@ -29,17 +31,8 @@
 			"israelbitnu": "no",
 			"mertz": "no",
 			"hadashe": "no",
-			"shess": ""
-		}, {
-			"licod": "yes",
-			"avoda": "",
-			"yeshAtid": "",
-			"abityehudi": "yes",
-			"culanu": "",
-			"israelbitnu": "yes",
-			"mertz": "",
-			"hadashe": "",
-			"shess": ""
+			"shess": "",
+			"y_tora":""
 		}, {
 			"licod": "yes",
 			"avoda": "no",
@@ -49,7 +42,8 @@
 			"israelbitnu": "no",
 			"mertz": "no",
 			"hadashe": "no",
-			"shess": ""
+			"shess": "",
+			"y_tora":""
 		}, {
 			"licod": "no",
 			"avoda": "no",
@@ -59,7 +53,8 @@
 			"israelbitnu": "no",
 			"mertz": "yes",
 			"hadashe": "no",
-			"shess": ""
+			"shess": "",
+			"y_tora":""
 		}, {
 			"licod": "no",
 			"avoda": "no",
@@ -69,7 +64,8 @@
 			"israelbitnu": "yes",
 			"mertz": "yes",
 			"hadashe": "",
-			"shess": ""
+			"shess": "",
+			"y_tora":""
 		}, {
 			"licod": "no",
 			"avoda": "yes",
@@ -79,7 +75,8 @@
 			"israelbitnu": "yes",
 			"mertz": "yes",
 			"hadashe": "yes",
-			"shess": ""
+			"shess": "",
+			"y_tora":""
 		}, {
 			"licod": "yes",
 			"avoda": "no",
@@ -89,7 +86,8 @@
 			"israelbitnu": "yes",
 			"mertz": "no",
 			"hadashe": "",
-			"shess": ""
+			"shess": "",
+			"y_tora":""
 		}, {
 			"licod": "yes",
 			"avoda": "no",
@@ -99,7 +97,8 @@
 			"israelbitnu": "yes",
 			"mertz": "no",
 			"hadashe": "no",
-			"shess": ""
+			"shess": "",
+			"y_tora":"yes"
 		}
 	]
 }

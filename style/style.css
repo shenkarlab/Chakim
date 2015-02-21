@@ -88,34 +88,39 @@ body {
 	#menu > li > a > span {
 		position: relative;
 		top: 54px;
-		left: 27%;
+		left: 25%;
 		color: #4c4c4c;
 		float: left;
 		height: 0px;
-		width: 68px;
+		width: 71px;
 		font-size: x-large;
 		text-align: center;
 		line-height: 20px;
-		z-index: 99;
+		z-index: 999;
 		font-family: shual-bold;
 	}
 
 	form {
 		display: inline-block;
 		text-align: center;
-		height: 672px;
+		height: 600px;
 		width: 100%;
+		background: white;
+	}
+
+	#top_questionier {
 		background: linear-gradient(to top left, #fcc531, #ffe933);
+		height: 270px;
 	}
 
 	.questionConcept {
-		height: 219px;
+		height: 160px;
 		width: 100%;
 		position: relative;
-		margin-top: 49px;
+		/*margin-top: 49px;*/
 		background-repeat: no-repeat;
-		left: 20%;
-		top: -23px;
+		background-position-x: center;
+		top: 38px;
 	}
 
 	#Questionconcept1 {
@@ -156,18 +161,22 @@ body {
 
 	.questions > h3 {
 		font-family: shual-Regular;
-		margin-top: 14px;
-		text-align: center;
-		color: #ef7430;
-		font-size: 42px;
+		margin-top: 142px;
+		text-align: right;
+		margin-right: 9%;
+		color: #ffba00;
+		letter-spacing: 0.5px;
+		font-size: 40px;
 	}
 
 	.questions > p {
 		font-family: shual-light;
-		font-size: 29px;
-		color: #8c5d20;
-		margin: 10px 14%;
-		line-height: 105%;
+		font-size: 32px;
+		color: #494949;
+		margin: 14px 9%;
+		line-height: 112%;
+		text-align: right;
+		width: 70%;
 	}
 	.inputButton {
 		position: absolute;
@@ -175,48 +184,38 @@ body {
 		text-decoration: none;
 		font-size: 29.56px;
 		color: #fff8e2;
-		line-height: 250px;
-		opacity: 0.5;
+		line-height: 215px;
 		background-repeat: no-repeat;
-		font-family: shual-light;
+		font-family: shual-regular;
 		font-weight: normal;
-	}
-	#yesText {
-
-	}
-
-	#noText {
-
-	}
-
-	#dontKnowText {
-
+		color: #494949;
 	}
 
 	#chooses {
 		width: 800px;
-		height: 171px;
+		height: 150px;
 		position: absolute;
 		overflow: auto;
-		top: 564px;
+		top: 520px;
 		right: 0;
 	}
 
 	#chooseYes {
 		background-image: url("../images/likeMark.png");
-		width: 33.3%;
-		height: 170px;
+		width: 20%;
+		height: 150px;
 		background-position: center 20px;
-		left: 67%;
+		left: 77%;
 		top: 0;
 		text-align: center;
+		/*color: #21cbc0;*/
 	}
 
 	#chooseNo {
 		background-image: url("../images/thumbDownMark.png");
-		width: 33.3%;
-		height: 170px;
-		left: 0;
+		width:20%;
+		height: 150px;
+		left: 5%;
 		top: 0;
 		background-position: center 20px;
 		text-align: center;
@@ -224,20 +223,12 @@ body {
 
 	#chooseDontKnow {
 		background-image: url("../images/dontKnowMark.png");
-		width: 33.3%;
-		height: 170px;
-		left: 33.3%;
+		width: 20%;
+		height: 150px;
+		left: 40%;
 		top: 0;
-		background-position: center 40px;
+		background-position: center 32px;
 		text-align: center;
-	}
-
-	.inputButton #chooseYes : active {
-		background-image: url("../images/likeMarkClicked.png");
-	}
-
-	.inputButton : hover {
-		opacity: 1;
 	}
 
 	.ol-search {
@@ -245,7 +236,7 @@ body {
 		width: 100%;
 		direction: rtl;
 		position: relative;
-		top: 430px;
+		top: 213px;
 	}
 	.li-search {
 		border-radius: 50%;
@@ -253,15 +244,15 @@ body {
 		border-width: 2px;
 		border-color: white;
 		display: inline-block;
-		width: 3px;
-		height: 3px;
+		width: 6px;
+		height: 6px;
 		background: white;
 		margin: 10px 10px 12px 10px;
-		opacity: 0.6;
+		opacity: 0.4;
 	}
 	.active {
-		width: 12px;
-		height: 12px;
+		width: 14px;
+		height: 14px;
 		opacity: 1;
 		margin: 10px;
 	}
@@ -273,7 +264,7 @@ body {
 		width: 100%;
 		position: absolute;
 		background-repeat: no-repeat;
-		top: 90px;
+		/*top: 90px;*/
 		height: 440px;
 		right: 0;
 		overflow: hidden;
@@ -306,18 +297,18 @@ body {
 	}
 
 	#formHeader {
-		background-color: #d72f37;
+		background-color: #494949;
 		width: 100%;
-		height: 82px;
+		height: 70px;
 	}
 
 	header > h1 {
 		font-family: swatch-bold !important;
 		color: #ffffff;
 		float: right;
-		font-size: 55px;
+		font-size: 50px;
 		margin-right: 26%;
-		line-height: 82px;
+		line-height: 70px;
 		letter-spacing: 2.5px;
 	}
 
@@ -331,7 +322,7 @@ body {
 
 	.ui-progressbar {
 		width: 0;
-		margin-bottom: 50px;
+		margin-bottom: 45px;
 		direction: rtl;
 		background: #a6a6a6;
 		text-align: center !important;
@@ -374,13 +365,13 @@ body {
 	}
 	#partiesName > ul {
 		list-style-type: none;
-		padding-top: 5px;
+		padding-top: 3px;
 		color: #4c4c4c;
 	}
 	#partiesName > ul > li {
 		padding-top: 15px;
 		font-size: 20px;
-		height: 56px;
+		height: 50px;
 		font-family: shual-regular;
 	}
 	#deynmicActive {
@@ -388,7 +379,7 @@ body {
 		margin-top: 37px;
 		border-right-width: thin;
 		border-right-style: groove;
-		height: 590px;
+		height: 602px;
 		width: 82%;
 	}
 
@@ -481,6 +472,13 @@ body {
 		border-bottom-color: #eae9e4;
 		border-bottom-style: solid;
 	}
+
+	#knesetPtoha {
+		font-size: 11px;
+		font-family: alef-regular;
+		float: left;
+		margin-left: 7%;
+	}
 	#questionnaire {
 		margin-top: -60px;
 		float: right;
@@ -510,9 +508,6 @@ body {
 		border-bottom-style: solid;
 	}
 
-	#questionnaire > p {
-		font-family: Arial;
-	}
 	#ques {
 		float: right;
 		width: 72%;
@@ -520,7 +515,8 @@ body {
 	.artAns {
 		width: 86%;
 		height: auto;
-		margin-top: 25px;
+		margin-top: 35px;
+		padding-bottom: 20px;
 	}
 
 	#icon_apt {
@@ -600,14 +596,17 @@ body {
 		position: relative;
 		top: 48px;
 		font-family: alef-regular;
-		font-size: 18px;
+		font-size: 17px;
 		cursor: pointer;
-		background-color: #ffffff !important;
-		color: #008acd !important;
+		background-color: #888d9e !important;
+		color: #ffffff !important;
 		border: none !important;
-		text-decoration: underline !important;
-		right: 4%;
-		padding-bottom: 20px;
+		text-decoration: none !important;
+		background-image: url("../images/arrow_fullans.png");
+		background-repeat: no-repeat;
+		right: 3%;
+		padding: 2px 10px 2px 35px;
+		background-position: 13px;
 	}
 
 	h5 {
@@ -920,11 +919,11 @@ body {
 		background-image: url("../images/prevH.png") !important;
 	}
 	/*.next {
-		background-image: url("images/next.png") !important;
-		background-repeat: no-repeat;
-		width: 42px !important;
-		height: 150px !important;
-	}*/
+	 background-image: url("images/next.png") !important;
+	 background-repeat: no-repeat;
+	 width: 42px !important;
+	 height: 150px !important;
+	 }*/
 	.next:hover {
 		background-image: url("../images/nextH.png") !important;
 	}
@@ -967,9 +966,9 @@ body {
 	 box-shadow: none;
 	 }*/
 	#menu > li > a > img:hover {
-		background: url('../images/selected_bgH.png') center no-repeat;
+		/*	background: url('../images/selected_bgH.png') center no-repeat;*/
 		background-size: 100% 100%;
-		z-index: 999;
+		z-index: 99;
 		opacity: 0.5;
 	}
 
@@ -978,25 +977,9 @@ body {
 		background: transparent !important;
 		height: 165px !important;
 		color: white !important;
+		opacity: 1.0 !important;
 	}
 
-	/*.liquid .previous {
-	 background-image: url("../images/resultsArrow.png") !important;
-	 background-repeat: no-repeat;
-	 width: 47px !important;
-	 height: 150px !important;
-	 }
-	 .liquid .previous:hover {
-	 background-image: url("../images/prevH.png") !important;
-	 }
-	 .liquid .next {
-	 background-repeat: no-repeat;
-	 width: 47px !important;
-	 height: 150px !important;
-	 }
-	 .liquid .next:hover {
-	 background-image: url("../images/nextH.png") !important;
-	 }*/
 	.sac {
 		display: block;
 		width: 100%;
@@ -1096,7 +1079,7 @@ body {
 		display: inline-block;
 		top: -5px;
 		height: 40px;
-		width: 40px;
+		width: 30px;
 		background: url('../images/twitter.png') center no-repeat;
 	}
 
@@ -1111,9 +1094,14 @@ body {
 	}
 
 	#shareB {
-		margin-right: 70%;
+		margin-right: 68%;
 		position: relative;
 		bottom: 200px;
+		background: #f6991d;
+		padding-right: 3%;
+		padding-top: 4px;
+		width: 27%;
+		height: 35px;
 	}
 	#comboBox {
 		display: none;
@@ -1125,6 +1113,7 @@ body {
 		width: 100%;
 		margin: 0 auto;
 	}
+
 	header > h1 {
 		font-family: swatch-bold !important;
 		color: #ffffff;
@@ -1134,10 +1123,17 @@ body {
 		line-height: 82px;
 		letter-spacing: 2.5px;
 	}
+
+	#top_questionier {
+		background: linear-gradient(to top left, #fcc531, #ffe933);
+		height: 250px;
+	}
+
 	#formHeader {
 		background-color: #d72f37;
 		width: 100%;
 		height: 82px;
+		display: none;
 	}
 	header > h2 {
 		font-family: shual-light !important;
@@ -1153,20 +1149,20 @@ body {
 		text-align: center;
 		height: 100vh;
 		width: 100%;
-		background: linear-gradient(124deg, #fcc531, #ffe933);
+		background: white;
 	}
 
 	.questionConcept {
 		height: 220px;
 		width: 100%;
 		position: relative;
-		margin-top: 49px;
+		margin-top: 70px;
+		background-position-x: center;
 		background-repeat: no-repeat;
-		left: 10%;
 	}
 
 	#Questionconcept1 {
-		background-image: url("../images/M_Art_city.png");
+		background-image: url("../images/M_Art_executives.png");
 	}
 
 	#Questionconcept2 {
@@ -1178,15 +1174,15 @@ body {
 	}
 
 	#Questionconcept4 {
-		background-image: url("../images/M_Art_factory.png");
+		background-image: url("../images/M_Art_retire.png");
 	}
 
 	#Questionconcept5 {
-		background-image: url("../images/M_Art_city.png");
+		background-image: url("../images/M_Art_taxes.png");
 	}
 
 	#Questionconcept6 {
-		background-image: url("../images/M_Art_city.png");
+		background-image: url("../images/M_Art_pension.png");
 	}
 
 	#Questionconcept7 {
@@ -1194,23 +1190,19 @@ body {
 	}
 
 	#Questionconcept8 {
-		background-image: url("../images/M_Art_city.png");
-	}
-
-	#Questionconcept9 {
 		background-image: url("../images/M_Art_gas.png");
 	}
 
-	#Questionconcept12 {
+	#Questionconcept9 {
 		background-image: url("../images/M_Art_medical.png");
 	}
 
 	.questions > h3 {
 		font-family: shual-Regular;
-		margin-top: -55px;
+		margin-top: -25px;
 		text-align: center;
 		opacity: 0.5;
-		color: #00756d;
+		color: #ffba00;
 		font-size: 24px;
 		float: right;
 		margin-right: 7%;
@@ -1219,8 +1211,8 @@ body {
 	.questions > p {
 		font-family: shual-light;
 		font-size: 18px;
-		color: #8c5d20;
-		margin-top: -20px;
+		color: #494949;
+		margin-top: 7px;
 		margin-right: 7%;
 		float: right;
 		width: 80%;
@@ -1233,7 +1225,7 @@ body {
 		text-decoration: none;
 		font-size: 20px;
 		color: #fff8e2;
-		line-height: 220px;
+		line-height: 211px;
 		opacity: 0.5;
 		background-repeat: no-repeat;
 		font-family: shual-light;
@@ -1242,10 +1234,10 @@ body {
 
 	#chooses {
 		width: 100%;
-		height: 135px;
+		height: 110px;
 		position: relative;
 		overflow: auto;
-		top: -80px;
+		top: -54px;
 		left: 0%;
 		overflow: hidden;
 	}
@@ -1254,7 +1246,7 @@ body {
 		background-image: url("../images/M_yes.png");
 		width: 20%;
 		height: auto;
-		background-position: center 20px;
+		background-position: center 25px;
 		right: 7%;
 		top: 0;
 		text-align: center;
@@ -1263,10 +1255,10 @@ body {
 	#chooseNo {
 		background-image: url("../images/M_no.png");
 		width: 20%;
-		height: 74px;
+		height: 84px;
 		left: 7%;
 		top: 0;
-		background-position: center 20px;
+		background-position: center 25px;
 		text-align: center;
 	}
 
@@ -1285,7 +1277,7 @@ body {
 		width: 100%;
 		direction: rtl;
 		position: relative;
-		top: -150px;
+		top: -175px;
 		left: 0%;
 	}
 	.li-search {
@@ -1315,7 +1307,7 @@ body {
 		position: relative;
 		background-repeat: no-repeat;
 		top: -31px;
-		height: 300px;
+		height: 350px;
 		right: 0;
 		overflow: hidden;
 	}
@@ -1381,32 +1373,33 @@ body {
 	}
 
 	#choice {
-		/*background-image: url("../images/backgroundParty.jpg");*/
+		/* background-image: url("../images/backgroundParty.jpg"); */
 		background: linear-gradient(to top left, #fcc531, #ffe933);
 		width: 100%;
-		height: 208px;
-		/*border-bottom: 20px;*/
+		/* border-bottom: 20px; */
 		border-bottom-color: #eae9e4;
 		border-bottom-style: solid;
 		margin-top: -20px;
+		top: 15px;
+		position: relative;
 	}
 	#choice > h3 {
 		font-size: 20px;
 		float: right;
 		position: relative;
 		color: #ffffff;
-		top: -40px;
-		right: 30%;
+		top: -50px;
+		right: 32%;
 		font-family: shual-light;
 	}
 	#percentOf {
 		float: right;
 		font-size: 20px;
 		position: relative;
-		z-index: 1;
+		/* z-index: 1; */
 		color: #ffffff;
-		top: -40px;
-		right: 29%;
+		top: -49px;
+		right: 30%;
 		font-family: shual-light;
 	}
 	#partiesName {
@@ -1445,8 +1438,8 @@ body {
 		/* padding-top: 19px; */
 		border-right-width: thin;
 		border-right-style: groove;
-		height: 372px;
-		width: 76%
+		height: 417px;
+		width: 76%;
 	}
 
 	#headLogo {
@@ -1501,20 +1494,19 @@ body {
 		font-size: large;
 		float: right;
 	}
-	/*
-	 #pic {
-	 width: 19%;
-	 height: 274px;
-	 position: relative;
-	 float: right;
-	 background-image: url("../images/benet.jpg");
-	 }
-	 */
+	#knesetPtoha {
+		font-size: 11px;
+		font-family: alef-regular;
+		float: left;
+		margin-left: 7%;
+		top : 0px
+	}
 	#logo {
 		width: 100%;
 		height: auto;
 		position: relative;
-		top: -11px;
+		top: 20px;
+		right: 1%;
 		background-repeat: no-repeat;
 	}
 	#subTitle {
@@ -1588,15 +1580,45 @@ body {
 	.artAns {
 		width: 86%;
 		height: auto;
-		margin-top: 25px;
+		margin-top: 60px;
+	}
+
+	#icon_apt {
+		background-image: url("../images/icon_apt.png");
+	}
+	#icon_taxes {
+		background-image: url("../images/icon_Taxes.png");
+	}
+
+	#icon_gas {
+		background-image: url("../images/icon_gas.png");
+	}
+
+	#retire_icon {
+		background-image: url("../images/icon_retire.png");
+	}
+
+	#icon_indusrty {
+		background-image: url("../images/icon_industry.png");
+	}
+
+	#milk_icon {
+		background-image: url("../images/icon_milk.png");
+	}
+	#icon_executives {
+		background-image: url("../images/icon_executives.png");
 	}
 
 	#army_icon {
-		background-image: url("../images/icon_army.png");
+		background-image: url("../images/icon_security.png");
+	}
+
+	#pension_icon {
+		background-image: url("../images/icon_pension.png");
 	}
 
 	#icon_doctor {
-		background-image: url("../images/icon_doctor.png");
+		background-image: url("../images/icon_health.png");
 	}
 
 	#icon_taxes {
@@ -1618,14 +1640,17 @@ body {
 	.icon {
 		top: 0px important;
 		float: right;
-		width: 19%;
+		width: 25%;
 		height: 62px;
 	}
 	#questionnaire > h4 {
-		margin-top: 25px;
+		/* margin-top: 25px; */
 		float: initial;
 		font-size: 22px;
 		font-family: shual-regular;
+		position: relative;
+		top: 60px;
+		margin-bottom: 17px;
 	}
 	#questionnaire > article > a {
 		float: right;
@@ -1640,12 +1665,15 @@ body {
 		font-family: alef-regular;
 		font-size: 14px;
 		cursor: pointer;
-		background-color: #ffffff !important;
-		color: #008acd !important;
+		background-color: #888d9e !important;
+		color: #ffffff !important;
 		border: none !important;
-		text-decoration: underline !important;
-		right: 4%;
-		padding-bottom: 20px;
+		text-decoration: none !important;
+		background-image: url("../images/arrow_fullans.png");
+		background-repeat: no-repeat;
+		right: 3%;
+		padding: 2px 10px 2px 35px;
+		background-position: 13px;
 	}
 
 	h5 {
@@ -1842,7 +1870,7 @@ body {
 		margin-top: 1%;
 		float: initial;
 		padding-right: 5%;
-		font-size: 36px;
+		font-size: 22px;
 		font-family: shual-regular;
 	}
 	#list > ul > li {
@@ -1889,55 +1917,93 @@ body {
 		float: left;
 		height: 0px;
 	}
-	#liquid1 {
-		background: transparent;
-		padding: 0;
-		border-radius: 0px;
-		border: none;
-		font-family: shual-bold;
+	#menu {
+		height: 96px;
+		white-space: nowrap;
+		/**/
+		overflow-y: hidden;
 	}
-	#liquid1 .wrapper ul li {
+	#menu li {
+		height: 80px;
+		list-style-type: none;
+		/* padding: 5px; */
+		width: 67px;
+		display: inline-block;
+	}
+	#menu li a {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		padding: 0;
+		margin: 0;
+	}
+	#menu li a img {
+		position: relative;
+		width: 100%;
+		height: 80px;
+		float: right;
+	}
+	/*.previous {
+	 background-image: url("../images/resultsArrow.png") !important;
+	 background-repeat: no-repeat;
+	 width: 39px !important;
+	 height: 101px !important;
+	 position: relative;
+	 right: 2%;
+	 }*/
+	/*.previous:hover {
+	 background-image: url("../images/prevH.png") !important;
+	 }
+
+	 .next:hover {
+	 background-image: url("../images/nextH.png") !important;
+	 }*/
+	.previous {
+		display: block;
+		height: 80px;
+		width: 28px;
+		background-image: url('../images/M_prev.png');
+		background-repeat: no-repeat;
+		float: left;
+		margin: 0;
+		padding: 0;
+	}
+	.next {
+		display: block;
+		height: 80px;
+		background-repeat: no-repeat;
+		width: 28px !important;
+		background-image: url('../images/M_next.png');
+		float: right;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		right: 1%;
+	}
+	#menu ul li {
 		margin: 0 !important;
 		padding: 0;
 		border: none;
 		width: 135px;
 	}
 
-	#liquid1 .wrapper ul li a {
+	#menu  li a {
 		-webkit-box-shadow: none;
 		box-shadow: none;
 		padding: 0;
 		margin: 0;
 	}
 
-	#liquid1 .wrapper ul li a img {
-		width: 135px;
-		height: 150px;
-		box-shadow: none;
+	#menu > li > a > img:hover {
+		background-size: 100% 100%;
+		z-index: 99;
+		opacity: 0.5;
 	}
-
 	.selected {
 		content: url('../images/selected_bg.png');
 		background: transparent !important;
-		height: 164px !important;
+		height: 87px !important;
 		color: white !important;
-	}
-
-	.liquid .previous {
-		background-image: url("../images/resultsArrow.png") !important;
-		background-repeat: no-repeat;
-		width: 47px !important;
-		height: 150px !important;
-		/*visibility: hidden !important;*/
-		/*margin-top: 45px !important;*/
-	}
-
-	.liquid .next {
-		/*visibility: hidden !important;*/
-		background-repeat: no-repeat;
-		width: 47px !important;
-		height: 150px !important;
-		/*margin-top: 45px !important;*/
+		opacity: 1.0 !important;
 	}
 
 	.sac {
@@ -2002,11 +2068,6 @@ body {
 		border-left: 0 none;
 	}
 
-	/*hover on activityMenu*/
-	/*.horizontal-nav ul li button:hover {
-	 background: transparent;
-	 color: #ffffff;
-	 }*/
 	.selected1 {
 		background: #4C4C4C;
 		color: #ffffff;
@@ -2014,8 +2075,8 @@ body {
 	#noData {
 		float: right;
 		position: relative;
-		top: -18px;
-		right: 1%;
+		top: -19px;
+		right: 2%;
 		font-family: shual-regular;
 		font-size: 20px;
 		color: #4c4c4c;
@@ -2060,23 +2121,27 @@ body {
 	}
 
 	#shareB {
-		width: 46%;
+		margin-right: 42%;
 		position: relative;
-		height: auto;
-		float: left;
+		bottom: 87px;
+		background: #f6991d;
+		padding-right: 3%;
+		padding-top: 4px;
+		width: 51%;
+		height: 35px;
 	}
 
 	#menu > li > a > span {
 		position: relative;
-		top: 35px;
-		left: 26%;
 		color: #4c4c4c;
 		float: left;
-		height: 0px;
-		width: 68px;
-		font-size: x-large;
+		height: 0;
+		width: 101%;
+		font-size: large;
 		text-align: center;
-		z-index: 99;
+		z-index: 999;
+		top: 10px;
+		font-family: Shual-regular;
 	}
 
 }
