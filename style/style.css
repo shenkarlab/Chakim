@@ -74,8 +74,8 @@ body {
 	}
 
 	b {
-		font-size: 50px;
-		font-family: shual-light;
+		font-size: 53px;
+		font-family: shual-regular;
 		position: relative;
 		top: -9px;
 	}
@@ -83,6 +83,162 @@ body {
 		position: relative;
 		width: 100%;
 		margin: 0 auto;
+	}
+
+	#tutorial {
+		background: #ffffff;
+		height: 710px;
+	}
+
+	#payAtension {
+		font-size: 18px;
+		top: 0px;
+		font-family: ariel;
+	}
+
+	#explantion {
+		height: 187px;
+		/* top: 74px; */
+		position: relative;
+		color: #494A49;
+		float: right;
+		width: 50%;
+	}
+
+	#explantion > p {
+		word-wrap: break-word;
+		float: right;
+		position: relative;
+		top: 3px;
+		left: -13%;
+		text-align: right;
+		font-family: alef-regular;
+		font-size: 17px;
+		direction: rtl;
+		width: 330px;
+	}
+
+	#explantion > h3 {
+		width: 142px;
+		float: right;
+		position: relative;
+		color: #494A49;
+		/* top: 52px; */
+		/* left: 46%; */
+		font-family: shual-regular;
+		font-size: 29px;
+		margin-right: 13%;
+	}
+	#tutorial > h4 {
+		color: #494A49;
+		float: right;
+		font-size: 30px;
+		width: 50%;
+		direction: rtl;
+		font-family: Shual-Light;
+		margin: 28px;
+		margin-bottom: 0;
+		position: relative;
+		right: 3%;
+	}
+	#tutorial > h2 {
+		color: #494A49;
+		float: right;
+		font-size: 66px;
+		width: 80%;
+		margin: 26px;
+		margin-bottom: 17px;
+		margin-top: 0;
+		font-family: shual-regular;
+		direction: rtl;
+		position: relative;
+		right: 3%;
+	}
+	#hoWork {
+		width: 387px;
+		height: auto;
+		float: right;
+		position: relative;
+		margin-top: 0px;
+		margin: 14px;
+		margin-right: 27px;
+		right: 3%;
+		font-size: 30px;
+		direction: rtl;
+		font-family: shual-regular;
+	}
+	#calfi {
+		width: 175px;
+		height: 264px;
+		background-image: url("../images/calfi.png");
+		float: left;
+		left: 10%;
+		position: relative;
+		top: -49px;
+	}
+	#toTheQuestionier {
+		background-image: url("../images/toTheQuestionier.png");
+		width: 293px;
+		height: 69px;
+		position: relative;
+		float: right;
+		right: 7%;
+		font-size: 50px;
+		text-decoration: none;
+		color: #FFFFFF;
+		text-align: center;
+		font-family: Shual-Bold;
+		line-height: -1px;
+		padding: 5px;
+		background-repeat: no-repeat;
+	}
+	#toTheQuestionier:hover {
+		background-image: url("../images/toTheQuestionierH.png");
+	}
+	#dontknow {
+		background-image: url("../images/iDontKnow.png");
+		width: 33px;
+		height: 33px;
+		display: inline-flex;
+		position: relative;
+		top: 6px;
+	}
+	#yes {
+		background-image: url("../images/agree.png");
+		width: 131px;
+		height: 31px;
+		display: -webkit-inline-box;
+		position: relative;
+		background-repeat: no-repeat;
+		left: 97px;
+		top: 3px;
+	}
+	#no {
+		background-image: url("../images/disAgree.png");
+		width: 262px;
+		height: 31px;
+		display: -webkit-inline-box;
+		position: relative;
+		background-repeat: no-repeat;
+		left: 224px;
+		top: 9px;
+	}
+	#foo {
+		float: right;
+		position: relative;
+		right: 46px;
+		direction: rtl;
+		color: #494A49;
+	}
+	#foo > p {
+		float: right;
+	}
+	#sign {
+		background-image: url("../images/sign.png");
+		width: 21px;
+		height: 20px;
+		/* display: table-caption; */
+		float: right;
 	}
 
 	#menu > li > a > span {
@@ -97,7 +253,7 @@ body {
 		text-align: center;
 		line-height: 20px;
 		z-index: 999;
-		font-family: shual-bold;
+		font-family: shual-regular;
 	}
 
 	form {
@@ -209,16 +365,18 @@ body {
 		top: 0;
 		text-align: center;
 		/*color: #21cbc0;*/
+		color: #79d6d0;
 	}
 
 	#chooseNo {
 		background-image: url("../images/thumbDownMark.png");
-		width:20%;
+		width: 20%;
 		height: 150px;
 		left: 5%;
 		top: 0;
 		background-position: center 20px;
 		text-align: center;
+		color: #f5ac83;
 	}
 
 	#chooseDontKnow {
@@ -229,6 +387,7 @@ body {
 		top: 0;
 		background-position: center 32px;
 		text-align: center;
+		color: #cacaca;
 	}
 
 	.ol-search {
@@ -303,7 +462,7 @@ body {
 	}
 
 	header > h1 {
-		font-family: swatch-bold !important;
+		font-family: swatch-normal !important;
 		color: #ffffff;
 		float: right;
 		font-size: 50px;
@@ -322,7 +481,7 @@ body {
 
 	.ui-progressbar {
 		width: 0;
-		margin-bottom: 45px;
+		margin-bottom: 40px;
 		direction: rtl;
 		background: #a6a6a6;
 		text-align: center !important;
@@ -370,7 +529,7 @@ body {
 	}
 	#partiesName > ul > li {
 		padding-top: 15px;
-		font-size: 20px;
+		font-size: 18px;
 		height: 50px;
 		font-family: shual-regular;
 	}
@@ -801,18 +960,18 @@ body {
 	#titel {
 		width: 100%;
 		background-color: #ffffff;
-		height: 81px;
+		height: 60px;
 		font-size: 23px;
 	}
 	#titel > h3 {
 		float: initial;
 		padding-right: 3%;
-		font-size: 30px;
+		font-size: 28px;
 		font-family: shual-regular !important;
 		text-align: initial;
 		color: #4c4c4c;
 		font-weight: 400;
-		line-height: 81px;
+		line-height: 66px;
 	}
 	#list > h4 {
 		margin-top: 3%;
@@ -912,7 +1071,7 @@ body {
 	.previous {
 		background-image: url("../images/resultsArrow.png") !important;
 		background-repeat: no-repeat;
-		width: 42px !important;
+		width: 47px !important;
 		height: 150px !important;
 	}
 	.previous:hover {
@@ -1124,6 +1283,161 @@ body {
 		letter-spacing: 2.5px;
 	}
 
+	#tutorial {
+		background: #ffffff;
+		height: 710px;
+	}
+
+	#payAtension {
+		font-size: 18px;
+		top: 0px;
+		font-family: ariel;
+	}
+
+	#explantion {
+		height: 187px;
+		/* top: 74px; */
+		position: relative;
+		color: #494A49;
+		float: right;
+		width: 50%;
+	}
+
+	#explantion > p {
+		word-wrap: break-word;
+		float: right;
+		position: relative;
+		top: 3px;
+		left: -13%;
+		text-align: right;
+		font-family: alef-regular;
+		font-size: 17px;
+		direction: rtl;
+		width: 330px;
+	}
+
+	#explantion > h3 {
+		width: 142px;
+		float: right;
+		position: relative;
+		color: #494A49;
+		/* top: 52px; */
+		/* left: 46%; */
+		font-family: shual-regular;
+		font-size: 29px;
+		margin-right: 13%;
+	}
+	#tutorial > h4 {
+		color: #494A49;
+		float: right;
+		font-size: 30px;
+		width: 50%;
+		direction: rtl;
+		font-family: Shual-Light;
+		margin: 28px;
+		margin-bottom: 0;
+		position: relative;
+		right: 3%;
+	}
+	#tutorial > h2 {
+		color: #494A49;
+		float: right;
+		font-size: 66px;
+		width: 80%;
+		margin: 26px;
+		margin-bottom: 17px;
+		margin-top: 0;
+		font-family: shual-regular;
+		direction: rtl;
+		position: relative;
+		right: 3%;
+	}
+	#hoWork {
+		width: 387px;
+		height: auto;
+		float: right;
+		position: relative;
+		margin-top: 0px;
+		margin: 14px;
+		margin-right: 27px;
+		right: 3%;
+		font-size: 30px;
+		direction: rtl;
+		font-family: shual-regular;
+	}
+	#calfi {
+		width: 175px;
+		height: 264px;
+		background-image: url("../images/calfi.png");
+		float: left;
+		left: 10%;
+		position: relative;
+		top: -49px;
+	}
+	#toTheQuestionier {
+		background-image: url("../images/toTheQuestionier.png");
+		width: 293px;
+		height: 69px;
+		position: relative;
+		float: right;
+		right: 7%;
+		font-size: 50px;
+		text-decoration: none;
+		color: #FFFFFF;
+		text-align: center;
+		font-family: Shual-Bold;
+		line-height: -1px;
+		padding: 5px;
+		background-repeat: no-repeat;
+	}
+	#toTheQuestionier:hover {
+		background-image: url("../images/toTheQuestionierH.png");
+	}
+	#dontknow {
+		background-image: url("../images/iDontKnow.png");
+		width: 33px;
+		height: 33px;
+		display: inline-flex;
+		position: relative;
+		top: 6px;
+	}
+	#yes {
+		background-image: url("../images/agree.png");
+		width: 131px;
+		height: 31px;
+		display: -webkit-inline-box;
+		position: relative;
+		background-repeat: no-repeat;
+		left: 97px;
+		top: 3px;
+	}
+	#no {
+		background-image: url("../images/disAgree.png");
+		width: 262px;
+		height: 31px;
+		display: -webkit-inline-box;
+		position: relative;
+		background-repeat: no-repeat;
+		left: 224px;
+		top: 9px;
+	}
+	#foo {
+		float: right;
+		position: relative;
+		right: 46px;
+		direction: rtl;
+		color: #494A49;
+	}
+	#foo > p {
+		float: right;
+	}
+	#sign {
+		background-image: url("../images/sign.png");
+		width: 21px;
+		height: 20px;
+		/* display: table-caption; */
+		float: right;
+	}
 	#top_questionier {
 		background: linear-gradient(to top left, #fcc531, #ffe933);
 		height: 250px;
@@ -1265,7 +1579,7 @@ body {
 	#chooseDontKnow {
 		background-image: url("../images/M_QM.png");
 		width: 25%;
-		height: 73px;
+		height: 90px;
 		left: 39.3%;
 		top: 0;
 		background-position: center 40px;
@@ -1499,7 +1813,7 @@ body {
 		font-family: alef-regular;
 		float: left;
 		margin-left: 7%;
-		top : 0px
+		top: 0px
 	}
 	#logo {
 		width: 100%;
@@ -1938,7 +2252,7 @@ body {
 	}
 	#menu li a img {
 		position: relative;
-		width: 100%;
+		width: 73px;
 		height: 80px;
 		float: right;
 	}
@@ -1958,26 +2272,42 @@ body {
 	 background-image: url("../images/nextH.png") !important;
 	 }*/
 	.previous {
+		background-image: url("../images/M_prev.png") !important;
+		background-repeat: no-repeat;
+		width: 28px !important;
+		height: 80px !important;
+	}
+	.next {
+		background-image: url("../images/M_next.png") !important;
+		background-repeat: no-repeat;
+		width: 28px !important;
+		height: 80px !important;
+	}
+	.previous {
 		display: block;
 		height: 80px;
 		width: 28px;
-		background-image: url('../images/M_prev.png');
+		background-image: url("../images/M_prev.png");
 		background-repeat: no-repeat;
 		float: left;
 		margin: 0;
 		padding: 0;
 	}
+	.previous:hover {
+		background-image: url("../images/M_prev.png") !important;
+	}
+	.next:hover {
+		background-image: url("../images/M_next.png") !important;
+	}
 	.next {
 		display: block;
 		height: 80px;
 		background-repeat: no-repeat;
-		width: 28px !important;
-		background-image: url('../images/M_next.png');
+		width: 28px;
+		background-image: url("../images/M_next.png");
 		float: right;
 		margin: 0;
 		padding: 0;
-		position: relative;
-		right: 1%;
 	}
 	#menu ul li {
 		margin: 0 !important;

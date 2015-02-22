@@ -17,7 +17,7 @@ function partySection(id, name, percent, vid, sub, app, Color, numMem, avgMonth,
 		id : id,
 		name : name,
 		percent : percent,
-		answers : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		answers : [0, 0, 0, 0, 0, 0, 0, 0, 0],
 		video : vid,
 		rulesSubmission : sub,
 		rulesApprove : app,
@@ -146,10 +146,14 @@ $(document).ready(function() {
 		}
 		//form hide all sections but the first question
 		$("section#partyPage").hide();
+		$("section#formContainer").hide();
+		$(document).one('click', '#toTheQuestionier', function(event) {
+			$("section#tutorial").fadeOut(1000).hide();
+			$("section#formContainer").fadeIn(1000).show();
+		});
 		$('section.questions:not(:first)').hide();
 		sectionId = $('section.questions').find("section").attr('id');
 		sectionPosition = $('section.questions').attr('id');
-
 		//calculate the party activity
 		calcResidence();
 
@@ -247,7 +251,7 @@ $(function() {
 //compare form results with party results
 var clicked = false;
 function checkform(obj) {
-	// checkAns();
+	checkAns();
 
 	if (clicked)
 		return false;
@@ -413,9 +417,6 @@ function checkAns() {
 		});
 		$(".answer8 #button8").click(function() {
 			$("div.fullAns8").slideToggle("fast");
-		});
-		$(".answer9 #button9").click(function() {
-			$("div.fullAns9").slideToggle("fast");
 		});
 		var index = 0,
 		    smaller = 10;
@@ -724,34 +725,34 @@ function updateButton(num) {
 	});
 	$("button#submission").click(function() {
 		$(this).addClass('selected2');
-		$('#hour').html('ממוצע לח"כ במפלגה*');
+		$('#hour').html('*ממוצע לח"כ במפלגה');
 
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
 			case 14: {
 				$("#14ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission ) * 3) + "px"
+					"width" : ((tempName[i].rulesSubmission ) * 1.5) + "px"
 				});
 				$("#14ProgressBar").html(tempName[i].rulesSubmission);
 				break;
 			}
 			case 15: {
 				$("#15ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					"width" : ((tempName[i].rulesSubmission) * 1.5) + "px"
 				});
 				$("#15ProgressBar").html(tempName[i].rulesSubmission);
 				break;
 			}
 			case 16: {
 				$("#16ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					"width" : ((tempName[i].rulesSubmission) * 1.5) + "px"
 				});
 				$("#16ProgressBar").html(tempName[i].rulesSubmission);
 				break;
 			}
 			case 17: {
 				$("#17ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					"width" : ((tempName[i].rulesSubmission) * 1.5) + "px"
 				});
 				$("#17ProgressBar").html(tempName[i].rulesSubmission);
 				break;
@@ -761,35 +762,35 @@ function updateButton(num) {
 			}
 			case 26: {
 				$("#26ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					"width" : ((tempName[i].rulesSubmission) * 1.5) + "px"
 				});
 				$("#26ProgressBar").html(tempName[i].rulesSubmission);
 				break;
 			}
 			case 20: {
 				$("#20ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					"width" : ((tempName[i].rulesSubmission) * 1.2 ) + "px"
 				});
 				$("#20ProgressBar").html(tempName[i].rulesSubmission);
 				break;
 			}
 			case 22: {
 				$("#22ProgressBar").animate({
-					"width" : "400px"
+					"width" : tempName[i].rulesSubmission + "px"
 				});
 				$("#22ProgressBar").html(tempName[i].rulesSubmission);
 				break;
 			}
 			case 18: {
 				$("#18ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					"width" : ((tempName[i].rulesSubmission) * 1.5) + "px"
 				});
 				$("#18ProgressBar").html(parseInt(tempName[i].rulesSubmission));
 				break;
 			}
 			case 19: {
 				$("#19ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 3) + "px"
+					"width" : ((tempName[i].rulesSubmission) * 1.5) + "px"
 				});
 				$("#19ProgressBar").html(parseInt(tempName[i].rulesSubmission));
 				break;
@@ -807,6 +808,7 @@ function moveToPartyPage() {
 
 //update page with choosen party
 function daynamicFunc(num) {
+	closeToggle();
 	$.getJSON("js/full.json", function(d) {
 		var dataFull = d.fullAnswers;
 		//$('#fullAns' + index).html(v);
@@ -848,7 +850,7 @@ function daynamicFunc(num) {
 				if (tempName[i].id == value.id) {
 					$('#percentOf').html(tempName[i].percent + "%");
 					updateToggle(i);
-					for ( j = 0; j < 10; j++) {
+					for ( j = 0; j < 9; j++) {
 						if (tempName[i].answers[j] == "yes")
 							$('#theAns .partyAnswer' + j).css({
 								"backgroundImage" : "url('images/smalLike.png')"
@@ -884,7 +886,9 @@ function daynamicFunc(num) {
 					$('#list h4').css({
 						"color" : tempName[i].color
 					});
-
+					$('#comboBox').css({
+						"background" : tempName[i].color
+					});
 					break;
 				}
 
@@ -904,7 +908,7 @@ function daynamicFunc(num) {
 					});
 
 					myAnsfunc();
-					for ( j = 0; j < 10; j++) {
+					for ( j = 0; j < 9; j++) {
 						if (tempName[i].answers[j] == "yes")
 							$('#theAns .partyAnswer' + j).css({
 								"backgroundImage" : "url('images/smalLike.png')"
@@ -949,6 +953,9 @@ function daynamicFunc(num) {
 					$('#list h4').css({
 						"color" : tempName[i].color
 					});
+					$('#comboBox').css({
+						"background" : tempName[i].color
+					});
 					break;
 				}
 			}
@@ -967,16 +974,24 @@ function daynamicFunc(num) {
 }
 
 function updateToggle(tog) {
-	for ( u = 0; u < 10; u++) {
+	for ( u = 0; u < 9; u++) {
 		$('#button' + u).html("עוד על עמדת " + tempName[tog].name)
 
 	}
 }
 
+function closeToggle() {
+	for ( u = 0; u < 9; u++) {
+		if ($("div.fullAns" + u).css("display") == "block")
+			$("div.fullAns" + u).css({
+				"display" : "none"
+			});
+	}
+};
 //get user results
 var u = 0;
 function myAnsfunc() {
-	for ( u = 0; u < 10; u++) {
+	for ( u = 0; u < 9; u++) {
 		if (answers[u] == "yes")
 			$('#theAns .myAnswer' + u).css({
 				"backgroundImage" : "url('images/smalLike.png')"
