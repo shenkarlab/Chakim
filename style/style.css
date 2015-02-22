@@ -528,14 +528,14 @@ body {
 		color: #4c4c4c;
 	}
 	#partiesName > ul > li {
-		padding-top: 15px;
+		padding-top: 10px;
 		font-size: 18px;
 		height: 50px;
 		font-family: shual-regular;
 	}
 	#deynmicActive {
 		float: right;
-		margin-top: 37px;
+		margin-top: 29px;
 		border-right-width: thin;
 		border-right-style: groove;
 		height: 602px;
@@ -637,6 +637,7 @@ body {
 		font-family: alef-regular;
 		float: left;
 		margin-left: 7%;
+		top : 0px;
 	}
 	#questionnaire {
 		margin-top: -60px;
@@ -1206,7 +1207,7 @@ body {
 	#noData {
 		float: right;
 		position: relative;
-		top: -21px;
+		top: -62px;
 		right: 2%;
 		font-family: shual-regular;
 		font-size: 20px;
