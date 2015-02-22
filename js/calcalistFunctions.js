@@ -251,7 +251,7 @@ $(function() {
 //compare form results with party results
 var clicked = false;
 function checkform(obj) {
-	checkAns();
+	// checkAns();
 
 	if (clicked)
 		return false;
