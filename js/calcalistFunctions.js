@@ -131,6 +131,9 @@ $(document).ready(function() {
 		//update progress bar with party results
 	});
 
+	$(document).ready(mobileImg("#my_image", "images/M_facebook.png"));
+	$(window).resize(mobileImg("#my_imagee", "images/M_facebook.png"));
+	
 	//click the first commite button
 	$("button #committee").click();
 	//initialize liquid menu
@@ -169,13 +172,30 @@ $(document).ready(function() {
 	//change animation on hover form
 	$(document).on("mouseenter", '.inputButton', function(e) {
 		var $that = $(this);
-		doBounce($that, 0.8, '10px', 400);
-		bouncer = setInterval(function() {
+		if ($(window).width() > 640) {
 			doBounce($that, 0.8, '10px', 400);
-		}, 800);
+			bouncer = setInterval(function() {
+				doBounce($that, 0.8, '10px', 400);
+			}, 800);
+		};
 	});
+
+	$(document).on("mouseenter", '#toTheQuestionier', function(e) {
+		var $that = $(this);
+		if ($(window).width() > 640) {
+			doBounce($that, 0.8, '10px', 400);
+			bouncer = setInterval(function() {
+				doBounce($that, 0.8, '10px', 400);
+			}, 800);
+		};
+	});
+
 	//stop animtion on hover form
 	$(document).on("mouseleave", '.inputButton', function(e) {
+		clearInterval(bouncer);
+	});
+
+	$(document).on("mouseleave", '#toTheQuestionier', function(e) {
 		clearInterval(bouncer);
 	});
 
@@ -184,7 +204,7 @@ $(document).ready(function() {
 	});
 
 	$(document).on("mouseleave", '#chooseYes', function(e) {
-		$(this).css("color", "#494949");
+		$(this).css("color", "#79d6d0");
 	});
 
 	$(document).on("mouseenter", '#chooseNo', function(e) {
@@ -192,7 +212,7 @@ $(document).ready(function() {
 	});
 
 	$(document).on("mouseleave", '#chooseNo', function(e) {
-		$(this).css("color", "#494949");
+		$(this).css("color", "#f5ac83");
 	});
 
 	$(document).on("mouseenter", '#chooseDontKnow', function(e) {
@@ -200,7 +220,7 @@ $(document).ready(function() {
 	});
 
 	$(document).on("mouseleave", '#chooseDontKnow', function(e) {
-		$(this).css("color", "#494949");
+		$(this).css("color", "#cacaca");
 	});
 
 	$(function() {
@@ -231,6 +251,15 @@ function doBounce(element, times, distance, speed) {
 			marginTop : '+=' + distance
 		}, speed);
 	}
+}
+function mobileImg(targetClass, imageSrc) {
+    var width = window.innerWidth; // No need for jQuery here, raw JS can do this
+
+    if(width < 640) {
+        $(targetClass).attr("src", imageSrc);
+        $(targetClass).css("width", "20px");
+        $(targetClass).css("height", "20px");
+    }
 }
 
 //initialize all progress bar

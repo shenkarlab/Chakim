@@ -364,7 +364,6 @@ body {
 		left: 77%;
 		top: 0;
 		text-align: center;
-		/*color: #21cbc0;*/
 		color: #79d6d0;
 	}
 
@@ -637,7 +636,7 @@ body {
 		font-family: alef-regular;
 		float: left;
 		margin-left: 7%;
-		top : 0px;
+		top: 0px;
 	}
 	#questionnaire {
 		margin-top: -60px;
@@ -935,7 +934,7 @@ body {
 		left: 2%;
 		font-family: shual-regular;
 		height: 0px;
-		width: 11%;
+		width: 16%;
 	}
 
 	#activity > p {
@@ -1266,6 +1265,19 @@ body {
 	#comboBox {
 		display: none;
 	}
+
+	#todot {
+		background: white;
+	}
+
+	#todot > p {
+		padding-top: 60px;
+		font-family: shual-light;
+		font-size: 12px;
+		width: 95%;
+		margin-right: 3%;
+		padding-bottom: 20px;
+	}
 }
 @media (max-width: 640px) {
 	#container {
@@ -1450,14 +1462,6 @@ body {
 		height: 82px;
 		display: none;
 	}
-	header > h2 {
-		font-family: shual-light !important;
-		font-size: 13px;
-		font-weight: lighter;
-		color: #59a7b3;
-		padding-top: 35px;
-		margin-right: 2%;
-	}
 
 	form {
 		display: inline-block;
@@ -1547,6 +1551,11 @@ body {
 		font-weight: normal;
 	}
 
+	.inputButton:active, .inputButton:checked {
+		background: transparent !important;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+
 	#chooses {
 		width: 100%;
 		height: 110px;
@@ -1560,7 +1569,7 @@ body {
 	#chooseYes {
 		background-image: url("../images/M_yes.png");
 		width: 20%;
-		height: auto;
+		height: 84px;
 		background-position: center 25px;
 		right: 7%;
 		top: 0;
@@ -1688,10 +1697,9 @@ body {
 	}
 
 	#choice {
-		/* background-image: url("../images/backgroundParty.jpg"); */
 		background: linear-gradient(to top left, #fcc531, #ffe933);
 		width: 100%;
-		/* border-bottom: 20px; */
+		border-bottom: 20px;
 		border-bottom-color: #eae9e4;
 		border-bottom-style: solid;
 		margin-top: -20px;
@@ -1703,7 +1711,7 @@ body {
 		float: right;
 		position: relative;
 		color: #ffffff;
-		top: -50px;
+		top: -35px;
 		right: 32%;
 		font-family: shual-light;
 	}
@@ -1713,7 +1721,7 @@ body {
 		position: relative;
 		/* z-index: 1; */
 		color: #ffffff;
-		top: -49px;
+		top: -34px;
 		right: 30%;
 		font-family: shual-light;
 	}
@@ -1729,10 +1737,8 @@ body {
 		color: #4c4c4c;
 	}
 	#partiesName > ul > li {
-		/* padding-top: 15px; */
-		/* width: 114%; */
 		position: relative;
-		font-size: 20px;
+		font-size: 18px;
 		height: 39px;
 		font-family: shual-regular;
 		padding-bottom: 0px;
@@ -1746,6 +1752,7 @@ body {
 		background: #4C4C4C;
 		color: #ffffff;
 		font-size: 16px;
+		font-family: shual-regular;
 	}
 	#deynmicActive {
 		float: right;
@@ -1755,6 +1762,12 @@ body {
 		border-right-style: groove;
 		height: 417px;
 		width: 76%;
+	}
+
+	#hour {
+		padding-top: 20px;
+		font-family: shual-regular;
+		font-size: 12px;
 	}
 
 	#headLogo {
@@ -1957,6 +1970,7 @@ body {
 		float: right;
 		width: 25%;
 		height: 62px;
+		background-repeat: no-repeat;
 	}
 	#questionnaire > h4 {
 		/* margin-top: 25px; */
@@ -2159,7 +2173,7 @@ body {
 		font-family: shual-regular;
 		font-size: 18px;
 		color: #454545;
-		margin-top: 80px;
+		margin-top: 58px;
 		margin-right: 24px;
 		text-align: right;
 		margin-left: 24px;
@@ -2222,7 +2236,7 @@ body {
 		margin-right: 24px;
 		margin-top: 20px;
 		float: right;
-		font-size: 36px;
+		font-size: 22px;
 		font-family: shual-regular;
 	}
 	/*navigation results css*/
@@ -2233,7 +2247,7 @@ body {
 		height: 0px;
 	}
 	#menu {
-		height: 96px;
+		height: 104px;
 		white-space: nowrap;
 		/**/
 		overflow-y: hidden;
@@ -2420,26 +2434,30 @@ body {
 	#mImageBox {
 		position: relative;
 		display: inline-block;
-		top: -10px;
+		top: 8px;
 		margin: 0;
 		cursor: pointer;
 	}
 	#mImageBox img {
 		position: relative;
+		bottom: 5px;
+		right: -2%;
 	}
 	#custom-tweet-button {
 		position: relative;
 		display: inline-block;
 		top: 0;
 		margin: 0;
+		right: -5%;
 	}
 	#custom-tweet-button a {
 		position: relative;
 		display: inline-block;
-		top: -5px;
-		height: 40px;
-		width: 40px;
-		background: url('../images/twitter.png') center no-repeat;
+		top: 3px;
+		height: 20px;
+		width: 20px;
+		background: url('../images/M_twitter.png') center no-repeat;
+		padding-right: 57%;
 	}
 
 	#shareB > p {
@@ -2447,19 +2465,19 @@ body {
 		font-family: shual-light;
 		font-size: 16px;
 		position: relative;
-		top: -17px;
+		top: -2px;
 		display: inline-block;
 	}
 
 	#shareB {
-		margin-right: 42%;
+		margin-right: 48%;
 		position: relative;
-		bottom: 87px;
+		bottom: 82px;
 		background: #f6991d;
-		padding-right: 3%;
-		padding-top: 4px;
-		width: 51%;
-		height: 35px;
+		padding-right: 1%;
+		padding-top: 0px;
+		width: 48%;
+		height: 25px
 	}
 
 	#menu > li > a > span {
@@ -2473,6 +2491,19 @@ body {
 		z-index: 999;
 		top: 10px;
 		font-family: Shual-regular;
+	}
+
+	#todot {
+		background: white;
+	}
+
+	#todot > p {
+		padding-top: 60px;
+		font-family: shual-light;
+		font-size: 8px;
+		width: 95%;
+		margin-right: 3%;
+		padding-bottom: 20px;
 	}
 
 }
