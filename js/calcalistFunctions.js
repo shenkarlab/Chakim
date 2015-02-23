@@ -133,7 +133,7 @@ $(document).ready(function() {
 
 	$(document).ready(mobileImg("#my_image", "images/M_facebook.png"));
 	$(window).resize(mobileImg("#my_imagee", "images/M_facebook.png"));
-	
+
 	//click the first commite button
 	$("button #committee").click();
 	//initialize liquid menu
@@ -204,7 +204,9 @@ $(document).ready(function() {
 	});
 
 	$(document).on("mouseleave", '#chooseYes', function(e) {
-		$(this).css("color", "#9be8e3");
+		if ($(window).width() > 640) {
+			$(this).css("color", "#9be8e3");
+		}
 	});
 
 	$(document).on("mouseenter", '#chooseNo', function(e) {
@@ -212,7 +214,9 @@ $(document).ready(function() {
 	});
 
 	$(document).on("mouseleave", '#chooseNo', function(e) {
-		$(this).css("color", "#f5ac83");
+		if ($(window).width() > 640) {
+			$(this).css("color", "#f5ac83");
+		}
 	});
 
 	$(document).on("mouseenter", '#chooseDontKnow', function(e) {
@@ -220,8 +224,16 @@ $(document).ready(function() {
 	});
 
 	$(document).on("mouseleave", '#chooseDontKnow', function(e) {
-		$(this).css("color", "#cacaca");
+		if ($(window).width() > 640) {
+			$(this).css("color", "#cacaca");
+		}
 	});
+
+	// $(document).on("click", '.next', function(e) {
+		// $(this).css({
+			// "backgroundImage" : "url('images/next.png')"
+		// });
+	// });
 
 	$(function() {
 		$("#comboBox").on("change", function() {
@@ -252,14 +264,16 @@ function doBounce(element, times, distance, speed) {
 		}, speed);
 	}
 }
-function mobileImg(targetClass, imageSrc) {
-    var width = window.innerWidth; // No need for jQuery here, raw JS can do this
 
-    if(width < 640) {
-        $(targetClass).attr("src", imageSrc);
-        $(targetClass).css("width", "20px");
-        $(targetClass).css("height", "20px");
-    }
+function mobileImg(targetClass, imageSrc) {
+	var width = window.innerWidth;
+	// No need for jQuery here, raw JS can do this
+
+	if (width < 640) {
+		$(targetClass).attr("src", imageSrc);
+		$(targetClass).css("width", "20px");
+		$(targetClass).css("height", "20px");
+	}
 }
 
 //initialize all progress bar
@@ -911,7 +925,7 @@ function daynamicFunc(num) {
 					$('#questionnaire h4').css({
 						"color" : tempName[i].color
 					});
-					$('#list h4').html("רשימת " + tempName[i].name + " : " + "העשירייה הראשונה");
+					$('#list h4').html("רשימת " + tempName[i].name + ": " + "העשירייה הראשונה");
 					$('#list h4').css({
 						"color" : tempName[i].color
 					});
@@ -978,7 +992,7 @@ function daynamicFunc(num) {
 					$('#questionnaire h4').css({
 						"color" : tempName[i].color
 					});
-					$('#list h4').html("רשימת " + tempName[i].name + " : " + "העשירייה הראשונה");
+					$('#list h4').html("רשימת " + tempName[i].name + ": " + "העשירייה הראשונה");
 					$('#list h4').css({
 						"color" : tempName[i].color
 					});
@@ -1048,7 +1062,7 @@ $(document).on('click', "#previous , #next", function(e) {
 	e.preventDefault();
 	console.log($('#menu').hasScrollBar());
 	// if($("#menu").scrollLeft() == ($("#menu").width())){
-		// alert('end!');
+	// alert('end!');
 	// }
 	if ($('#menu').hasScrollBar()) {
 		var leftPos = $('#menu').scrollLeft();

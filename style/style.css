@@ -485,13 +485,13 @@ body {
 
 	#createdBy > b {
 		font-size: 12px;
-		font-family: shual-bold;
+		font-family: alef-bold;
 		top: 0px;
 	}
 
 	#createdBy {
-		font-size: 12px;
-		font-family: shual-regular;
+		font-size: 13px;
+		font-family: alef-regular;
 		width: 95%;
 		margin-right: 3%;
 		margin-top: 20px;
@@ -1115,7 +1115,7 @@ body {
 		height: 150px;
 		background-repeat: no-repeat;
 		width: 42px !important;
-		background-image: url('../images/next.png');
+		background-image: url('../images/nextH.png');
 		float: right;
 		margin: 0;
 		padding: 0;
@@ -1288,8 +1288,8 @@ body {
 
 	#todot > p {
 		padding-top: 60px;
-		font-family: shual-light;
-		font-size: 12px;
+		font-family: alef-regular;
+		font-size: 11px;
 		width: 95%;
 		margin-right: 3%;
 		padding-bottom: 20px;
@@ -1401,11 +1401,11 @@ body {
 	}
 	#toTheQuestionier {
 		background-image: url("../images/M_button_bg.png");
-		width: 168px;
+		width: 150px;
 		height: 39px;
 		position: relative;
-		float: right;
-		right: 35%;
+		float: left;
+		right: -10%;
 		font-size: 30px;
 		text-decoration: none;
 		color: #FFFFFF;
@@ -1414,7 +1414,7 @@ body {
 		line-height: -1px;
 		padding: 5px;
 		background-repeat: no-repeat;
-		bottom: 60px;
+		bottom: -38px;
 	}
 
 	#dontknow {
@@ -1447,7 +1447,7 @@ body {
 		right: 3%;
 		direction: rtl;
 		color: #494A49;
-		top: -30px;
+		top: 20px;
 	}
 	#foo > p {
 		float: right;
@@ -1555,7 +1555,6 @@ body {
 		font-size: 20px;
 		color: #fff8e2;
 		line-height: 211px;
-		opacity: 0.5;
 		background-repeat: no-repeat;
 		font-family: shual-light;
 		font-weight: normal;
@@ -1584,7 +1583,7 @@ body {
 		right: 7%;
 		top: 0;
 		text-align: center;
-		color: #9be8e3;
+		color: #21cbc0;
 	}
 
 	#chooseNo {
@@ -1595,7 +1594,7 @@ body {
 		top: 0;
 		background-position: center 25px;
 		text-align: center;
-		color: #f5ac83;
+		color: #ff6d1d;
 	}
 
 	#chooseDontKnow {
@@ -1606,7 +1605,7 @@ body {
 		top: 0;
 		background-position: center 40px;
 		text-align: center;
-		color: #cacaca;
+		color: #a3a3a3;
 	}
 
 	.ol-search {
@@ -1712,7 +1711,7 @@ body {
 	#choice {
 		background: linear-gradient(to top left, #fcc531, #ffe933);
 		width: 100%;
-		border-bottom: 20px;
+		border-bottom: 10px;
 		border-bottom-color: #eae9e4;
 		border-bottom-style: solid;
 		margin-top: -20px;
@@ -1878,7 +1877,7 @@ body {
 		width: 100%;
 		height: auto;
 		background-color: #ffffff;
-		border-bottom: 20px;
+		border-bottom: 10px;
 		border-bottom-color: #eae9e4;
 		border-bottom-style: solid;
 	}
@@ -1889,7 +1888,7 @@ body {
 		width: 100%;
 		text-align: inherit;
 		background-color: #ffffff;
-		border-bottom: 20px;
+		border-bottom: 10px;
 		border-bottom-color: #eae9e4;
 		border-bottom-style: solid;
 	}
@@ -2187,7 +2186,7 @@ body {
 
 	#activity > p {
 		font-family: shual-regular;
-		font-size: 18px;
+		font-size: 15px;
 		color: #454545;
 		margin-top: 58px;
 		margin-right: 24px;
@@ -2214,7 +2213,7 @@ body {
 	#list > h4 {
 		margin-top: 1%;
 		float: initial;
-		padding-right: 5%;
+		/*padding-right: 5%;*/
 		font-size: 22px;
 		font-family: shual-regular;
 	}
@@ -2263,13 +2262,13 @@ body {
 		height: 0px;
 	}
 	#menu {
-		height: 104px;
+		height: 95px;
 		white-space: nowrap;
 		/**/
 		overflow-y: hidden;
 	}
 	#menu li {
-		height: 80px;
+		height: 96px;
 		list-style-type: none;
 		/* padding: 5px; */
 		width: 67px;
@@ -2287,21 +2286,7 @@ body {
 		height: 80px;
 		float: right;
 	}
-	/*.previous {
-	 background-image: url("../images/resultsArrow.png") !important;
-	 background-repeat: no-repeat;
-	 width: 39px !important;
-	 height: 101px !important;
-	 position: relative;
-	 right: 2%;
-	 }*/
-	/*.previous:hover {
-	 background-image: url("../images/prevH.png") !important;
-	 }
-
-	 .next:hover {
-	 background-image: url("../images/nextH.png") !important;
-	 }*/
+	
 	.previous {
 		background-image: url("../images/M_prev.png") !important;
 		background-repeat: no-repeat;
@@ -2453,6 +2438,7 @@ body {
 		top: 8px;
 		margin: 0;
 		cursor: pointer;
+		height : 0px;
 	}
 	#mImageBox img {
 		position: relative;
@@ -2473,7 +2459,7 @@ body {
 		height: 20px;
 		width: 20px;
 		background: url('../images/M_twitter.png') center no-repeat;
-		right: 121%;
+		right: 100%;
 	}
 
 	#shareB > p {
@@ -2488,11 +2474,11 @@ body {
 	#shareB {
 		margin-right: 48%;
 		position: relative;
-		bottom: 82px;
+		bottom: 88px;
 		background: #f6991d;
 		padding-right: 1%;
 		padding-top: 0px;
-		width: 48%;
+		width: 150px;
 		height: 25px
 	}
 
@@ -2515,7 +2501,7 @@ body {
 
 	#todot > p {
 		padding-top: 60px;
-		font-family: shual-light;
+		font-family: alef-regular;
 		font-size: 8px;
 		width: 95%;
 		margin-right: 3%;
@@ -2523,14 +2509,14 @@ body {
 	}
 	
 		#createdBy > b {
-		font-size: 10px;
-		font-family: shual-bold;
+		font-size: 9px;
+		font-family: alef-bold;
 		top: 0px;
 	}
 
 	#createdBy {
 		font-size: 10px;
-		font-family: shual-regular;
+		font-family: alef-regular;
 		width: 95%;
 		margin-right: 3%;
 		margin-top: 20px;
