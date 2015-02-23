@@ -204,7 +204,7 @@ $(document).ready(function() {
 	});
 
 	$(document).on("mouseleave", '#chooseYes', function(e) {
-		$(this).css("color", "#79d6d0");
+		$(this).css("color", "#9be8e3");
 	});
 
 	$(document).on("mouseenter", '#chooseNo', function(e) {
@@ -1047,8 +1047,12 @@ function myAnsfunc() {
 $(document).on('click', "#previous , #next", function(e) {
 	e.preventDefault();
 	console.log($('#menu').hasScrollBar());
+	// if($("#menu").scrollLeft() == ($("#menu").width())){
+		// alert('end!');
+	// }
 	if ($('#menu').hasScrollBar()) {
 		var leftPos = $('#menu').scrollLeft();
+		// $(".next").css({"backgroundImage" : "url('images/nextH.png')"});
 		if ($(this).attr('id') == "previous")
 			$('#menu').animate({
 				scrollLeft : leftPos + 200
