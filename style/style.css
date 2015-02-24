@@ -1115,7 +1115,7 @@ body {
 		height: 150px;
 		background-repeat: no-repeat;
 		width: 42px !important;
-		background-image: url('../images/nextH.png');
+		background-image: url('../images/next.png');
 		float: right;
 		margin: 0;
 		padding: 0;
@@ -1588,7 +1588,7 @@ body {
 
 	#chooseNo {
 		background-image: url("../images/M_no.png");
-		width: 20%;
+		width: 25%;
 		height: 84px;
 		left: 7%;
 		top: 0;
@@ -1752,7 +1752,7 @@ body {
 		position: relative;
 		font-size: 18px;
 		height: 39px;
-		font-family: shual-regular;
+		font-family: shual-light;
 		padding-bottom: 0px;
 		padding-top: 5px;
 	}
@@ -2271,7 +2271,7 @@ body {
 		height: 96px;
 		list-style-type: none;
 		/* padding: 5px; */
-		width: 67px;
+		width: 71px;
 		display: inline-block;
 	}
 	#menu li a {
@@ -2424,7 +2424,7 @@ body {
 		top: -19px;
 		right: 2%;
 		font-family: shual-light;
-		font-size: 20px;
+		font-size: 18px;
 		color: #4c4c4c;
 	}
 	.selected2 {
@@ -2492,7 +2492,7 @@ body {
 		text-align: center;
 		z-index: 999;
 		top: 10px;
-		font-family: Shual-regular;
+		font-family: Shual-light;
 	}
 
 	#todot {

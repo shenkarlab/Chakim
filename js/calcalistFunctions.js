@@ -1069,11 +1069,11 @@ $(document).on('click', "#previous , #next", function(e) {
 		// $(".next").css({"backgroundImage" : "url('images/nextH.png')"});
 		if ($(this).attr('id') == "previous")
 			$('#menu').animate({
-				scrollLeft : leftPos + 200
-			}, 800);
+				scrollLeft : leftPos - 200
+			}, 600);
 		else if ($(this).attr('id') == "next")
 			$('#menu').animate({
-				scrollLeft : leftPos - 200
-			}, 800);
+				scrollLeft : leftPos + 200
+			}, 600);
 	}
 });
