@@ -70,7 +70,15 @@ body {
 
 @media (min-width: 641px) {
     body {
+<<<<<<< HEAD
         width: 770px;
+=======
+<<<<<<< HEAD
+        width: 770px;
+=======
+        width: 800px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
 
     b {
@@ -148,7 +156,15 @@ body {
         color: #494A49;
         float: right;
         font-size: 66px;
+<<<<<<< HEAD
         width: 69%;
+=======
+<<<<<<< HEAD
+        width: 69%;
+=======
+        width: 80%;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         margin: 26px;
         margin-bottom: 17px;
         margin-top: 0;
@@ -182,7 +198,15 @@ body {
         float: left;
         left: 8%;
         position: relative;
+<<<<<<< HEAD
         top: 120px;
+=======
+<<<<<<< HEAD
+        top: 120px;
+=======
+        top: 0px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
     #toTheQuestionier {
         background-image: url("../images/toTheQuestionier.png");
@@ -199,7 +223,15 @@ body {
         line-height: -1px;
         background-repeat: no-repeat;
         padding-top: 10px;
+<<<<<<< HEAD
         top: 140px;
+=======
+<<<<<<< HEAD
+        top: 140px;
+=======
+        top: 20px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
     #toTheQuestionier:hover {
         background-image: url("../images/toTheQuestionierH.png");
@@ -343,7 +375,15 @@ body {
         font-size: 32px;
         color: #494949;
         margin: 14px 9%;
+<<<<<<< HEAD
         line-height: 104%;
+=======
+<<<<<<< HEAD
+        line-height: 104%;
+=======
+        line-height: 112%;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         text-align: right;
         width: 70%;
     }
@@ -453,7 +493,16 @@ body {
     #partyPage {
         width: 100%;
         height: 100%;
+<<<<<<< HEAD
         background-color: #ffffff;
+=======
+<<<<<<< HEAD
+        background-color: #ffffff;
+=======
+        background-color: #eae9e4;
+        overflow-y: scroll;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
 
     .partySection {
@@ -620,8 +669,18 @@ body {
         text-decoration: none;
         font-size: large;
         float: right;
+<<<<<<< HEAD
         /*    position: relative;
          left: 20px;*/
+=======
+<<<<<<< HEAD
+        /*    position: relative;
+         left: 20px;*/
+=======
+        position: relative;
+        left: 20px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
 
     #logo {
@@ -657,9 +716,21 @@ body {
         width: 100%;
         height: auto;
         background-color: #ffffff;
+<<<<<<< HEAD
         /*border-bottom: 20px;
          border-bottom-color: #eae9e4;
          border-bottom-style: solid;*/
+=======
+<<<<<<< HEAD
+        /*border-bottom: 20px;
+         border-bottom-color: #eae9e4;
+         border-bottom-style: solid;*/
+=======
+        border-bottom: 20px;
+        border-bottom-color: #eae9e4;
+        border-bottom-style: solid;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
 
     #knesetPtoha {
@@ -670,15 +741,35 @@ body {
         top: 0px;
     }
     #questionnaire {
+<<<<<<< HEAD
         margin-top: -79px;
+=======
+<<<<<<< HEAD
+        margin-top: -79px;
+=======
+        margin-top: -60px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         float: right;
         height: auto;
         width: 100%;
         text-align: inherit;
         background-color: #ffffff;
+<<<<<<< HEAD
         /* border-bottom: 20px;
          border-bottom-color: #eae9e4;
          border-bottom-style: solid;*/
+=======
+<<<<<<< HEAD
+        /* border-bottom: 20px;
+         border-bottom-color: #eae9e4;
+         border-bottom-style: solid;*/
+=======
+        border-bottom: 20px;
+        border-bottom-color: #eae9e4;
+        border-bottom-style: solid;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
 
     #left {
@@ -966,7 +1057,15 @@ body {
         left: 2%;
         font-family: shual-regular;
         height: 0px;
+<<<<<<< HEAD
         width: 20%;
+=======
+<<<<<<< HEAD
+        width: 20%;
+=======
+        width: 16%;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
 
     #activity > p {
@@ -1080,8 +1179,18 @@ body {
         white-space: nowrap;
         overflow-x: hidden;
         overflow-y: hidden;
+<<<<<<< HEAD
         /*position: relative;
          left: 36px;*/
+=======
+<<<<<<< HEAD
+        /*position: relative;
+         left: 36px;*/
+=======
+        position: relative;
+        left: 36px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
     #menu li {
         height: 191px;
@@ -1107,8 +1216,18 @@ body {
         background-repeat: no-repeat;
         width: 47px !important;
         height: 150px !important;
+<<<<<<< HEAD
         /*    position: relative;
          left: 17px;*/
+=======
+<<<<<<< HEAD
+        /*    position: relative;
+         left: 17px;*/
+=======
+        position: relative;
+        left: 17px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
     .previous:hover {
         background-image: url("../images/prevH.png") !important;
@@ -1238,7 +1357,15 @@ body {
         float: right;
         position: relative;
         top: -62px;
+<<<<<<< HEAD
         right: 3%;
+=======
+<<<<<<< HEAD
+        right: 3%;
+=======
+        right: 2%;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         font-family: shual-light;
         font-size: 20px;
         color: #4c4c4c;
@@ -1291,7 +1418,15 @@ body {
         background: #f6991d;
         padding-right: 3%;
         padding-top: 4px;
+<<<<<<< HEAD
         width: 29%;
+=======
+<<<<<<< HEAD
+        width: 29%;
+=======
+        width: 27%;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         height: 35px;
     }
     #comboBox {
@@ -1347,8 +1482,18 @@ body {
         background: #f6991d;
         padding-right: 1%;
         padding-top: 0px;
+<<<<<<< HEAD
         width: 165px;
         height: 26px;
+=======
+<<<<<<< HEAD
+        width: 165px;
+        height: 26px;
+=======
+        width: 150px;
+        height: 25px
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
 }
 @media (max-width: 640px) {
@@ -1375,9 +1520,20 @@ body {
 
     #payAtension {
         font-size: 12px;
+<<<<<<< HEAD
         top: 42px;
         font-family: shual-bold;
         display: none;
+=======
+<<<<<<< HEAD
+        top: 42px;
+        font-family: shual-bold;
+        display: none;
+=======
+        top: 0px;
+        font-family: shual-bold;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
 
     #explantion > p {
@@ -1385,13 +1541,29 @@ body {
         float: right;
         position: relative;
         color: #494A49;
+<<<<<<< HEAD
         top: -14px;
+=======
+<<<<<<< HEAD
+        top: -14px;
+=======
+        top: -110px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         left: -6%;
         text-align: right;
         font-family: alef-regular;
         font-size: 10px;
         direction: rtl;
+<<<<<<< HEAD
         width: 45%;
+=======
+<<<<<<< HEAD
+        width: 45%;
+=======
+        width: 50%;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
 
     #explantion > h3 {
@@ -1408,22 +1580,51 @@ body {
     #tutorial > h4 {
         color: #494A49;
         float: right;
+<<<<<<< HEAD
         font-size: 20px;
+=======
+<<<<<<< HEAD
+        font-size: 20px;
+=======
+        font-size: 22px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         width: 50%;
         direction: rtl;
         font-family: Shual-Light;
         margin-bottom: 0;
         position: relative;
+<<<<<<< HEAD
         right: -2%;
+=======
+<<<<<<< HEAD
+        right: -2%;
+=======
+        right: -3%;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         top: 28px;
     }
     #tutorial > h2 {
         color: #494A49;
         float: right;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/gh-pages
         font-size: 33px;
         width: 55%;
         /* margin: 26px; */
         /* margin-bottom: 17px; */
+<<<<<<< HEAD
+=======
+=======
+        font-size: 28px;
+        width: 80%;
+        /*margin: 26px;*/
+        /*margin-bottom: 17px;*/
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         margin-top: 0;
         font-family: shual-regular;
         direction: rtl;
@@ -1438,6 +1639,10 @@ body {
         float: right;
         position: relative;
         margin-top: 0px;
+<<<<<<< HEAD
+        /* margin: 14px; */
+=======
+<<<<<<< HEAD
         /* margin: 14px; */
         margin-right: 3%;
         right: 2%;
@@ -1446,6 +1651,21 @@ body {
         font-family: shual-regular;
         top: -41px;
         line-height: 18px;
+=======
+        /*margin: 14px;*/
+>>>>>>> origin/gh-pages
+        margin-right: 3%;
+        right: 2%;
+        font-size: 20px;
+        direction: rtl;
+        font-family: shual-regular;
+<<<<<<< HEAD
+        top: -41px;
+        line-height: 18px;
+=======
+        top: -120px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
     #calfi {
         width: 99px;
@@ -1455,7 +1675,15 @@ body {
         float: left;
         left: 10%;
         position: relative;
+<<<<<<< HEAD
         top: 182px;
+=======
+<<<<<<< HEAD
+        top: 182px;
+=======
+        top: 110px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
     #toTheQuestionier {
         background-image: url("../images/M_button_bg.png");
@@ -1463,6 +1691,13 @@ body {
         height: 39px;
         position: relative;
         float: left;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+        right: -10%;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         font-size: 30px;
         text-decoration: none;
         color: #FFFFFF;
@@ -1472,8 +1707,16 @@ body {
         padding: 5px;
         background-repeat: no-repeat;
         bottom: -38px;
+<<<<<<< HEAD
         top: 126px;
         left: 26%;
+=======
+<<<<<<< HEAD
+        top: 126px;
+        left: 26%;
+=======
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
 
     #dontknow {
@@ -1494,12 +1737,27 @@ body {
     }
     #no {
         background-image: url("../images/M_disagree.png");
+<<<<<<< HEAD
         width: 22px;
+=======
+<<<<<<< HEAD
+        width: 22px;
+=======
+        width: 18px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         height: 18px;
         display: -webkit-inline-box;
         position: relative;
         background-repeat: no-repeat;
+<<<<<<< HEAD
         top: 3px;
+=======
+<<<<<<< HEAD
+        top: 3px;
+=======
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
     #foo {
         float: right;
@@ -1513,10 +1771,19 @@ body {
         float: right;
         font-family: shual-regular;
         font-size: 8px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/gh-pages
         top: 50px;
         position: relative;
         right: 5px;
         display: none;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
     #sign {
         background-image: url("../images/M_info.png");
@@ -1524,9 +1791,18 @@ body {
         height: 10px;
         background-repeat: no-repeat;
         float: right;
+<<<<<<< HEAD
         position: relative;
         top: 52px;
         display: none;
+=======
+<<<<<<< HEAD
+        position: relative;
+        top: 52px;
+        display: none;
+=======
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
     #top_questionier {
         background: linear-gradient(to top left, #fcc531, #ffe933);
@@ -1692,7 +1968,15 @@ body {
         width: 2px;
         height: 2px;
         background: white;
+<<<<<<< HEAD
         margin: 10px 6px 12px 6px;
+=======
+<<<<<<< HEAD
+        margin: 10px 6px 12px 6px;
+=======
+        margin: 10px 10px 12px 10px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         opacity: 0.6;
     }
     .active {
@@ -1760,7 +2044,14 @@ body {
         z-index: 1;
         width: 100%;
         float: right;
+<<<<<<< HEAD
         display: none;
+=======
+<<<<<<< HEAD
+        display: none;
+=======
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
 
     .ui-progressbar {
@@ -1779,9 +2070,21 @@ body {
     #choice {
         background: linear-gradient(to top left, #fcc531, #ffe933);
         width: 100%;
+<<<<<<< HEAD
         /*  border-bottom: 10px;
          border-bottom-color: #eae9e4;
          border-bottom-style: solid;*/
+=======
+<<<<<<< HEAD
+        /*  border-bottom: 10px;
+         border-bottom-color: #eae9e4;
+         border-bottom-style: solid;*/
+=======
+        border-bottom: 10px;
+        border-bottom-color: #eae9e4;
+        border-bottom-style: solid;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         margin-top: -20px;
         top: 15px;
         position: relative;
@@ -1815,6 +2118,7 @@ body {
         margin-top: 14px;
         padding-top: 7px;
         color: #4c4c4c;
+<<<<<<< HEAD
         text-align: right;
         position: relative;
         right: 8px;
@@ -1822,13 +2126,37 @@ body {
     #partiesName > ul > li {
         position: relative;
         font-size: 15px;
+=======
+<<<<<<< HEAD
+        text-align: right;
+        position: relative;
+        right: 8px;
+    }
+    #partiesName > ul > li {
+        position: relative;
+        font-size: 15px;
+=======
+    }
+    #partiesName > ul > li {
+        position: relative;
+        font-size: 18px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         height: 39px;
         font-family: shual-light;
         padding-bottom: 0px;
         padding-top: 5px;
     }
     #comboBox {
+<<<<<<< HEAD
         width: 100%;
+=======
+<<<<<<< HEAD
+        width: 100%;
+=======
+        width: 45%;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         height: 33px;
         direction: rtl;
         float: right;
@@ -1836,7 +2164,14 @@ body {
         color: #ffffff;
         font-size: 16px;
         font-family: shual-regular;
+<<<<<<< HEAD
         border-color: #FFFFFF;
+=======
+<<<<<<< HEAD
+        border-color: #FFFFFF;
+=======
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
     #deynmicActive {
         float: right;
@@ -1846,18 +2181,35 @@ body {
         border-right-style: groove;
         height: 417px;
         width: 76%;
+<<<<<<< HEAD
         position: relative;
         right: 5px;
+=======
+<<<<<<< HEAD
+        position: relative;
+        right: 5px;
+=======
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
 
     #hour {
         padding-top: 20px;
         font-family: shual-regular;
         font-size: 12px;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/gh-pages
         position: relative;
         width: 20%;
         top: 2px;
         right: 4px;
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
 
     #headLogo {
@@ -1915,12 +2267,24 @@ body {
     #knesetPtoha {
         font-size: 11px;
         font-family: alef-regular;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/gh-pages
         /* float: left; */
         /* margin-left: -6%; */
         top: -9px;
         float: right;
         right: 17px;
         width: auto;
+<<<<<<< HEAD
+=======
+=======
+        float: left;
+        margin-left: 7%;
+        top: 0px
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
     #logo {
         width: 100%;
@@ -1958,9 +2322,21 @@ body {
         width: 100%;
         height: auto;
         background-color: #ffffff;
+<<<<<<< HEAD
         /*   border-bottom: 10px;
          border-bottom-color: #eae9e4;
          border-bottom-style: solid;*/
+=======
+<<<<<<< HEAD
+        /*   border-bottom: 10px;
+         border-bottom-color: #eae9e4;
+         border-bottom-style: solid;*/
+=======
+        border-bottom: 10px;
+        border-bottom-color: #eae9e4;
+        border-bottom-style: solid;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
     #questionnaire {
         margin-top: -60px;
@@ -1969,9 +2345,21 @@ body {
         width: 100%;
         text-align: inherit;
         background-color: #ffffff;
+<<<<<<< HEAD
         /* border-bottom: 10px;
          border-bottom-color: #eae9e4;
          border-bottom-style: solid;*/
+=======
+<<<<<<< HEAD
+        /* border-bottom: 10px;
+         border-bottom-color: #eae9e4;
+         border-bottom-style: solid;*/
+=======
+        border-bottom: 10px;
+        border-bottom-color: #eae9e4;
+        border-bottom-style: solid;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
 
     #artAns1 {
@@ -2074,8 +2462,18 @@ body {
         font-size: 22px;
         font-family: shual-regular;
         position: relative;
+<<<<<<< HEAD
         top: 69px;
         margin-bottom: 28px;
+=======
+<<<<<<< HEAD
+        top: 69px;
+        margin-bottom: 28px;
+=======
+        top: 60px;
+        margin-bottom: 17px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
     }
     #questionnaire > article > a {
         float: right;
@@ -2086,7 +2484,15 @@ body {
     #questionnaire > div > article > button {
         float: right;
         position: relative;
+<<<<<<< HEAD
         top: 44px;
+=======
+<<<<<<< HEAD
+        top: 44px;
+=======
+        top: 48px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         font-family: alef-regular;
         font-size: 14px;
         cursor: pointer;
@@ -2106,7 +2512,15 @@ body {
         margin: 0%;
         color: #454545;
         right: 2%;
+<<<<<<< HEAD
         top: 44px;
+=======
+<<<<<<< HEAD
+        top: 44px;
+=======
+        top: 31px;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         position: relative;
         float: right;
         font-family: shual-bold;
@@ -2294,7 +2708,15 @@ body {
     }
 
     #list > h4 {
+<<<<<<< HEAD
         margin-top: 8%;
+=======
+<<<<<<< HEAD
+        margin-top: 8%;
+=======
+        margin-top: 1%;
+>>>>>>> origin/gh-pages
+>>>>>>> origin/gh-pages
         float: initial;
         /*padding-right: 5%;*/
         font-size: 22px;
