@@ -10,7 +10,7 @@
 			"mertz": "yes",
 			"hadashe": "yes",
 			"shess": "",
-			"y_tora":""
+			"y_tora":"yes"
 		}, {
 			"licod": "yes",
 			"avoda": "yes",
@@ -32,7 +32,7 @@
 			"mertz": "no",
 			"hadashe": "no",
 			"shess": "",
-			"y_tora":""
+			"y_tora":"no"
 		}, {
 			"licod": "yes",
 			"avoda": "no",
@@ -43,7 +43,7 @@
 			"mertz": "no",
 			"hadashe": "no",
 			"shess": "",
-			"y_tora":""
+			"y_tora":"yes"
 		}, {
 			"licod": "no",
 			"avoda": "no",
@@ -54,7 +54,7 @@
 			"mertz": "yes",
 			"hadashe": "no",
 			"shess": "",
-			"y_tora":""
+			"y_tora":"no"
 		}, {
 			"licod": "no",
 			"avoda": "no",

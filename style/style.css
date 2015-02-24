@@ -94,6 +94,8 @@ body {
 		font-size: 18px;
 		top: 0px;
 		font-family: shual-bold;
+		padding-right: 4px;
+		letter-spacing: 0.5px;
 	}
 
 	#explantion {
@@ -110,7 +112,7 @@ body {
 		word-wrap: break-word;
 		float: right;
 		position: relative;
-		top: 3px;
+		top: 50px;
 		left: -13%;
 		text-align: right;
 		font-family: alef-regular;
@@ -155,6 +157,8 @@ body {
 		position: relative;
 		right: 3%;
 		line-height: 56px;
+		top: 3px;
+		letter-spacing: 1px;
 	}
 	#hoWork {
 		width: 387px;
@@ -168,6 +172,8 @@ body {
 		font-size: 30px;
 		direction: rtl;
 		font-family: shual-regular;
+		line-height: 22px;
+		top: 27px;
 	}
 	#calfi {
 		width: 175px;
@@ -176,7 +182,7 @@ body {
 		float: left;
 		left: 8%;
 		position: relative;
-		top: -49px;
+		top: 0px;
 	}
 	#toTheQuestionier {
 		background-image: url("../images/toTheQuestionier.png");
@@ -184,15 +190,16 @@ body {
 		height: 69px;
 		position: relative;
 		float: right;
-		right: 4%;
+		right: 5%;
 		font-size: 50px;
 		text-decoration: none;
 		color: #FFFFFF;
 		text-align: center;
 		font-family: Shual-Bold;
 		line-height: -1px;
-		padding: 5px;
 		background-repeat: no-repeat;
+		padding-top: 10px;
+		top: 20px;
 	}
 	#toTheQuestionier:hover {
 		background-image: url("../images/toTheQuestionierH.png");
@@ -236,6 +243,7 @@ body {
 	#foo > p {
 		float: right;
 		font-family: shual-regular;
+		padding-top: 1px;
 	}
 	#sign {
 		background-image: url("../images/sign.png");
@@ -357,6 +365,7 @@ body {
 		height: 150px;
 		position: absolute;
 		overflow: auto;
+		overflow-y: hidden;
 		top: 520px;
 		right: 0;
 	}
@@ -496,6 +505,7 @@ body {
 		margin-right: 3%;
 		margin-top: 20px;
 		margin-bottom: 20px;
+		float: right;
 	}
 	.ui-progressbar {
 		width: 0;
@@ -772,18 +782,18 @@ body {
 	#questionnaire > div > article > button {
 		float: right;
 		position: relative;
-		top: 48px;
+		top: 44px;
 		font-family: alef-regular;
-		font-size: 17px;
+		font-size: 15px;
 		cursor: pointer;
-		background-color: #a6a6a6 !important;
+		background-color: #cacaca !important;
 		color: #ffffff !important;
 		border: none !important;
 		text-decoration: none !important;
 		background-image: url("../images/arrow_fullans.png");
 		background-repeat: no-repeat;
 		right: 3%;
-		padding: 2px 10px 2px 35px;
+		padding: 3px 10px 4px 35px;
 		background-position: 13px;
 	}
 
@@ -797,6 +807,7 @@ body {
 		float: right;
 		font-family: shual-bold;
 		font-size: 24px;
+		letter-spacing: 0.5px;
 	}
 	h6 {
 		float: right;
@@ -990,7 +1001,7 @@ body {
 		text-align: initial;
 		color: #4c4c4c;
 		font-weight: 400;
-		line-height: 66px;
+		line-height: 62px;
 	}
 	#list > h4 {
 		margin-top: 3%;
@@ -1287,12 +1298,14 @@ body {
 	}
 
 	#todot > p {
-		padding-top: 60px;
+		/* padding-top: 60px; */
 		font-family: alef-regular;
 		font-size: 11px;
-		width: 95%;
-		margin-right: 3%;
-		padding-bottom: 20px;
+		width: 90%;
+		/* margin-right: 5%; */
+		padding: 5%;
+		background: white;
+		float: right;
 	}
 }
 @media (max-width: 640px) {
@@ -1591,7 +1604,7 @@ body {
 		width: 25%;
 		height: 84px;
 		left: 7%;
-		top: 0;
+		top: -2px;
 		background-position: center 25px;
 		text-align: center;
 		color: #ff6d1d;
@@ -1750,7 +1763,7 @@ body {
 	}
 	#partiesName > ul > li {
 		position: relative;
-		font-size: 18px;
+		font-size: 16px;
 		height: 39px;
 		font-family: shual-light;
 		padding-bottom: 0px;
@@ -1838,7 +1851,8 @@ body {
 		font-size: 11px;
 		font-family: alef-regular;
 		float: left;
-		margin-left: 7%;
+		margin-left: 5%;
+		margin-bottom: 1%;
 		top: 0px
 	}
 	#logo {
@@ -1888,7 +1902,7 @@ body {
 		width: 100%;
 		text-align: inherit;
 		background-color: #ffffff;
-		border-bottom: 10px;
+		border-bottom: 3px;
 		border-bottom-color: #eae9e4;
 		border-bottom-style: solid;
 	}
@@ -1993,8 +2007,8 @@ body {
 		font-size: 22px;
 		font-family: shual-regular;
 		position: relative;
-		top: 60px;
-		margin-bottom: 17px;
+		top: 75px;
+		margin-bottom: 40px;
 	}
 	#questionnaire > article > a {
 		float: right;
@@ -2024,12 +2038,13 @@ body {
 		font-size: larger;
 		margin: 0%;
 		color: #454545;
-		right: 2%;
-		top: 31px;
+		right: 3%;
+		top: 43px;
 		position: relative;
 		float: right;
 		font-family: shual-bold;
 		font-size: 20px;
+		letter-spacing: 0.5px;
 	}
 	h6 {
 		float: right;
@@ -2211,7 +2226,8 @@ body {
 	}
 
 	#list > h4 {
-		margin-top: 1%;
+		margin-top: 7%;
+		margin-bottom : 1%;
 		float: initial;
 		/*padding-right: 5%;*/
 		font-size: 22px;
@@ -2286,7 +2302,7 @@ body {
 		height: 80px;
 		float: right;
 	}
-	
+
 	.previous {
 		background-image: url("../images/M_prev.png") !important;
 		background-repeat: no-repeat;
@@ -2438,7 +2454,7 @@ body {
 		top: 8px;
 		margin: 0;
 		cursor: pointer;
-		height : 0px;
+		height: 0px;
 	}
 	#mImageBox img {
 		position: relative;
@@ -2500,15 +2516,18 @@ body {
 	}
 
 	#todot > p {
-		padding-top: 60px;
+		/* padding-top: 60px; */
 		font-family: alef-regular;
 		font-size: 8px;
-		width: 95%;
-		margin-right: 3%;
-		padding-bottom: 20px;
+		width: 90%;
+		/* margin-right: 3%; */
+		/* padding-bottom: 20px; */
+		float: right;
+		padding: 5%;
+		background: white;
 	}
-	
-		#createdBy > b {
+
+	#createdBy > b {
 		font-size: 9px;
 		font-family: alef-bold;
 		top: 0px;
@@ -2521,6 +2540,7 @@ body {
 		margin-right: 3%;
 		margin-top: 20px;
 		margin-bottom: 20px;
+		float: right;
 	}
 
 }

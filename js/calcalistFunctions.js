@@ -47,7 +47,7 @@ function avgParty(id, avgMonth, avgWeek) {
 	};
 }
 
-var tempName = [partySection(14, "הליכוד", "", "//www.youtube.com/embed/ZA23LiWIHzM", 49.3, 3.2, "#22599c", 10), partySection(16, "המחנה הציוני", "", "//www.youtube.com/embed/J5eDRryp9uY", 61.7, 2.9, "#265da0", 10), partySection(15, "יש עתיד", "", "//www.youtube.com/embed/pKVrFwJ2CVc", 29.3, 2.1, "#16477e", 10), partySection(17, "הבית היהודי", "", "//www.youtube.com/embed/oSwCtvH9838", 38.5, 2.7, "#a2c739", 10), partySection(10, "כולנו", "", "//www.youtube.com/embed/YujaXY3jyKM", 0, 0, "#30b4e7", 10), partySection(26, "ישראל ביתנו", "", "//www.youtube.com/embed/5hO4mnG-wLU", 39.5, 2.4, "#255a70", 10), partySection(20, "מרצ", "", "//www.youtube.com/embed/IF2yLwB0Qa0", 119.7, 5, "#3d9c3f", 10), partySection(22, "הרשימה הערבית", "", "//www.youtube.com/embed/ZxPuED8HZIk", 215, 5.5, "#009138", 10), partySection(18, 'ש"ס', "", "//www.youtube.com/embed/ZxPuED8HZIk", 53, 2.2, "#000000", 10), partySection(19, "יהדות התורה", "", "//www.youtube.com/embed/ZxPuED8HZIk", 58.9, 3.0, "#1578ba", 10)];
+var tempName = [ partySection(17, "הבית היהודי", "", "//www.youtube.com/embed/oSwCtvH9838", 38.5, 2.7, "#a2c739", 10),partySection(14, "הליכוד", "", "//www.youtube.com/embed/ZA23LiWIHzM", 49.3, 3.2, "#22599c", 10), partySection(16, "המחנה הציוני", "", "//www.youtube.com/embed/J5eDRryp9uY", 61.7, 2.9, "#265da0", 10), partySection(22, "הרשימה הערבית", "", "//www.youtube.com/embed/ZxPuED8HZIk", 215, 5.5, "#009138", 10), partySection(19, "יהדות התורה", "", "//www.youtube.com/embed/ZxPuED8HZIk", 58.9, 3.0, "#1578ba", 10), partySection(15, "יש עתיד", "", "//www.youtube.com/embed/pKVrFwJ2CVc", 29.3, 2.1, "#16477e", 10),partySection(26, "ישראל ביתנו", "", "//www.youtube.com/embed/5hO4mnG-wLU", 39.5, 2.4, "#255a70", 10), partySection(10, "כולנו", "", "//www.youtube.com/embed/YujaXY3jyKM", 0, 0, "#30b4e7", 10),  partySection(20, "מרצ", "", "//www.youtube.com/embed/IF2yLwB0Qa0", 119.7, 5, "#3d9c3f", 10), partySection(18, 'ש"ס', "", "//www.youtube.com/embed/ZxPuED8HZIk", 53, 2.2, "#000000", 10)];
 
 var partiesAvg = [];
 
@@ -348,46 +348,46 @@ function checkAns() {
 		var eachPercent = 0;
 		$.each(dataAnswer, function(index, value) {
 			//parties.push(Party(value.name, value.id, value.number_of_seats, value.members))
-			if (answers[index] == value.licod) {
-				chkimAns[0]++;
-			}
-			if (answers[index] == value.avoda) {
+	if (answers[index] == value.licod) {
 				chkimAns[1]++;
 			}
-			if (answers[index] == value.yeshAtid) {
+			if (answers[index] == value.avoda) {
 				chkimAns[2]++;
 			}
-			if (answers[index] == value.abityehudi) {
-				chkimAns[3]++;
-			}
-			if (answers[index] == value.culanu) {
-				chkimAns[4]++;
-			}
-			if (answers[index] == value.israelbitnu) {
+			if (answers[index] == value.yeshAtid) {
 				chkimAns[5]++;
 			}
-			if (answers[index] == value.mertz) {
-				chkimAns[6]++;
+			if (answers[index] == value.abityehudi) {
+				chkimAns[0]++;
 			}
-			if (answers[index] == value.hadashe) {
+			if (answers[index] == value.culanu) {
 				chkimAns[7]++;
 			}
-			if (answers[index] == value.shess) {
+			if (answers[index] == value.israelbitnu) {
+				chkimAns[6]++;
+			}
+			if (answers[index] == value.mertz) {
 				chkimAns[8]++;
 			}
-			if (answers[index] == value.y_tora) {
+			if (answers[index] == value.hadashe) {
+				chkimAns[3]++;
+			}
+			if (answers[index] == value.shess) {
 				chkimAns[9]++;
 			}
-			tempName[0].answers[index] = value.licod;
-			tempName[1].answers[index] = value.avoda;
-			tempName[2].answers[index] = value.yeshAtid;
-			tempName[3].answers[index] = value.abityehudi;
-			tempName[4].answers[index] = value.culanu;
-			tempName[5].answers[index] = value.israelbitnu;
-			tempName[6].answers[index] = value.mertz;
-			tempName[7].answers[index] = value.hadashe;
-			tempName[8].answers[index] = value.shess;
-			tempName[9].answers[index] = value.y_tora;
+			if (answers[index] == value.y_tora) {
+				chkimAns[4]++;
+			}
+			tempName[1].answers[index] = value.licod;
+			tempName[2].answers[index] = value.avoda;
+			tempName[5].answers[index] = value.yeshAtid;
+			tempName[0].answers[index] = value.abityehudi;
+			tempName[7].answers[index] = value.culanu;
+			tempName[6].answers[index] = value.israelbitnu;
+			tempName[8].answers[index] = value.mertz;
+			tempName[3].answers[index] = value.hadashe;
+			tempName[9].answers[index] = value.shess;
+			tempName[4].answers[index] = value.y_tora;
 		});
 
 		for ( i = 0; i < chkimAns.length; i++) {
