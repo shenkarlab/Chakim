@@ -294,7 +294,7 @@ $(function() {
 //compare form results with party results
 var clicked = false;
 function checkform(obj) {
-	// checkAns();
+	//checkAns();
 
 	if (clicked)
 		return false;
@@ -348,7 +348,7 @@ function checkAns() {
 		var eachPercent = 0;
 		$.each(dataAnswer, function(index, value) {
 			//parties.push(Party(value.name, value.id, value.number_of_seats, value.members))
-	if (answers[index] == value.licod) {
+			if (answers[index] == value.licod) {
 				chkimAns[1]++;
 			}
 			if (answers[index] == value.avoda) {
@@ -1022,7 +1022,9 @@ function updateToggle(tog) {
 
 	}
 }
-
+function updateToggleAnswer(){
+	
+}
 function closeToggle() {
 	for ( u = 0; u < 9; u++) {
 		if ($("div.fullAns" + u).css("display") == "block")
