@@ -47,7 +47,7 @@ function avgParty(id, avgMonth, avgWeek) {
 	};
 }
 
-var tempName = [ partySection(17, "הבית היהודי", "", "//www.youtube.com/embed/oSwCtvH9838", 38.5, 2.7, "#a2c739", 10),partySection(14, "הליכוד", "", "//www.youtube.com/embed/ZA23LiWIHzM", 49.3, 3.2, "#22599c", 10), partySection(16, "המחנה הציוני", "", "//www.youtube.com/embed/J5eDRryp9uY", 61.7, 2.9, "#265da0", 10), partySection(22, "הרשימה הערבית", "", "//www.youtube.com/embed/ZxPuED8HZIk", 215, 5.5, "#009138", 10), partySection(19, "יהדות התורה", "", "//www.youtube.com/embed/ZxPuED8HZIk", 58.9, 3.0, "#1578ba", 10), partySection(15, "יש עתיד", "", "//www.youtube.com/embed/pKVrFwJ2CVc", 29.3, 2.1, "#16477e", 10),partySection(26, "ישראל ביתנו", "", "//www.youtube.com/embed/5hO4mnG-wLU", 39.5, 2.4, "#255a70", 10), partySection(10, "כולנו", "", "//www.youtube.com/embed/YujaXY3jyKM", 0, 0, "#30b4e7", 10),  partySection(20, "מרצ", "", "//www.youtube.com/embed/IF2yLwB0Qa0", 119.7, 5, "#3d9c3f", 10), partySection(18, 'ש"ס', "", "//www.youtube.com/embed/ZxPuED8HZIk", 53, 2.2, "#000000", 10)];
+var tempName = [partySection(17, "הבית היהודי", "", "//www.youtube.com/embed/oSwCtvH9838", 38.5, 2.7, "#a2c739", 10), partySection(14, "הליכוד", "", "//www.youtube.com/embed/ZA23LiWIHzM", 49.3, 3.2, "#22599c", 10), partySection(16, "המחנה הציוני", "", "//www.youtube.com/embed/J5eDRryp9uY", 61.7, 2.9, "#265da0", 10), partySection(22, "הרשימה הערבית", "", "//www.youtube.com/embed/ZxPuED8HZIk", 215, 5.5, "#009138", 10), partySection(19, "יהדות התורה", "", "//www.youtube.com/embed/ZxPuED8HZIk", 58.9, 3.0, "#1578ba", 10), partySection(15, "יש עתיד", "", "//www.youtube.com/embed/pKVrFwJ2CVc", 29.3, 2.1, "#16477e", 10), partySection(26, "ישראל ביתנו", "", "//www.youtube.com/embed/5hO4mnG-wLU", 39.5, 2.4, "#255a70", 10), partySection(10, "כולנו", "", "//www.youtube.com/embed/YujaXY3jyKM", 0, 0, "#30b4e7", 10), partySection(20, "מרצ", "", "//www.youtube.com/embed/IF2yLwB0Qa0", 119.7, 5, "#3d9c3f", 10), partySection(18, 'ש"ס', "", "//www.youtube.com/embed/ZxPuED8HZIk", 53, 2.2, "#000000", 10)];
 
 var partiesAvg = [];
 
@@ -81,6 +81,20 @@ function calcResidence() {
 
 	});
 };
+// 
+// function preloader() {
+	// if (document.images) {
+		// img1 = new Image();
+		// img2 = new Image();
+		// img3 = new Image();
+// 
+		// img1.src = "../images/logo10.png";
+		// img2.src = "../images/logo14.png";
+		// img3.src = "../images/logo15.png";
+	// }
+	// console.log("loaded secc");
+// }
+
 
 $(document).ready(function() {
 
@@ -124,6 +138,9 @@ $(document).ready(function() {
 			"color" : "#FFFFFF"
 		})
 		numParty = numParty.replace(/[^\d.]/g, '');
+		$('#logo').css("display", "none");
+		$('#logo').attr("src", "images/logo" + numParty + ".png");
+
 		daynamicFunc(numParty);
 
 		//update page with party results
@@ -152,7 +169,7 @@ $(document).ready(function() {
 		$("section#formContainer").hide();
 		$(document).one('click', '#toTheQuestionier', function(event) {
 			$("section#tutorial").fadeOut(1000).hide();
-			$("section#formContainer").fadeIn(1000).show();
+			$("section#formContainer").fadeIn(1000);
 		});
 		$('section.questions:not(:first)').hide();
 		sectionId = $('section.questions').find("section").attr('id');
@@ -230,14 +247,13 @@ $(document).ready(function() {
 	});
 
 	// $(document).on("click", '.next', function(e) {
-		// $(this).css({
-			// "backgroundImage" : "url('images/next.png')"
-		// });
+	// $(this).css({
+	// "backgroundImage" : "url('images/next.png')"
+	// });
 	// });
 
 	$(function() {
 		$("#comboBox").on("change", function() {
-			console.log($("#comboBox").val());
 			if ($("#comboBox").val() == "committee")
 				$('#committee').click();
 			if ($("#comboBox").val() == "residence")
@@ -309,9 +325,7 @@ function checkform(obj) {
 			return false;
 		answers.push(selection);
 		selection = "";
-		console.log('b', q_num);
 		if (parseInt(q_num, 10) == 9) {//update to num of questions
-			console.log('a', q_num);
 			checkAns();
 		}
 
@@ -507,20 +521,14 @@ function updateButton(num) {
 	});
 	$('#boxCommittee').on('change', function() {
 		$('#residence').click();
-		console.log(haim)
 		// or $(this).val()
 	});
 	$('#boxResidence').on('change', function() {
 		$('#committee').click();
-		// or $(this).val()
-		console.log(haim2)
 	});
 	$('#boxSubmission').on('change', function() {
 		$('#submission').click();
-		console.log(haim4)
-		// or $(this).val()
 	});
-	console.log($("#comboBox").val());
 	if ($("#comboBox").val == "boxSubmission") {
 		$('#submission').click();
 
@@ -548,28 +556,29 @@ function updateButton(num) {
 			switch (tempName[i].id) {
 			case 14: {
 				$("#14ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+
 				});
 				$("#14ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
 				break;
 			}
 			case 15: {
 				$("#15ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
 				});
 				$("#15ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
 				break;
 			}
 			case 16: {
 				$("#16ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
 				});
 				$("#16ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
 				break;
 			}
 			case 17: {
 				$("#17ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
 				});
 				$("#17ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
 				break;
@@ -579,35 +588,35 @@ function updateButton(num) {
 			}
 			case 26: {
 				$("#26ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
 				});
 				$("#26ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
 				break;
 			}
 			case 20: {
 				$("#20ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
 				});
 				$("#20ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
 				break;
 			}
 			case 22: {
 				$("#22ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
 				});
 				$("#22ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
 				break;
 			}
 			case 18: {
 				$("#18ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
 				});
 				$("#18ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
 				break;
 			}
 			case 19: {
 				$("#19ProgressBar").animate({
-					"width" : ((tempName[i].average_weekly_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
 				});
 				$("#19ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
 				break;
@@ -623,28 +632,28 @@ function updateButton(num) {
 			switch (tempName[i].id) {
 			case 14: {
 				$("#14ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
 				});
 				$("#14ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
 				break;
 			}
 			case 15: {
 				$("#15ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
 				});
 				$("#15ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
 				break;
 			}
 			case 16: {
 				$("#16ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
 				});
 				$("#16ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
 				break;
 			}
 			case 17: {
 				$("#17ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
 				});
 				$("#17ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
 				break;
@@ -654,35 +663,35 @@ function updateButton(num) {
 			}
 			case 26: {
 				$("#26ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
 				});
 				$("#26ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
 				break;
 			}
 			case 20: {
 				$("#20ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
 				});
 				$("#20ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
 				break;
 			}
 			case 22: {
 				$("#22ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
 				});
 				$("#22ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
 				break;
 			}
 			case 18: {
 				$("#18ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
 				});
 				$("#18ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
 				break;
 			}
 			case 19: {
 				$("#19ProgressBar").animate({
-					"width" : ((tempName[i].average_monthly_committee_presence) * 10) + "px"
+					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
 				});
 				$("#19ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
 				break;
@@ -699,28 +708,28 @@ function updateButton(num) {
 			switch (tempName[i].id) {
 			case 14: {
 				$("#14ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
 				});
 				$("#14ProgressBar").html(tempName[i].rulesApprove);
 				break;
 			}
 			case 15: {
 				$("#15ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
 				});
 				$("#15ProgressBar").html(tempName[i].rulesApprove);
 				break;
 			}
 			case 16: {
 				$("#16ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
 				});
 				$("#16ProgressBar").html(tempName[i].rulesApprove);
 				break;
 			}
 			case 17: {
 				$("#17ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
 				});
 				$("#17ProgressBar").html(tempName[i].rulesApprove);
 				break;
@@ -730,36 +739,37 @@ function updateButton(num) {
 			}
 			case 26: {
 				$("#26ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
 				});
 				$("#26ProgressBar").html(tempName[i].rulesApprove);
 				break;
 			}
 			case 20: {
 				$("#20ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
 				});
 				$("#20ProgressBar").html(tempName[i].rulesApprove);
 				break;
 			}
 			case 22: {
 				$("#22ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
 				});
 				$("#22ProgressBar").html(tempName[i].rulesApprove);
 				break;
 			}
 			case 18: {
 				$("#18ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
 				});
 				$("#18ProgressBar").html(parseInt(tempName[i].rulesApprove));
 				break;
 			}
 			case 19: {
 				$("#19ProgressBar").animate({
-					"width" : ((tempName[i].rulesApprove) * 20) + "px"
+					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
 				});
+				console.log((" אלהן שלום" + parseInt(tempName[i].rulesApprove) * 20))
 				$("#19ProgressBar").html(parseInt(tempName[i].rulesApprove));
 				break;
 			}
@@ -774,28 +784,28 @@ function updateButton(num) {
 			switch (tempName[i].id) {
 			case 14: {
 				$("#14ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission ) * 1.5) + "px"
+					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
 				});
 				$("#14ProgressBar").html(tempName[i].rulesSubmission);
 				break;
 			}
 			case 15: {
 				$("#15ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 1.5) + "px"
+					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
 				});
 				$("#15ProgressBar").html(tempName[i].rulesSubmission);
 				break;
 			}
 			case 16: {
 				$("#16ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 1.5) + "px"
+					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
 				});
 				$("#16ProgressBar").html(tempName[i].rulesSubmission);
 				break;
 			}
 			case 17: {
 				$("#17ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 1.5) + "px"
+					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
 				});
 				$("#17ProgressBar").html(tempName[i].rulesSubmission);
 				break;
@@ -805,35 +815,35 @@ function updateButton(num) {
 			}
 			case 26: {
 				$("#26ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 1.5) + "px"
+					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
 				});
 				$("#26ProgressBar").html(tempName[i].rulesSubmission);
 				break;
 			}
 			case 20: {
 				$("#20ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 1.2 ) + "px"
+					"width" : (190) + "px"
 				});
 				$("#20ProgressBar").html(tempName[i].rulesSubmission);
 				break;
 			}
 			case 22: {
 				$("#22ProgressBar").animate({
-					"width" : tempName[i].rulesSubmission + "px"
+					"width" : 230 + "px"
 				});
 				$("#22ProgressBar").html(tempName[i].rulesSubmission);
 				break;
 			}
 			case 18: {
 				$("#18ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 1.5) + "px"
+					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
 				});
 				$("#18ProgressBar").html(parseInt(tempName[i].rulesSubmission));
 				break;
 			}
 			case 19: {
 				$("#19ProgressBar").animate({
-					"width" : ((tempName[i].rulesSubmission) * 1.5) + "px"
+					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
 				});
 				$("#19ProgressBar").html(parseInt(tempName[i].rulesSubmission));
 				break;
@@ -852,25 +862,9 @@ function moveToPartyPage() {
 //update page with choosen party
 function daynamicFunc(num) {
 	closeToggle();
-	$.getJSON("js/full.json", function(d) {
-		var dataFull = d.fullAnswers;
-		//$('#fullAns' + index).html(v);
-		$.each(result, function(index, val) {
-			if (val == num) {
-				$.each(dataFull[index], function(x, v) {
-					$('#fullAns' + x).html(v);
-				});
-			}
-			return;
-		});
-	});
-
+	$('#logo').fadeIn(500);
 	$.each(parties, function(index, value) {
 		if (value.id == num && num != 10) {
-			/*$('#logo').css({
-			 "background-image" : "url('images/logo" + num + ".png')"
-			 });*/
-			$('#logo').attr('src', "images/logo" + num + ".png");
 
 			i = 0;
 			$.each(result, function(i, v) {
@@ -940,10 +934,6 @@ function daynamicFunc(num) {
 		if (num == 10) {
 			for ( i = 0; i < tempName.length; i++) {
 				if (tempName[i].id == 10) {
-					// $('#logo').css({
-					// "background-image" : "url('images/logo" + num + ".png')"
-					// });
-					$('#logo').attr('src', "images/logo" + num + ".png");
 					updateToggle(i);
 					$('#percentOf').html(tempName[i].percent + "%");
 					$('section.partyNameTrue').each(function() {
@@ -1004,6 +994,18 @@ function daynamicFunc(num) {
 			}
 		}
 	});
+	$.getJSON("js/full.json", function(d) {
+		var dataFull = d.fullAnswers;
+		//$('#fullAns' + index).html(v);
+		$.each(result, function(index, val) {
+			if (val == num) {
+				$.each(dataFull[index], function(x, v) {
+					$('#fullAns' + x).html(v);
+				});
+			}
+			return;
+		});
+	});
 	var images = [];
 	for ( j = 1; j < tempName[i].members + 1; j++) {
 		images[j] = 'images/' + num + '/' + num + '.' + j + '.png';
@@ -1022,9 +1024,11 @@ function updateToggle(tog) {
 
 	}
 }
-function updateToggleAnswer(){
-	
+
+function updateToggleAnswer() {
+
 }
+
 function closeToggle() {
 	for ( u = 0; u < 9; u++) {
 		if ($("div.fullAns" + u).css("display") == "block")
@@ -1062,13 +1066,8 @@ function myAnsfunc() {
 })(jQuery);
 $(document).on('click', "#previous , #next", function(e) {
 	e.preventDefault();
-	console.log($('#menu').hasScrollBar());
-	// if($("#menu").scrollLeft() == ($("#menu").width())){
-	// alert('end!');
-	// }
 	if ($('#menu').hasScrollBar()) {
 		var leftPos = $('#menu').scrollLeft();
-		// $(".next").css({"backgroundImage" : "url('images/nextH.png')"});
 		if ($(this).attr('id') == "previous")
 			$('#menu').animate({
 				scrollLeft : leftPos - 200
