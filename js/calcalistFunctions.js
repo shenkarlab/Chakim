@@ -5,10 +5,7 @@ var answers = [];
 var chkimAns = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var percent = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 var result = [14, 16, 15, 17, 10, 26, 20, 22, 18, 19];
-var i,
-    j,
-    y,
-    p;
+var i, j, y, p;
 var selection = "";
 var numParty = 0;
 var bouncer;
@@ -81,20 +78,6 @@ function calcResidence() {
 
 	});
 };
-// 
-// function preloader() {
-	// if (document.images) {
-		// img1 = new Image();
-		// img2 = new Image();
-		// img3 = new Image();
-// 
-		// img1.src = "../images/logo10.png";
-		// img2.src = "../images/logo14.png";
-		// img3.src = "../images/logo15.png";
-	// }
-	// console.log("loaded secc");
-// }
-
 
 $(document).ready(function() {
 
@@ -138,11 +121,7 @@ $(document).ready(function() {
 			"color" : "#FFFFFF"
 		})
 		numParty = numParty.replace(/[^\d.]/g, '');
-		$('#logo').css("display", "none");
-		$('#logo').attr("src", "images/logo" + numParty + ".png");
-
 		daynamicFunc(numParty);
-
 		//update page with party results
 		updateButton(numParty);
 		//update progress bar with party results
@@ -169,7 +148,7 @@ $(document).ready(function() {
 		$("section#formContainer").hide();
 		$(document).one('click', '#toTheQuestionier', function(event) {
 			$("section#tutorial").fadeOut(1000).hide();
-			$("section#formContainer").fadeIn(1000);
+			$("section#formContainer").fadeIn(1000).show();
 		});
 		$('section.questions:not(:first)').hide();
 		sectionId = $('section.questions').find("section").attr('id');
@@ -475,8 +454,7 @@ function checkAns() {
 		$(".answer8 #button8").click(function() {
 			$("div.fullAns8").slideToggle("fast");
 		});
-		var index = 0,
-		    smaller = 10;
+		var index = 0, smaller = 10;
 		//move first result to start
 		$(".next").click();
 		//choose the first result
@@ -554,73 +532,73 @@ function updateButton(num) {
 		$('#hour').html("*שעות שבועיות");
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
 
-				});
-				$("#14ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#15ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#16ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#17ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#26ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#20ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#22ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 18: {
-				$("#18ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#18ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
-			case 19: {
-				$("#19ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
-				});
-				$("#19ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
-				break;
-			}
+					});
+					$("#14ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#15ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#16ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#17ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#26ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#20ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#22ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 18: {
+					$("#18ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#18ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
+				case 19: {
+					$("#19ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_weekly_presence) * 10) + "px"
+					});
+					$("#19ProgressBar").html(parseInt(tempName[i].average_weekly_presence));
+					break;
+				}
 			}
 		}
 	});
@@ -630,72 +608,72 @@ function updateButton(num) {
 
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#14ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#15ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#16ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#17ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#26ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#20ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#22ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 18: {
-				$("#18ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#18ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
-			case 19: {
-				$("#19ProgressBar").animate({
-					"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
-				});
-				$("#19ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
-				break;
-			}
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#14ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#15ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#16ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#17ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#26ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#20ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#22ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 18: {
+					$("#18ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#18ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
+				case 19: {
+					$("#19ProgressBar").animate({
+						"width" : (parseInt(tempName[i].average_monthly_committee_presence) * 10) + "px"
+					});
+					$("#19ProgressBar").html(parseInt(tempName[i].average_monthly_committee_presence));
+					break;
+				}
 			}
 		}
 
@@ -706,73 +684,73 @@ function updateButton(num) {
 
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#14ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#15ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#16ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#17ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#26ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#20ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#22ProgressBar").html(tempName[i].rulesApprove);
-				break;
-			}
-			case 18: {
-				$("#18ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				$("#18ProgressBar").html(parseInt(tempName[i].rulesApprove));
-				break;
-			}
-			case 19: {
-				$("#19ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
-				});
-				console.log((" אלהן שלום" + parseInt(tempName[i].rulesApprove) * 20))
-				$("#19ProgressBar").html(parseInt(tempName[i].rulesApprove));
-				break;
-			}
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#14ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#15ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#16ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#17ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#26ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#20ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#22ProgressBar").html(tempName[i].rulesApprove);
+					break;
+				}
+				case 18: {
+					$("#18ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					$("#18ProgressBar").html(parseInt(tempName[i].rulesApprove));
+					break;
+				}
+				case 19: {
+					$("#19ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesApprove) * 20) + "px"
+					});
+					console.log((" אלהן שלום" + parseInt(tempName[i].rulesApprove) * 20))
+					$("#19ProgressBar").html(parseInt(tempName[i].rulesApprove));
+					break;
+				}
 			}
 		}
 	});
@@ -782,72 +760,72 @@ function updateButton(num) {
 
 		for ( i = 0; i < tempName.length; i++) {
 			switch (tempName[i].id) {
-			case 14: {
-				$("#14ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
-				});
-				$("#14ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 15: {
-				$("#15ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
-				});
-				$("#15ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 16: {
-				$("#16ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
-				});
-				$("#16ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 17: {
-				$("#17ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
-				});
-				$("#17ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 10: {
-				break;
-			}
-			case 26: {
-				$("#26ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
-				});
-				$("#26ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 20: {
-				$("#20ProgressBar").animate({
-					"width" : (190) + "px"
-				});
-				$("#20ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 22: {
-				$("#22ProgressBar").animate({
-					"width" : 230 + "px"
-				});
-				$("#22ProgressBar").html(tempName[i].rulesSubmission);
-				break;
-			}
-			case 18: {
-				$("#18ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
-				});
-				$("#18ProgressBar").html(parseInt(tempName[i].rulesSubmission));
-				break;
-			}
-			case 19: {
-				$("#19ProgressBar").animate({
-					"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
-				});
-				$("#19ProgressBar").html(parseInt(tempName[i].rulesSubmission));
-				break;
-			}
+				case 14: {
+					$("#14ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
+					});
+					$("#14ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 15: {
+					$("#15ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
+					});
+					$("#15ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 16: {
+					$("#16ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
+					});
+					$("#16ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 17: {
+					$("#17ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
+					});
+					$("#17ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 10: {
+					break;
+				}
+				case 26: {
+					$("#26ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
+					});
+					$("#26ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 20: {
+					$("#20ProgressBar").animate({
+						"width" : (190) + "px"
+					});
+					$("#20ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 22: {
+					$("#22ProgressBar").animate({
+						"width" : 230 + "px"
+					});
+					$("#22ProgressBar").html(tempName[i].rulesSubmission);
+					break;
+				}
+				case 18: {
+					$("#18ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
+					});
+					$("#18ProgressBar").html(parseInt(tempName[i].rulesSubmission));
+					break;
+				}
+				case 19: {
+					$("#19ProgressBar").animate({
+						"width" : (parseInt(tempName[i].rulesSubmission) * 2) + "px"
+					});
+					$("#19ProgressBar").html(parseInt(tempName[i].rulesSubmission));
+					break;
+				}
 			}
 		}
 	});
@@ -862,7 +840,7 @@ function moveToPartyPage() {
 //update page with choosen party
 function daynamicFunc(num) {
 	closeToggle();
-	$('#logo').fadeIn(500);
+	$('#logo').attr("src",  "images/logo" + numParty + ".png");
 	$.each(parties, function(index, value) {
 		if (value.id == num && num != 10) {
 

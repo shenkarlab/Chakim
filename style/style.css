@@ -20,46 +20,51 @@ article, section, nav, aside, header, footer, main {
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-
 @font-face {
-	font-family: Shual-Black;
-	src: url("../fonts/Shual-Black.otf");
+	font-family: 'Shual-Bold';
+	src: url('../fonts/shual-bold.eot');
+	src: url('../fonts/shual-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/shual-bold.woff') format('woff'), url('../fonts/shual-bold.ttf') format('truetype'), url('../fonts/shual-bold.svg#Shual-Bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Shual-Bold';
-	src: url('shual-bold-web.eot');
-	src: url('shual-bold-web.eot?#iefix') format('embedded-opentype'), url('shual-bold-web.woff') format('woff'), url('shual-bold-web.ttf') format('truetype'), url('shual-bold-web.svg#ShualBold') format('svg');
+	font-family: 'shual-light';
+	src: url('../fonts/Shual-Light-webfont.eot');
+	src: url('../fonts/Shual-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Shual-Light-webfont.woff2') format('woff2'), url('../fonts/Shual-Light-webfont.woff') format('woff'), url('../fonts/Shual-Light-webfont.ttf') format('truetype'), url('../fonts/Shual-Light-webfont.svg#shual-light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'shual_regular';
+	src: url('../fonts/Shual-Regular-webfont.eot');
+	src: url('../fonts/Shual-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Shual-Regular-webfont.woff2') format('woff2'), url('../fonts/Shual-Regular-webfont.woff') format('woff'), url('../fonts/Shual-Regular-webfont.ttf') format('truetype'), url('../fonts/Shual-Regular-webfont.svg#shual_regular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
-	font-family: Shual-Light;
-	src: url("../fonts/Shual-Light.otf");
+	font-family: 'swatchnormal';
+	src: url('../fonts/Swatch-Normal-webfont.eot');
+	src: url('../fonts/Swatch-Normal-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Swatch-Normal-webfont.woff2') format('woff2'), url('../fonts/Swatch-Normal-webfont.woff') format('woff'), url('../fonts/Swatch-Normal-webfont.ttf') format('truetype'), url('../fonts/Swatch-Normal-webfont.svg#swatchnormal') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-	font-family: Shual-Regular;
-	src: url("../fonts/Shual-Regular.otf");
-}
-@font-face {
-	font-family: Swatch-Bold;
-	src: url("../fonts/Swatch-Bold.otf");
-}
-
-@font-face {
-	font-family: Swatch-Normal;
-	src: url("../fonts/Swatch-Normal.otf");
+	font-family: 'Alef';
+	src: url('../fonts/Alef-Bold.eot');
+	src: url('../fonts/Alef-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Alef-Bold.woff') format('woff'), url('../fonts/Alef-Bold.ttf') format('truetype'), url('../fonts/Alef-Bold.svg#Alef-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
 }
 
 @font-face {
-	font-family: Alef-regular;
-	src: url("../fonts/Alef-regular.ttf");
-}
-
-@font-face {
-	font-family: Alef-bold;
-	src: url("../fonts/Alef-bold.ttf");
+	font-family: 'Alef';
+	src: url('../fonts/Alef-Regular.eot');
+	src: url('../fonts/Alef-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Alef-Regular.woff') format('woff'), url('../fonts/Alef-Regular.ttf') format('truetype'), url('../fonts/Alef-Regular.svg#alefregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 html, body {
@@ -76,11 +81,14 @@ body {
 @media (min-width: 641px) {
 	body {
 		width: 770px;
+		font-weight: normal;
 	}
 
 	b {
 		font-size: 53px;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
+		font-weight: normal;
+		font-style: normal;
 		position: relative;
 		top: -9px;
 	}
@@ -98,7 +106,9 @@ body {
 	#payAtension {
 		font-size: 18px;
 		top: 0px;
-		font-family: shual-bold;
+		font-family: 'Shual-Bold';
+		font-weight: normal;
+		font-style: normal;
 		padding-right: 4px;
 		letter-spacing: 0.5px;
 	}
@@ -120,7 +130,8 @@ body {
 		top: 50px;
 		left: -13%;
 		text-align: right;
-		font-family: alef-regular;
+		font-family: 'Alef';
+		font-weight: normal;
 		font-size: 17px;
 		direction: rtl;
 		width: 330px;
@@ -133,7 +144,9 @@ body {
 		color: #494A49;
 		/* top: 52px; */
 		/* left: 46%; */
-		font-family: shual-regular;
+		font-family: 'shual_regular';
+		font-weight: normal;
+		font-style: normal;
 		font-size: 29px;
 		margin-right: 13%;
 	}
@@ -143,7 +156,7 @@ body {
 		font-size: 30px;
 		width: 50%;
 		direction: rtl;
-		font-family: Shual-Light;
+		font-family: 'shual-light';
 		margin: 28px;
 		margin-bottom: 0;
 		position: relative;
@@ -157,7 +170,7 @@ body {
 		margin: 26px;
 		margin-bottom: 17px;
 		margin-top: 0;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		direction: rtl;
 		position: relative;
 		right: 3%;
@@ -176,7 +189,7 @@ body {
 		right: 3%;
 		font-size: 30px;
 		direction: rtl;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		line-height: 22px;
 		top: 27px;
 	}
@@ -200,7 +213,7 @@ body {
 		text-decoration: none;
 		color: #FFFFFF;
 		text-align: center;
-		font-family: Shual-Bold;
+		font-family: 'Shual-Bold';
 		line-height: -1px;
 		background-repeat: no-repeat;
 		padding-top: 10px;
@@ -247,7 +260,7 @@ body {
 	}
 	#foo > p {
 		float: right;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		padding-top: 1px;
 	}
 	#sign {
@@ -270,7 +283,7 @@ body {
 		text-align: center;
 		line-height: 20px;
 		z-index: 999;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 	}
 
 	form {
@@ -335,7 +348,7 @@ body {
 	}
 
 	.questions > h3 {
-		font-family: shual-Regular;
+		font-family: 'shual_regular';
 		margin-top: 142px;
 		text-align: right;
 		margin-right: 9%;
@@ -344,7 +357,7 @@ body {
 		font-size: 40px;
 	}
 	.questions > p {
-		font-family: shual-light;
+		font-family: 'shual-light';
 		font-size: 32px;
 		color: #494949;
 		margin: 14px 9%;
@@ -360,7 +373,7 @@ body {
 		color: #fff8e2;
 		line-height: 215px;
 		background-repeat: no-repeat;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		font-weight: normal;
 		color: #494949;
 	}
@@ -480,7 +493,7 @@ body {
 	}
 
 	header > h1 {
-		font-family: swatch-normal !important;
+		font-family: 'swatchnormal' !important;
 		color: #ffffff;
 		float: right;
 		font-size: 50px;
@@ -499,13 +512,15 @@ body {
 
 	#createdBy > b {
 		font-size: 12px;
-		font-family: alef-bold;
+		font-family: 'Alef';
+		font-weight: bold;
 		top: 0px;
 	}
 
 	#createdBy {
 		font-size: 13px;
-		font-family: alef-regular;
+		font-family: 'Alef';
+		font-weight: normal;
 		width: 95%;
 		margin-right: 3%;
 		margin-top: 20px;
@@ -539,7 +554,7 @@ body {
 		color: #ffffff;
 		top: -121px;
 		right: 248px;
-		font-family: shual-light;
+		font-family: 'shual-light';
 	}
 	#percentOf {
 		float: right;
@@ -549,7 +564,7 @@ body {
 		color: #ffffff;
 		top: -120px;
 		right: 238px;
-		font-family: shual-light;
+		font-family: 'shual-light';
 	}
 	#partiesName {
 		float: right;
@@ -565,7 +580,7 @@ body {
 		padding-top: 10px;
 		font-size: 18px;
 		height: 50px;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 	}
 	#deynmicActive {
 		float: right;
@@ -588,7 +603,7 @@ body {
 	.progressBar {
 		height: 20px !important;
 		color: white !important;
-		font-family: shual-light !important;
+		font-family: 'shual-light' !important;
 		font-size: 18px !important;
 	}
 
@@ -670,7 +685,8 @@ body {
 
 	#knesetPtoha {
 		font-size: 11px;
-		font-family: alef-regular;
+		font-family: 'Alef';
+		font-weight: normal;
 		float: left;
 		margin-left: 7%;
 		top: 0px;
@@ -779,7 +795,7 @@ body {
 		margin-top: 25px;
 		float: initial;
 		font-size: 36px;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 	}
 	#questionnaire > article > a {
 		float: right;
@@ -791,7 +807,8 @@ body {
 		float: right;
 		position: relative;
 		top: 44px;
-		font-family: alef-regular;
+		font-family: 'Alef';
+		font-weight: normal;
 		font-size: 15px;
 		cursor: pointer;
 		background-color: #cacaca !important;
@@ -813,7 +830,7 @@ body {
 		top: 41px;
 		position: relative;
 		float: right;
-		font-family: shual-bold;
+		font-family: 'Shual-Bold';
 		font-size: 24px;
 		letter-spacing: 0.5px;
 	}
@@ -822,7 +839,7 @@ body {
 		position: relative;
 		top: 13px;
 		right: 3%;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		font-size: 18px;
 		font-weight: 500;
 		color: #454545;
@@ -844,7 +861,7 @@ body {
 	#theAns > section {
 		margin-left: 2%;
 		float: right;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		font-size: 16px;
 		margin-top: 7px;
 	}
@@ -855,7 +872,7 @@ body {
 		position: relative;
 		margin-top: 2%;
 		margin-right: 4%;
-		font-family: shual-light;
+		font-family: 'shual-light';
 		font-size: 18px;
 		color: #454545;
 	}
@@ -869,7 +886,8 @@ body {
 		float: right;
 		background-color: white;
 		margin-right: 4%;
-		font-family: alef-regular;
+		font-family: 'Alef';
+		font-weight: normal;
 		margin-bottom: 27px;
 	}
 
@@ -970,13 +988,13 @@ body {
 		float: left;
 		top: 10px;
 		left: 2%;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		height: 0px;
 		width: 20%;
 	}
 
 	#activity > p {
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		font-size: 18px;
 		color: #454545;
 		margin-top: 80px;
@@ -1005,7 +1023,7 @@ body {
 		float: initial;
 		padding-right: 3%;
 		font-size: 28px;
-		font-family: shual-regular !important;
+		font-family: 'shual_regular' !important;
 		text-align: initial;
 		color: #4c4c4c;
 		font-weight: 400;
@@ -1016,7 +1034,7 @@ body {
 		float: initial;
 		padding-right: 1%;
 		font-size: 36px;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 	}
 
 	#imagesList {
@@ -1071,7 +1089,7 @@ body {
 		margin-top: 20px;
 		float: right;
 		font-size: 36px;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 	}
 
 	/*navigation results css*/
@@ -1230,7 +1248,7 @@ body {
 		border: 1px solid rgba(255,255,255, 0.25);
 		background: #ffffff;
 		font-size: 24px;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 	}
 	.horizontal-nav ul li:first-child a {
 		border-left: 0 none;
@@ -1245,7 +1263,7 @@ body {
 		position: relative;
 		top: -62px;
 		right: 3%;
-		font-family: shual-light;
+		font-family: 'shual-light';
 		font-size: 20px;
 		color: #4c4c4c;
 	}
@@ -1282,7 +1300,7 @@ body {
 
 	#shareB > p {
 		color: white;
-		font-family: shual-light;
+		font-family: 'shual-light';
 		font-size: 26px;
 		position: relative;
 		top: -17px;
@@ -1310,7 +1328,8 @@ body {
 
 	#todot > p {
 		/* padding-top: 60px; */
-		font-family: alef-regular;
+		font-family: 'Alef';
+		font-weight: normal;
 		font-size: 11px;
 		width: 90%;
 		/* margin-right: 5%; */
@@ -1365,7 +1384,7 @@ body {
 	}
 
 	header > h1 {
-		font-family: swatch-bold !important;
+		font-family: 'swatchnormal' !important;
 		color: #ffffff;
 		float: right;
 		font-size: 26px;
@@ -1382,7 +1401,7 @@ body {
 	#payAtension {
 		font-size: 12px;
 		top: 42px;
-		font-family: shual-bold;
+		font-family: 'Shual-Bold';
 		display: none;
 	}
 
@@ -1394,7 +1413,8 @@ body {
 		top: -14px;
 		left: -6%;
 		text-align: right;
-		font-family: alef-regular;
+		font-family: 'Alef';
+		font-weight: normal;
 		font-size: 10px;
 		direction: rtl;
 		width: 45%;
@@ -1407,7 +1427,7 @@ body {
 		color: #494A49;
 		/* top: 52px; */
 		/* left: 46%; */
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		font-size: 29px;
 		margin-right: 13%;
 	}
@@ -1417,7 +1437,7 @@ body {
 		font-size: 20px;
 		width: 50%;
 		direction: rtl;
-		font-family: Shual-Light;
+		font-family: 'shual-light';
 		margin-bottom: 0;
 		position: relative;
 		right: -2%;
@@ -1431,7 +1451,7 @@ body {
 		/* margin: 26px; */
 		/* margin-bottom: 17px; */
 		margin-top: 0;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		direction: rtl;
 		position: relative;
 		right: 5%;
@@ -1449,7 +1469,7 @@ body {
 		right: 2%;
 		font-size: 20px;
 		direction: rtl;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		top: -41px;
 		line-height: 18px;
 	}
@@ -1473,7 +1493,7 @@ body {
 		text-decoration: none;
 		color: #FFFFFF;
 		text-align: center;
-		font-family: Shual-Bold;
+		font-family: 'Shual-Bold';
 		line-height: -1px;
 		padding: 5px;
 		background-repeat: no-repeat;
@@ -1517,7 +1537,7 @@ body {
 	}
 	#foo > p {
 		float: right;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		font-size: 8px;
 		top: 50px;
 		position: relative;
@@ -1601,7 +1621,7 @@ body {
 	}
 
 	.questions > h3 {
-		font-family: shual-Regular;
+		font-family: 'shual_regular';
 		margin-top: -25px;
 		text-align: center;
 		opacity: 0.5;
@@ -1612,7 +1632,7 @@ body {
 	}
 
 	.questions > p {
-		font-family: shual-light;
+		font-family: 'shual-light';
 		font-size: 18px;
 		color: #494949;
 		margin-top: 7px;
@@ -1630,7 +1650,7 @@ body {
 		color: #fff8e2;
 		line-height: 211px;
 		background-repeat: no-repeat;
-		font-family: shual-light;
+		font-family: 'shual-light';
 		font-weight: normal;
 	}
 
@@ -1753,7 +1773,7 @@ body {
 		float: initial;
 		padding-right: 3%;
 		font-size: 17px;
-		font-family: shual-regular !important;
+		font-family: 'shual_regular' !important;
 		text-align: initial;
 		color: #4c4c4c;
 		font-weight: 400;
@@ -1798,7 +1818,7 @@ body {
 		color: #ffffff;
 		top: -35px;
 		right: 32%;
-		font-family: shual-light;
+		font-family: 'shual-light';
 	}
 	#percentOf {
 		float: right;
@@ -1808,7 +1828,7 @@ body {
 		color: #ffffff;
 		top: -34px;
 		right: 30%;
-		font-family: shual-light;
+		font-family: 'shual-light';
 	}
 	#partiesName {
 		float: right;
@@ -1828,7 +1848,7 @@ body {
 		position: relative;
 		font-size: 15px;
 		height: 39px;
-		font-family: shual-light;
+		font-family: 'shual-light';
 		padding-bottom: 0px;
 		padding-top: 5px;
 	}
@@ -1840,7 +1860,7 @@ body {
 		background: #4C4C4C;
 		color: #ffffff;
 		font-size: 16px;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		border-color: #FFFFFF;
 	}
 	#deynmicActive {
@@ -1857,7 +1877,7 @@ body {
 
 	#hour {
 		padding-top: 20px;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		font-size: 12px;
 		position: relative;
 		width: 20%;
@@ -1877,7 +1897,7 @@ body {
 	.progressBar {
 		height: 27px !important;
 		color: white !important;
-		font-family: shual-light !important;
+		font-family: 'shual-light' !important;
 		font-size: 18px !important;
 		margin-bottom: 17px;
 	}
@@ -1919,7 +1939,8 @@ body {
 	}
 	#knesetPtoha {
 		font-size: 11px;
-		font-family: alef-regular;
+		font-family: 'Alef';
+		font-weight: normal;
 		/* float: left; */
 		/* margin-left: -6%; */
 		top: -9px;
@@ -2077,7 +2098,7 @@ body {
 		/* margin-top: 25px; */
 		float: initial;
 		font-size: 22px;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		position: relative;
 		top: 69px;
 		margin-bottom: 28px;
@@ -2092,7 +2113,8 @@ body {
 		float: right;
 		position: relative;
 		top: 44px;
-		font-family: alef-regular;
+		font-family: 'Alef';
+		font-weight: normal;
 		font-size: 14px;
 		cursor: pointer;
 		background-color: #a6a6a6 !important;
@@ -2114,7 +2136,7 @@ body {
 		top: 44px;
 		position: relative;
 		float: right;
-		font-family: shual-bold;
+		font-family: 'Shual-Bold';
 		font-size: 20px;
 		letter-spacing: 0.5px;
 	}
@@ -2123,7 +2145,7 @@ body {
 		position: relative;
 		top: 13px;
 		right: 3%;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		font-size: 16px;
 		font-weight: 500;
 		color: #454545;
@@ -2146,7 +2168,7 @@ body {
 	#theAns > section {
 		margin-left: 2%;
 		float: right;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		font-size: 14px;
 		margin-top: 7px;
 	}
@@ -2157,7 +2179,7 @@ body {
 		position: relative;
 		margin-top: 2%;
 		margin-right: 4%;
-		font-family: shual-light;
+		font-family: 'shual-light';
 		font-size: 14px;
 		color: #454545;
 	}
@@ -2171,7 +2193,8 @@ body {
 		float: right;
 		background-color: white;
 		margin-right: 4%;
-		font-family: alef-regular;
+		font-family: 'Alef';
+		font-weight: normal;
 		margin-bottom: 27px;
 		font-size: 14px;
 	}
@@ -2273,7 +2296,7 @@ body {
 	}
 
 	#activity > p {
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 		font-size: 15px;
 		color: #454545;
 		margin-top: 58px;
@@ -2303,7 +2326,7 @@ body {
 		float: initial;
 		/*padding-right: 5%;*/
 		font-size: 22px;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 	}
 	#list > ul > li {
 		float: right;
@@ -2340,7 +2363,7 @@ body {
 		margin-top: 20px;
 		float: right;
 		font-size: 22px;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 	}
 	/*navigation results css*/
 	.p {
@@ -2496,7 +2519,7 @@ body {
 		border: 1px solid rgba(255,255,255, 0.25);
 		background: #ffffff;
 		font-size: 16px;
-		font-family: shual-regular;
+		font-family: 'shual_regular';
 	}
 	.horizontal-nav ul li:first-child a {
 		border-left: 0 none;
@@ -2511,7 +2534,7 @@ body {
 		position: relative;
 		top: -19px;
 		right: 2%;
-		font-family: shual-light;
+		font-family: 'shual-light';
 		font-size: 18px;
 		color: #4c4c4c;
 	}
@@ -2555,7 +2578,7 @@ body {
 
 	#shareB > p {
 		color: white;
-		font-family: shual-light;
+		font-family: 'shual-light';
 		font-size: 16px;
 		position: relative;
 		top: -2px;
@@ -2572,7 +2595,11 @@ body {
 		text-align: center;
 		z-index: 999;
 		top: 10px;
-		font-family: Shual-light;
+		font-family: 'shual-light';
+	}
+
+	#menu > li > a > span > b {
+		font-size: larger;
 	}
 
 	#todot {
@@ -2581,7 +2608,8 @@ body {
 
 	#todot > p {
 		padding-top: 60px;
-		font-family: alef-regular;
+		font-family: 'Alef';
+		font-weight: normal;
 		font-size: 8px;
 		width: 95%;
 		margin-right: 3%;
@@ -2591,13 +2619,15 @@ body {
 
 	#createdBy > b {
 		font-size: 9px;
-		font-family: alef-bold;
+		font-family: 'Alef';
+		font-weight: bold;
 		top: 0px;
 	}
 
 	#createdBy {
 		font-size: 10px;
-		font-family: alef-regular;
+		font-family: 'Alef';
+		font-weight: normal;
 		width: 95%;
 		margin-right: 3%;
 		margin-top: 20px;
