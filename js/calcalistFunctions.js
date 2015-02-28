@@ -108,7 +108,6 @@ preloadPictures(['images/logo10.png', 'images/logo14.png', 'images/logo15.png', 
 });
 
 $(document).ready(function() {
-
 	//liquid party menu results
 	$(document).on('click', "#menu li a", function() {
 
