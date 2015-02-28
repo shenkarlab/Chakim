@@ -23,7 +23,8 @@ article, section, nav, aside, header, footer, main {
 @font-face {
 	font-family: 'Shual-Bold';
 	src: url('../fonts/shual-bold.eot');
-	src: url('../fonts/shual-bold.eot?#iefix') format('embedded-opentype'), url('../fonts/shual-bold.woff') format('woff'), url('../fonts/shual-bold.ttf') format('truetype'), url('../fonts/shual-bold.svg#Shual-Bold') format('svg');
+	src: url('../fonts/shual-bold.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Shual-Bold.otf') format("opentype"), url('../fonts/shual-bold.woff') format('woff'), url('../fonts/shual-bold.ttf') format('truetype'), url('../fonts/shual-bold.svg#Shual-Bold') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -31,7 +32,8 @@ article, section, nav, aside, header, footer, main {
 @font-face {
 	font-family: 'shual-light';
 	src: url('../fonts/Shual-Light-webfont.eot');
-	src: url('../fonts/Shual-Light-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Shual-Light-webfont.woff2') format('woff2'), url('../fonts/Shual-Light-webfont.woff') format('woff'), url('../fonts/Shual-Light-webfont.ttf') format('truetype'), url('../fonts/Shual-Light-webfont.svg#shual-light') format('svg');
+	src: url('../fonts/Shual-Light-webfont.eot?#iefix') format('embedded-opentype'), 
+	url('../fonts/Shual-Light.otf') format("opentype"), url('../fonts/Shual-Light-webfont.woff2') format('woff2'), url('../fonts/Shual-Light-webfont.woff') format('woff'), url('../fonts/Shual-Light-webfont.ttf') format('truetype'), url('../fonts/Shual-Light-webfont.svg#shual-light') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -39,14 +41,18 @@ article, section, nav, aside, header, footer, main {
 @font-face {
 	font-family: 'shual_regular';
 	src: url('../fonts/Shual-Regular-webfont.eot');
-	src: url('../fonts/Shual-Regular-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Shual-Regular-webfont.woff2') format('woff2'), url('../fonts/Shual-Regular-webfont.woff') format('woff'), url('../fonts/Shual-Regular-webfont.ttf') format('truetype'), url('../fonts/Shual-Regular-webfont.svg#shual_regular') format('svg');
+	src: url('../fonts/Shual-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/Shual-Regular.otf') format("opentype"),
+	url('../fonts/Shual-Regular-webfont.woff2') format('woff2'), url('../fonts/Shual-Regular-webfont.woff') format('woff'), url('../fonts/Shual-Regular-webfont.ttf') format('truetype'), url('../fonts/Shual-Regular-webfont.svg#shual_regular') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 @font-face {
 	font-family: 'swatchnormal';
 	src: url('../fonts/Swatch-Normal-webfont.eot');
-	src: url('../fonts/Swatch-Normal-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Swatch-Normal-webfont.woff2') format('woff2'), url('../fonts/Swatch-Normal-webfont.woff') format('woff'), url('../fonts/Swatch-Normal-webfont.ttf') format('truetype'), url('../fonts/Swatch-Normal-webfont.svg#swatchnormal') format('svg');
+	src: url('../fonts/Swatch-Normal-webfont.eot?#iefix') format('embedded-opentype'), 
+	url('../fonts/Swatch-Normal.otf') format("opentype"),
+	url('../fonts/Swatch-Normal-webfont.woff2') format('woff2'), url('../fonts/Swatch-Normal-webfont.woff') format('woff'), url('../fonts/Swatch-Normal-webfont.ttf') format('truetype'), url('../fonts/Swatch-Normal-webfont.svg#swatchnormal') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -108,7 +114,7 @@ body {
 
 	#tutorial {
 		background: #ffffff;
-		height: 845px;
+		height: 775px;
 	}
 
 	#payAtension {
@@ -517,8 +523,8 @@ body {
 		z-index: 1;
 		width: 98%;
 	}
-	#tutorial > footer#createdBy{
-		margin-top : 80px;
+	#tutorial > footer#createdBy {
+		margin-top: 80px;
 	}
 	#createdBy > b {
 		font-size: 12px;
@@ -2634,15 +2640,24 @@ body {
 		top: 0px;
 	}
 
+	#shenkarLogo {
+		background-image: url("../images/shenkarLogo.png");
+		background-repeat: no-repeat;
+		width: 61px;
+		height: 50px;
+		float: right;
+		margin-left: 4%;
+		margin-right: 2%;
+	}
 	#createdBy {
 		font-size: 10px;
 		font-family: 'Alef';
 		font-weight: normal;
 		width: 95%;
-		margin-right: 3%;
+		margin-right: 1%;
 		margin-top: 20px;
 		margin-bottom: 20px;
-		float: right;
+		float: left;
 	}
 
 }
