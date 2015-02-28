@@ -83,7 +83,15 @@ body {
 		width: 770px;
 		font-weight: normal;
 	}
-
+	#shenkarLogo {
+		background-image: url("../images/shenkarLogo.png");
+		background-repeat: no-repeat;
+		width: 61px;
+		height: 50px;
+		float: right;
+		margin-left: 4%;
+		margin-right: 2%;
+	}
 	b {
 		font-size: 53px;
 		font-family: 'shual_regular';
@@ -100,7 +108,7 @@ body {
 
 	#tutorial {
 		background: #ffffff;
-		height: 710px;
+		height: 845px;
 	}
 
 	#payAtension {
@@ -509,7 +517,9 @@ body {
 		z-index: 1;
 		width: 98%;
 	}
-
+	#tutorial > footer#createdBy{
+		margin-top : 80px;
+	}
 	#createdBy > b {
 		font-size: 12px;
 		font-family: 'Alef';
@@ -521,11 +531,11 @@ body {
 		font-size: 13px;
 		font-family: 'Alef';
 		font-weight: normal;
-		width: 95%;
-		margin-right: 3%;
+		width: 100%;
+		margin-right: 1%;
 		margin-top: 20px;
 		margin-bottom: 20px;
-		float: right;
+		float: left;
 	}
 	.ui-progressbar {
 		width: 0;
