@@ -117,7 +117,7 @@ body {
 		font-family: 'Shual-Bold';
 		font-weight: normal;
 		font-style: normal;
-		padding-right: 4px;
+		/*padding-right: 4px;*/
 		letter-spacing: 0.5px;
 	}
 
@@ -161,7 +161,7 @@ body {
 	#tutorial > h4 {
 		color: #494A49;
 		float: right;
-		font-size: 30px;
+		font-size: 28px;
 		width: 50%;
 		direction: rtl;
 		font-family: 'shual-light';
@@ -174,11 +174,11 @@ body {
 		color: #494A49;
 		float: right;
 		font-size: 66px;
-		width: 69%;
+		width: 90%;
 		margin: 26px;
 		margin-bottom: 17px;
 		margin-top: 0;
-		font-family: 'shual_regular';
+		font-family: 'shual-light';
 		direction: rtl;
 		position: relative;
 		right: 3%;
@@ -195,9 +195,9 @@ body {
 		margin: 5px;
 		margin-right: 27px;
 		right: 3%;
-		font-size: 30px;
+		font-size: 28px;
 		direction: rtl;
-		font-family: 'shual_regular';
+		font-family: 'shual-light';
 		line-height: 22px;
 		top: 27px;
 	}
@@ -208,7 +208,7 @@ body {
 		float: left;
 		left: 8%;
 		position: relative;
-		top: 120px;
+		top: 30px;
 	}
 	#toTheQuestionier {
 		background-image: url("../images/toTheQuestionier.png");
@@ -225,7 +225,7 @@ body {
 		line-height: -1px;
 		background-repeat: no-repeat;
 		padding-top: 10px;
-		top: 140px;
+		top: 55px;
 	}
 	#toTheQuestionier:hover {
 		background-image: url("../images/toTheQuestionierH.png");
@@ -268,7 +268,7 @@ body {
 	}
 	#foo > p {
 		float: right;
-		font-family: 'shual_regular';
+		font-family: 'Alef';
 		padding-top: 1px;
 	}
 	#sign {
@@ -356,7 +356,7 @@ body {
 	}
 
 	.questions > h3 {
-		font-family: 'shual_regular';
+		font-family: 'shual-light';
 		margin-top: 142px;
 		text-align: right;
 		margin-right: 9%;
@@ -368,8 +368,8 @@ body {
 		font-family: 'shual-light';
 		font-size: 32px;
 		color: #494949;
-		margin: 14px 9%;
-		line-height: 91%;
+		margin: 10px 9%;
+		line-height: 83%;
 		text-align: right;
 		width: 70%;
 	}
@@ -590,7 +590,9 @@ body {
 		padding-top: 10px;
 		font-size: 18px;
 		height: 50px;
-		font-family: 'shual_regular';
+		font-family: 'Alef';
+		font-weight: 600;
+		line-height: 16px;
 	}
 	#deynmicActive {
 		float: right;
@@ -805,7 +807,7 @@ body {
 		margin-top: 25px;
 		float: initial;
 		font-size: 36px;
-		font-family: 'shual_regular';
+		font-family: 'shual-light';
 	}
 	#questionnaire > article > a {
 		float: right;
@@ -849,9 +851,9 @@ body {
 		position: relative;
 		top: 13px;
 		right: 3%;
-		font-family: 'shual_regular';
+		font-family: 'Alef';
 		font-size: 18px;
-		font-weight: 500;
+		font-weight: normal;
 		color: #454545;
 	}
 	#theAns {
@@ -871,9 +873,10 @@ body {
 	#theAns > section {
 		margin-left: 2%;
 		float: right;
-		font-family: 'shual_regular';
-		font-size: 16px;
+		font-family: 'Alef';
+		font-size: 15px;
 		margin-top: 7px;
+		font-weight: bold;
 	}
 
 	.summerAns {
@@ -998,13 +1001,15 @@ body {
 		float: left;
 		top: 10px;
 		left: 2%;
-		font-family: 'shual_regular';
+		font-family: 'Alef';
 		height: 0px;
 		width: 20%;
+		font-weight: 600;
 	}
 
 	#activity > p {
-		font-family: 'shual_regular';
+		font-family: 'Alef';
+		font-weight: normal;
 		font-size: 18px;
 		color: #454545;
 		margin-top: 80px;
@@ -1044,7 +1049,7 @@ body {
 		float: initial;
 		padding-right: 1%;
 		font-size: 36px;
-		font-family: 'shual_regular';
+		font-family: 'shual-light';
 	}
 
 	#imagesList {
@@ -1099,7 +1104,7 @@ body {
 		margin-top: 20px;
 		float: right;
 		font-size: 36px;
-		font-family: 'shual_regular';
+		font-family: 'shual-light';
 	}
 
 	/*navigation results css*/
@@ -1668,6 +1673,10 @@ body {
 		background: transparent !important;
 		-webkit-tap-highlight-color: rgba(0,0,0,0);
 	}
+	.inputButton:hover, .inputButton:focus {
+		background: '';
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	}
 
 	#chooses {
 		width: 100%;
@@ -2136,6 +2145,14 @@ body {
 		right: 3%;
 		padding: 2px 10px 2px 35px;
 		background-position: 13px;
+	}
+	#questionnaire > div > article > button:active, #questionnaire > div > article > button:checked {
+		background: transparent !important;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+	#questionnaire > div > article > button:hover, #questionnaire > div > article > button:focus {
+		background: '';
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 	}
 
 	h5 {
