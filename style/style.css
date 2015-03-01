@@ -112,17 +112,17 @@ body {
 	}
 
 	#payAtension {
-		font-size: 18px;
-		top: 0px;
-		font-family: 'Shual-Bold';
-		font-weight: normal;
-		font-style: normal;
-		/*padding-right: 4px;*/
-		letter-spacing: 0.5px;
+font-size: 15px;
+top: 0px;
+font-family: 'Alef';
+font-weight: bold;
+font-style: normal;
+/* padding-right: 4px; */
+letter-spacing: 0.5px;
 	}
 
 	#explantion {
-		height: 187px;
+		height: 200px;
 		/* top: 74px; */
 		position: relative;
 		color: #494A49;
@@ -140,7 +140,7 @@ body {
 		text-align: right;
 		font-family: 'Alef';
 		font-weight: normal;
-		font-size: 17px;
+		font-size: 15px;
 		direction: rtl;
 		width: 330px;
 	}
@@ -208,7 +208,7 @@ body {
 		float: left;
 		left: 8%;
 		position: relative;
-		top: 30px;
+		top: 15px;
 	}
 	#toTheQuestionier {
 		background-image: url("../images/toTheQuestionier.png");
@@ -225,7 +225,7 @@ body {
 		line-height: -1px;
 		background-repeat: no-repeat;
 		padding-top: 10px;
-		top: 55px;
+		top: 30px;
 	}
 	#toTheQuestionier:hover {
 		background-image: url("../images/toTheQuestionierH.png");
