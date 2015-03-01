@@ -2651,14 +2651,14 @@ body {
 	}
 
 	#shenkarLogo {
-		background-image: url("../images/M_shenkar.png");
-		background-repeat: no-repeat;
-		width: 42px;
-		height: 35px;
-		float: right;
-		margin-left: 4%;
-		margin-right: 2%;
-		margin-top: 10px;
+background-image: url("../images/M_shenkar.png");
+background-repeat: no-repeat;
+width: 42px;
+height: 35px;
+float: right;
+margin-left: 4%;
+margin-right: 2%;
+margin-top: 15px;
 	}
 
 	#tutorial > footer#createdBy {
@@ -2666,12 +2666,12 @@ body {
 	}
 
 	#createdBy {
-		font-size: 9px;
-		font-family: 'Alef';
-		font-weight: normal;
-		width: 90%;
-		margin : 4%;
-		float: left;
+font-size: 9px;
+font-family: 'Alef';
+font-weight: normal;
+width: 95%;
+margin: 4%;
+float: left;
 	}
 
 }
