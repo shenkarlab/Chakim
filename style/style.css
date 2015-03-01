@@ -84,13 +84,13 @@ body {
 		font-weight: normal;
 	}
 	#shenkarLogo {
-		background-image: url("../images/shenkarLogo.png");
-		background-repeat: no-repeat;
-		width: 61px;
-		height: 50px;
-		float: right;
-		margin-left: 4%;
-		margin-right: 2%;
+background-image: url("../images/shenkarLogo.png");
+background-repeat: no-repeat;
+width: 61px;
+height: 50px;
+float: right;
+margin-left: 3%;
+margin-right: 2%;
 	}
 	b {
 		font-size: 53px;
@@ -118,7 +118,6 @@ font-family: 'Alef';
 font-weight: bold;
 font-style: normal;
 /* padding-right: 4px; */
-letter-spacing: 0.5px;
 	}
 
 	#explantion {
@@ -202,13 +201,13 @@ letter-spacing: 0.5px;
 		top: 27px;
 	}
 	#calfi {
-		width: 175px;
-		height: 264px;
-		background-image: url("../images/calfi.png");
-		float: left;
-		left: 8%;
-		position: relative;
-		top: 15px;
+width: 175px;
+height: 264px;
+background-image: url("../images/calfi.png");
+float: left;
+left: 8%;
+position: relative;
+top: 25px;
 	}
 	#toTheQuestionier {
 		background-image: url("../images/toTheQuestionier.png");
@@ -225,7 +224,7 @@ letter-spacing: 0.5px;
 		line-height: -1px;
 		background-repeat: no-repeat;
 		padding-top: 10px;
-		top: 30px;
+		top: 40px;
 	}
 	#toTheQuestionier:hover {
 		background-image: url("../images/toTheQuestionierH.png");
@@ -518,7 +517,7 @@ letter-spacing: 0.5px;
 		width: 98%;
 	}
 	#tutorial > footer#createdBy {
-		margin-top: 80px;
+		margin-top: 60px;
 	}
 	#createdBy > b {
 		font-size: 12px;
@@ -528,14 +527,15 @@ letter-spacing: 0.5px;
 	}
 
 	#createdBy {
-		font-size: 13px;
-		font-family: 'Alef';
-		font-weight: normal;
-		width: 100%;
-		margin-right: 1%;
-		margin-top: 20px;
-		margin-bottom: 20px;
-		float: left;
+font-size: 12px;
+font-family: 'Alef';
+font-weight: normal;
+width: 90%;
+/* margin-right: 1%; */
+margin-top: 20px;
+/* margin-bottom: 20px; */
+margin: 5%;
+float: left;
 	}
 	.ui-progressbar {
 		width: 0;
