@@ -84,13 +84,13 @@ body {
 		font-weight: normal;
 	}
 	#shenkarLogo {
-background-image: url("../images/shenkarLogo.png");
-background-repeat: no-repeat;
-width: 61px;
-height: 50px;
-float: right;
-margin-left: 3%;
-margin-right: 2%;
+		background-image: url("../images/shenkarLogo.png");
+		background-repeat: no-repeat;
+		width: 61px;
+		height: 50px;
+		float: right;
+		margin-left: 3%;
+		margin-right: 2%;
 	}
 	b {
 		font-size: 53px;
@@ -108,16 +108,16 @@ margin-right: 2%;
 
 	#tutorial {
 		background: #ffffff;
-		height: 775px;
+		height: 700px;
 	}
 
 	#payAtension {
-font-size: 15px;
-top: 0px;
-font-family: 'Alef';
-font-weight: bold;
-font-style: normal;
-/* padding-right: 4px; */
+		font-size: 15px;
+		top: 0px;
+		font-family: 'Alef';
+		font-weight: bold;
+		font-style: normal;
+		/* padding-right: 4px; */
 	}
 
 	#explantion {
@@ -201,13 +201,13 @@ font-style: normal;
 		top: 27px;
 	}
 	#calfi {
-width: 175px;
-height: 264px;
-background-image: url("../images/calfi.png");
-float: left;
-left: 8%;
-position: relative;
-top: 25px;
+		width: 175px;
+		height: 264px;
+		background-image: url("../images/calfi.png");
+		float: left;
+		left: 8%;
+		position: relative;
+		top: 25px;
 	}
 	#toTheQuestionier {
 		background-image: url("../images/toTheQuestionier.png");
@@ -365,10 +365,10 @@ top: 25px;
 	}
 	.questions > p {
 		font-family: 'shual-light';
-		font-size: 32px;
+		font-size: 30px;
 		color: #494949;
 		margin: 10px 9%;
-		line-height: 83%;
+		 line-height: 105%; 
 		text-align: right;
 		width: 70%;
 	}
@@ -527,15 +527,15 @@ top: 25px;
 	}
 
 	#createdBy {
-font-size: 12px;
-font-family: 'Alef';
-font-weight: normal;
-width: 90%;
-/* margin-right: 1%; */
-margin-top: 20px;
-/* margin-bottom: 20px; */
-margin: 5%;
-float: left;
+		font-size: 12px;
+		font-family: 'Alef';
+		font-weight: normal;
+		width: 90%;
+		/* margin-right: 1%; */
+		margin-top: 20px;
+		/* margin-bottom: 20px; */
+		margin: 5%;
+		float: left;
 	}
 	.ui-progressbar {
 		width: 0;
@@ -1414,10 +1414,9 @@ float: left;
 	}
 
 	#payAtension {
-		font-size: 12px;
+		font-size: 10px;
 		top: 42px;
 		font-family: 'Shual-Bold';
-		display: none;
 	}
 
 	#explantion > p {
@@ -1425,7 +1424,7 @@ float: left;
 		float: right;
 		position: relative;
 		color: #494A49;
-		top: -14px;
+		top: -30px;
 		left: -6%;
 		text-align: right;
 		font-family: 'Alef';
@@ -1456,7 +1455,7 @@ float: left;
 		margin-bottom: 0;
 		position: relative;
 		right: -2%;
-		top: 28px;
+		top: 12px;
 	}
 	#tutorial > h2 {
 		color: #494A49;
@@ -1471,7 +1470,7 @@ float: left;
 		position: relative;
 		right: 5%;
 		line-height: 30px;
-		top: 28px;
+		top: 14px;
 	}
 	#hoWork {
 		width: 80%;
@@ -1485,7 +1484,7 @@ float: left;
 		font-size: 20px;
 		direction: rtl;
 		font-family: 'shual_regular';
-		top: -41px;
+		top: -55px;
 		line-height: 18px;
 	}
 	#calfi {
