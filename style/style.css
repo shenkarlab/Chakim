@@ -1355,6 +1355,16 @@ body {
 }
 /*@media (max-width: 470px and min-width: 390px) {
  }*/
+@media (min-width: 360px) and (max-width: 479px) {
+    #toTheQuestionier{
+        top:120px !important;
+    }
+}
+@media (min-width: 480px) and (max-width: 580px) {
+    #toTheQuestionier{
+        top:90px !important;
+    }
+}
 @media (min-width: 470px) and (max-width: 640px) {
 	#shareB {
 		margin-right: 64%;
@@ -1378,6 +1388,7 @@ body {
 		width: 150px;
 		height: 25px
 	}
+
 }
 @media (max-width: 390px) {
 	#shareB {
@@ -2651,14 +2662,14 @@ body {
 	}
 
 	#shenkarLogo {
-background-image: url("../images/M_shenkar.png");
-background-repeat: no-repeat;
-width: 42px;
-height: 35px;
-float: right;
-margin-left: 4%;
-margin-right: 2%;
-margin-top: 15px;
+		background-image: url("../images/M_shenkar.png");
+		background-repeat: no-repeat;
+		width: 42px;
+		height: 35px;
+		float: right;
+		margin-left: 4%;
+		margin-right: 2%;
+		margin-top: 15px;
 	}
 
 	#tutorial > footer#createdBy {
@@ -2666,12 +2677,12 @@ margin-top: 15px;
 	}
 
 	#createdBy {
-font-size: 9px;
-font-family: 'Alef';
-font-weight: normal;
-width: 95%;
-margin: 4%;
-float: left;
+		font-size: 9px;
+		font-family: 'Alef';
+		font-weight: normal;
+		width: 95%;
+		margin: 4%;
+		float: left;
 	}
 
 }
