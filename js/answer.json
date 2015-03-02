@@ -32,10 +32,10 @@
 			"mertz": "no",
 			"hadashe": "no",
 			"shess": "",
-			"y_tora":"no"
+			"y_tora":"yes"
 		}, {
 			"licod": "yes",
-			"avoda": "no",
+			"avoda": "",
 			"yeshAtid": "no",
 			"abityehudi": "yes",
 			"culanu": "no",
@@ -54,7 +54,7 @@
 			"mertz": "yes",
 			"hadashe": "no",
 			"shess": "",
-			"y_tora":"no"
+			"y_tora":"yes"
 		}, {
 			"licod": "no",
 			"avoda": "no",
@@ -68,7 +68,7 @@
 			"y_tora":""
 		}, {
 			"licod": "no",
-			"avoda": "yes",
+			"avoda": "no",
 			"yeshAtid": "no",
 			"abityehudi": "no",
 			"culanu": "no",
@@ -80,7 +80,7 @@
 		}, {
 			"licod": "yes",
 			"avoda": "no",
-			"yeshAtid": "",
+			"yeshAtid": "no",
 			"abityehudi": "yes",
 			"culanu": "no",
 			"israelbitnu": "yes",
